@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?><!--根布局，常用作蒙层（就是变暗的背景）-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent">
+    <!--播放动画的内容，可以认为是popup的主要内容布局-->
+    <!-- <RelativeLayout
+         android:id="@+id/popup_anima"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content">-->
+    <RelativeLayout
+        android:id="@+id/popup_anima"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff">
+
+        <RelativeLayout
+            android:id="@+id/rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp">
+
+            <ImageView
+                android:id="@+id/iv_add_attention"
+                android:layout_width="65dp"
+                android:layout_height="25dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/s_attention_drawable" />
+
+            <com.base.glide.GlideImageView
+                android:id="@+id/shop_logo"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_margin="10dp"
+                app:siv_shape_type="circle" />
+
+            <TextView
+                android:id="@+id/shop_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_toEndOf="@+id/shop_logo"
+                android:textColor="@color/black_63"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:id="@+id/shop_evaluate_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/shop_name"
+                android:layout_toEndOf="@id/shop_logo">
+
+                <include layout="@layout/item_shop_evaluate_new" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/realName_check"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/shop_evaluate_1"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="3dp"
+                android:layout_toEndOf="@+id/shop_logo"
+                android:background="@drawable/s_round_rect_blue_2898_gr6a"
+                android:padding="2dp"
+                android:text="实名认证"
+                android:textColor="@color/s_blue2898_gr6a"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/foodQuality"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/shop_evaluate_1"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="3dp"
+                android:layout_toEndOf="@+id/realName_check"
+                android:background="@drawable/s_round_rect_green_gr6a"
+                android:padding="2dp"
+                android:text="经营许可证"
+                android:textColor="@color/s_green_gr6a"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/licenceDoc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/shop_evaluate_1"
+                android:layout_marginTop="3dp"
+                android:layout_toEndOf="@+id/foodQuality"
+                android:background="@drawable/s_round_rect_red_gr6a"
+                android:padding="2dp"
+                android:text="营业执照"
+                android:textColor="@color/s_red_gr6a"
+                android:textSize="12sp" />
+
+        </RelativeLayout>
+                <android.support.v7.widget.RecyclerView
+            android:id="@+id/classify_rv"
+                    android:layout_below="@+id/rl"
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content">
+
+        </android.support.v7.widget.RecyclerView>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

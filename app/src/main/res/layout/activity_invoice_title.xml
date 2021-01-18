@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_v0.3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.25" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
+
+
+    <TextView
+        android:id="@+id/tv_invoice_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="专用发票"
+        app:layout_constraintLeft_toRightOf="@id/guideline_v0.3"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="发票类型："
+        app:layout_constraintRight_toLeftOf="@id/guideline_v0.3"
+        app:layout_constraintTop_toTopOf="@id/tv_invoice_type" />
+
+    <EditText
+        android:id="@+id/et_invoice_title"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/z_round_rect_gray_c9"
+        android:hint="请输入营业执照注册名称"
+        android:imeOptions="actionNext"
+        android:inputType="text"
+        android:padding="5dp"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@id/guideline_end"
+        app:layout_constraintStart_toEndOf="@id/guideline_v0.3"
+        app:layout_constraintTop_toBottomOf="@id/tv_invoice_type" />
+
+    <TextView
+        android:id="@+id/tv_invoice_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="发票抬头："
+        app:layout_constraintBaseline_toBaselineOf="@id/et_invoice_title"
+        app:layout_constraintRight_toRightOf="@id/guideline_v0.3" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="*"
+        android:textColor="@color/red_dark"
+        app:layout_constraintBaseline_toBaselineOf="@id/et_invoice_title"
+        app:layout_constraintRight_toLeftOf="@id/tv_invoice_title" />
+
+    <EditText
+        android:id="@+id/et_duty_paragraph"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/z_round_rect_gray_c9"
+        android:digits="0123456789"
+        android:hint="纳税人识别号或社会统一征信代码"
+        android:imeOptions="actionNext"
+        android:inputType="numberSigned"
+        android:padding="5dp"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@id/guideline_end"
+        app:layout_constraintStart_toStartOf="@id/guideline_v0.3"
+        app:layout_constraintTop_toBottomOf="@id/et_invoice_title" />
+
+    <TextView
+        android:id="@+id/tv_duty_paragraph"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="税号："
+        app:layout_constraintBaseline_toBaselineOf="@id/et_duty_paragraph"
+        app:layout_constraintRight_toRightOf="@id/guideline_v0.3" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="*"
+        android:textColor="@color/red_dark"
+        app:layout_constraintBaseline_toBaselineOf="@id/et_duty_paragraph"
+        app:layout_constraintRight_toLeftOf="@id/tv_duty_paragraph" />
+
+    <EditText
+        android:id="@+id/et_bankCard_name"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/z_round_rect_gray_c9"
+        android:hint="请输入开户银行名称"
+        android:imeOptions="actionNext"
+        android:inputType="text"
+        android:padding="5dp"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@id/guideline_end"
+        app:layout_constraintStart_toStartOf="@id/guideline_v0.3"
+        app:layout_constraintTop_toBottomOf="@id/et_duty_paragraph" />
+
+    <TextView
+        android:id="@+id/tv_bankCard_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="开户银行："
+        app:layout_constraintBaseline_toBaselineOf="@id/et_bankCard_name"
+        app:layout_constraintRight_toRightOf="@id/guideline_v0.3" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="*"
+        android:textColor="@color/red_dark"
+        app:layout_constraintBaseline_toBaselineOf="@id/et_bankCard_name"
+        app:layout_constraintRight_toLeftOf="@id/tv_bankCard_name" />
+
+    <EditText
+        android:id="@+id/et_bankCard_no"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/z_round_rect_gray_c9"
+        android:digits="0123456789"
+        android:hint="请输入开户银行账号"
+        android:imeOptions="actionNext"
+        android:inputType="numberSigned"
+        android:padding="5dp"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@id/guideline_end"
+        app:layout_constraintStart_toStartOf="@id/guideline_v0.3"
+        app:layout_constraintTop_toBottomOf="@id/et_bankCard_name" />
+
+    <TextView
+        android:id="@+id/tv_bankCard_no"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="银行账号："
+        app:layout_constraintBaseline_toBaselineOf="@id/et_bankCard_no"
+        app:layout_constraintRight_toRightOf="@id/guideline_v0.3" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="*"
+        android:textColor="@color/red_dark"
+        app:layout_constraintBaseline_toBaselineOf="@id/et_bankCard_no"
+        app:layout_constraintRight_toLeftOf="@id/tv_bankCard_no" />
+
+
+    <EditText
+        android:id="@+id/et_phone_num"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/z_round_rect_gray_c9"
+        android:digits="0123456789-"
+        android:hint="请输入企业电话"
+        android:imeOptions="actionNext"
+        android:inputType="numberSigned"
+        android:padding="5dp"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@id/guideline_end"
+        app:layout_constraintStart_toStartOf="@id/guideline_v0.3"
+        app:layout_constraintTop_toBottomOf="@id/et_bankCard_no" />
+
+    <TextView
+        android:id="@+id/tv_phone_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="企业电话："
+        app:layout_constraintBaseline_toBaselineOf="@id/et_phone_num"
+        app:layout_constraintRight_toRightOf="@id/guideline_v0.3" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="*"
+        android:textColor="@color/red_dark"
+        app:layout_constraintBaseline_toBaselineOf="@id/et_phone_num"
+        app:layout_constraintRight_toLeftOf="@id/tv_phone_num" />
+
+
+    <EditText
+        android:id="@+id/et_register_address"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/z_round_rect_gray_c9"
+        android:gravity="start"
+        android:hint="请输入企业注册地址"
+        android:padding="5dp"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@id/guideline_end"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="@id/guideline_v0.3"
+        app:layout_constraintTop_toBottomOf="@id/et_phone_num" />
+
+    <TextView
+        android:id="@+id/tv_register_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="注册地址："
+        app:layout_constraintBaseline_toBaselineOf="@id/et_register_address"
+        app:layout_constraintRight_toRightOf="@id/guideline_v0.3" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="*"
+        android:textColor="@color/red_dark"
+        app:layout_constraintBaseline_toBaselineOf="@id/et_register_address"
+        app:layout_constraintRight_toLeftOf="@id/tv_register_address" />
+
+    <Button
+        android:id="@+id/bt_submit_ok"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/r_round_rect_solid_orange_ff7d01"
+        android:text="@string/submit_ok"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/et_register_address" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+
+        android:background="@color/gray_f2"
+        android:orientation="vertical"
+        android:paddingBottom="50dp"
+        android:paddingStart="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/bt_submit_ok">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+
+            android:paddingTop="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="*"
+                android:textColor="@color/red_dark" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="重要提示：" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1、每月10号开出发票。" />
+
+        <TextView
+            android:id="@+id/tv_invoice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2、每笔订单收取12%票税。" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3、提交虚假或错误信息，责任自负，本公司不予退换。" />
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

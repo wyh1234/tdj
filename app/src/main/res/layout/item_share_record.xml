@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.1"
+        android:gravity="center"
+        android:text="姓名"
+        android:textSize="@dimen/low_text" />
+
+    <TextView
+        android:id="@+id/tv_phone_num"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.3"
+        android:gravity="center"
+        android:text="手机号"
+        android:textSize="@dimen/low_text" />
+
+    <TextView
+        android:id="@+id/tv_item_action"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.2"
+        android:gravity="center"
+        android:text="操作"
+        android:textSize="@dimen/low_text" />
+
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.3"
+        android:gravity="center"
+        android:text="日期"
+        android:textSize="@dimen/low_text" />
+
+    <TextView
+        android:id="@+id/tv_points"
+        android:layout_width="0dp"
+        android:layout_weight="0.2"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:text="奖励积分"
+        android:textSize="@dimen/low_text" />
+</LinearLayout>

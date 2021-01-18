@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?><!--根布局，常用作蒙层（就是变暗的背景）-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#8f000000"
+    >
+    <!--播放动画的内容，可以认为是popup的主要内容布局-->
+    <RelativeLayout
+        android:id="@+id/popup_anima"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_alignParentBottom="true"
+        android:layout_height="200dp"
+        >
+        <TextView
+            android:id="@+id/tv"
+            android:textSize="14sp"
+            android:text="分类"
+            android:gravity="center"
+            android:textColor="@color/black_63"
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+        <View
+            android:id="@+id/view"
+            android:layout_below="@+id/tv"
+            android:background="#dfdede"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+
+            <LinearLayout
+                android:id="@+id/ll"
+                android:layout_below="@+id/view"
+                android:layout_width="match_parent"
+                android:paddingLeft="10dp"
+                android:paddingRight="@dimen/dp_10"
+                android:gravity="center_vertical"
+                android:layout_height="97dp">
+                <TextView
+                    android:id="@+id/tv_penalty"
+                    android:layout_weight="1"
+                    android:textSize="14sp"
+                    android:text="罚款"
+                    android:background="@drawable/pay_classify_sel_shap"
+                    android:gravity="center"
+                    android:textColor="@drawable/classify_textcolor_select"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40" />
+                <View
+                    android:layout_width="@dimen/dp_10"
+                    android:layout_height="60dp"/>
+
+                <TextView
+                    android:id="@+id/tv_advertisement"
+                    android:layout_weight="1"
+                    android:textSize="14sp"
+                    android:text="广告费"
+                    android:gravity="center"
+                    android:background="@drawable/pay_classify_sel_shap"
+                    android:textColor="@drawable/classify_textcolor_select"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40" />
+                <View
+                    android:layout_width="@dimen/dp_10"
+                    android:layout_height="60dp"/>
+                <TextView
+                    android:id="@+id/tv_year_money"
+                    android:layout_weight="1"
+                    android:textSize="14sp"
+                    android:text="年费"
+                    android:background="@drawable/pay_classify_sel_shap"
+                    android:gravity="center"
+                    android:textColor="@drawable/classify_textcolor_select"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40" />
+                <View
+                    android:layout_width="@dimen/dp_10"
+                    android:layout_height="60dp"/>
+                <TextView
+                    android:id="@+id/tv_t_money"
+                    android:layout_weight="1"
+                    android:textSize="14sp"
+                    android:text="退款"
+                    android:background="@drawable/pay_classify_sel_shap"
+                    android:gravity="center"
+                    android:textColor="@drawable/classify_textcolor_select"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40" />
+            </LinearLayout>
+        <View
+            android:id="@+id/view1"
+            android:layout_below="@+id/ll"
+            android:background="@color/gray_f5"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"/>
+
+        <TextView
+            android:layout_below="@+id/view1"
+            android:id="@+id/tv_qx"
+            android:textSize="14sp"
+            android:text="取消"
+            android:gravity="center"
+            android:textColor="@color/gray_66"
+            android:layout_width="match_parent"
+            android:layout_height="53dp" />
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

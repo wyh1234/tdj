@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?><!--根布局，常用作蒙层（就是变暗的背景）-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#8f000000"
+    >
+    <!--播放动画的内容，可以认为是popup的主要内容布局-->
+    <RelativeLayout
+        android:id="@+id/popup_anima"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_centerInParent="true"
+            android:background="@drawable/err_pay_shap"
+            android:layout_marginRight="42dp"
+            android:layout_marginLeft="42dp"
+            android:layout_height="150dp">
+            <RelativeLayout
+                android:id="@+id/rl"
+                android:layout_width="match_parent"
+                android:layout_height="106dp">
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:textColor="@color/black_63"
+                    android:textSize="@dimen/sp_16"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/tv_content"
+                    android:layout_below="@+id/tv_title"
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:textColor="@color/gray_66"
+                    android:textSize="@dimen/sp_12"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/view"
+                android:layout_below="@+id/rl"
+                android:layout_width="match_parent"
+                android:background="@color/gray_f2"
+                android:layout_height="1dp"/>
+
+            <LinearLayout
+                android:layout_below="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_margin="1dp"
+                android:layout_height="match_parent">
+                <Button
+                    android:id="@+id/btn_qx"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:textSize="16sp"
+                    android:textColor="@color/gray_69"
+                    android:text="取消"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+                <View
+                    android:layout_width="1dp"
+                    android:background="@color/gray_f2"
+                    android:layout_height="match_parent"/>
+                <Button
+                    android:id="@+id/btn_next"
+                    android:textSize="16sp"
+                    android:textColor="@color/blue_2898eb"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+</RelativeLayout>

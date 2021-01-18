@@ -1,0 +1,237 @@
+<resources>
+    <string name="app_name">淘大集</string>
+
+    <!--   toolbar_menu-->
+    <string name="item_01">消息</string>
+    <string name="item_02">首页</string>
+    <string name="item_03">逛市场</string>
+    <string name="item_04">去挑菜</string>
+
+    <!-- login-->
+    <string name="district_management">区域管理</string>
+    <string name="purchaser_login_info">采购，想你所想，解决一切后顾之忧</string>
+    <string name="supplier_login_info">供应，还源食材根本，甄选健康未来</string>
+    <string name="username">手机号：</string>
+    <string name="verificationCode">验证码：</string>
+    <string name="password">密码：</string>
+    <string name="username_hint">请输入手机号</string>
+    <string name="verificationCode_hint">请输入验证码</string>
+    <string name="password_hint">密码为6-20位字符组成</string>
+    <string name="password_again">确定密码：</string>
+    <string name="password_hint_again">再次输入密码</string>
+    <string name="purchaser_login">采购商登录</string>
+    <string name="purchaser_login_my">我是买家</string>
+    <string name="supplier_login">销售商登录</string>
+    <string name="supplier_login_my">我是卖家</string>
+    <string name="verificationCode_login">短信验证码登录</string>
+    <string name="get_verificationCode">获取验证码</string>
+    <string name="password_login">使用密码登录</string>
+    <string name="forget_password">忘记密码</string>
+    <string name="register"><u>还没有账号？立即注册</u></string>
+    <string name="register_purchaser"><u>注册账号</u></string>
+
+    <!--  注册-->
+    <string name="register_purchaser_info">以下信息我们审核通过后，可在平台买菜，请认真填写。</string>
+    <string name="register_supplier_info">*以下信息我们审核通过后，可在平台发布商品，请认真填写。</string>
+    <string name="true_name">真实姓名：</string>
+    <string name="true_name_hint">您的真实姓名</string>
+    <string name="card_no">身份证号：</string>
+    <string name="card_no_hint">请输入15或18位身份证号</string>
+    <string name="organization_name">单位名称：</string>
+    <string name="organization_name_hint">请输入您的单位名称</string>
+    <string name="shop_name">店铺名称：</string>
+    <string name="shop_name_hint">请输入您的店铺名称</string>
+    <string name="palce">所在地区：</string>
+    <string name="address_detail">详细地址：</string>
+    <string name="address">地址：</string>
+    <string name="address_detail_hint">请输入详细所在地址</string>
+    <string name="place_market">当地市场：</string>
+    <string name="place_market_1">所属市场：</string>
+    <string name="market_NO">市场编号：</string>
+    <string name="market_NO_hint">您所在市场的您的店铺编号</string>
+    <string name="register_OK">确定注册</string>
+    <string name="OK">确定</string>
+    <string name="save">保存</string>
+    <string name="default_address">默认地址</string>
+    <string name="agreement">我已阅读并同意<u>《淘大集服务条款》</u></string>
+    <string name="stationAddress">配送地址：</string>
+
+
+    <!-- 采购商-->
+    <string name="register_shop_name">门店名称</string>
+    <string name="register_shop_address">门店地址</string>
+    <string name="register_shop_type">门店类型</string>
+    <string name="register_shop_get_time">要求到货时间</string>
+    <string name="register_shop_camera">门店形象照</string>
+    <string name="register_shop_invite">邀请码</string>
+    <string name="register_shop_camera_explain">为了方便我们司机更快的找到您，请上传图片！</string>
+    <string name="register_shop_tips">为了方便我们司机更快的找到您，请上传图片！</string>
+
+    <string name="register_shop_hint_name">请输入您的门店名称</string>
+    <string name="register_shop_hint_address">点击获取您的门店地址</string>
+    <string name="register_shop_hint_type">可获得专属类型优惠</string>
+    <!-- 采购商 默认到货时间-->
+    <string name="register_shop_start_get_time">9:00—10:00</string>
+    <string name="register_shop_hint_invite">填写您的邀请码</string>
+
+
+    <!--    tag-->
+    <string name="account_tag">account</string>
+    <string name="password_tag">password</string>
+    <string name="real_name_hint">请输入真实姓名</string>
+    <string name="smsCode_tag">smsCode</string>
+    <string name="realname_tag">realname</string>
+    <string name="hotelName_tag">hotelName</string>
+    <string name="regionId_tag">regionId</string>
+    <string name="cityId_tag">cityId</string>
+    <string name="hotelAddress_tag">hotelAddress</string>
+    <string name="storeName_tag">storeName</string>
+    <string name="storeAddress_tag">storeAddress</string>
+    <string name="marketId_tag">marketId</string>
+    <string name="marketName_tag">marketName</string>
+    <string name="station_address">stationAddress</string>
+    <string name="storeNumber_tag">storeNumber</string>
+    <string name="phoneNumber_tag">phoneNumber</string>
+
+    <string name="newPassword_tag">newPassword</string>
+
+    <string name="siteName">siteName</string>
+
+    <string name="storeCategory">storeCategory</string>
+
+    <!--    首页-->
+    <string name="search_text">搜索店铺、商品</string>
+    <string name="check_detail"><u>查看详情</u></string>
+    <string name="goods_classify">请输入食材分类</string>
+
+    <!-- 个人中心-->
+    <string name="change_goods_text"><u>更改 ></u></string>
+    <string name="company_introduction">由湖北淘大集供应链有限责任公司独立开发的淘大集APP、淘大集微信服务号，专注于为 买卖双方提供完整的供应链系统。在淘大集供应链里，酒店用户可以很方便的进行下单采 购、付款、收货；批发商用户可以很方便的发布商品、处理订单、查看营业额；配送环节由平 台自营的配送团队负责，保证以快速、有效的将酒店采购的商品及时配送到下单的酒店用户手 里。
+目前产品开发即将完成，IOS、安卓、微信服务号同步上线，敬请期待！</string>
+    <string name="address_company">湖北省襄阳市春园东路汉江创业创新产业园2楼</string>
+    <string name="my_idea">我们的理念：</string>
+    <string name="company_idea"> 集市搬上网   轻松逛市场</string>
+    <string name="company_email">邮箱：</string>
+    <string name="email_company">tdj@taodaji.com.cn</string>
+    <string name="headquarters_phone">总部电话：</string>
+    <!-- <string name="phone_headquarters">0710 -3715666</string>
+    <string name="phone_after_sale">0710 -3061631</string>-->
+
+    <string name="drawals_text">提示：提现1000元以下，收取2元手续费，1000元以上（包含1000元）不收取手续费。1至2个工作日到账。</string>
+
+    <string name="commodity_category_help">如果您没有找到你要发布的食材，请原谅我们的不足，如不弃，请帮我们完善食材分类，不盛感谢。点击提交新需求。</string>
+
+
+    <string name="shop_score_rule_introduce">
+        评分规则当前涉及数据：
+       \n\n1、商品的评价总分数：该店铺出售过的商品所获得的评价分数之和。
+        \n\n2、评价总次数：该店铺出售过的商品被评价过的总次数。
+        \n\n3、平台处罚分类：平台对店铺进行的处罚，歇业一周扣0.1分，歇业一个月0.2分，关闭店铺0.3。
+ </string>
+
+    <string name="shop_score_rule">店铺评分 = 商品的评价总分数 / 评价总次数 - 平台处罚分数</string>
+    <string name="hide_name_comment">匿名评价</string>
+    <!--    送达采购时间-->
+    <string name="service_time_1_start">08:00</string>
+    <string name="service_time_1_end">11:00</string>
+
+
+    <string name="service_time_2_start">16:30</string>
+    <string name="service_time_2_end">18:00</string>
+
+    <!--供应商送达配送中心时间-->
+    <string name="service_time_supplier_1">06:00</string>
+    <string name="service_time_supplier_2">15:30</string>
+    <!-- 采购商送达，可供选择时间
+    一、 每天的03：00~15：00 本时间段下单购买，可以选择当天下午和第二天上午及下午的时间送达
+    二、 每天的15：00~03：00 本时间段下单购买，可以选择第二天上午和第二天下午的-->
+    <string name="service_time_select_1">03:00</string>
+    <string name="service_time_select_2">15:00</string>
+
+    <!--评论采购商-->
+    <string name="evaluate_customer">没来得及评价的商品，快去评价哟！</string>
+    <!--评论供应商-->
+    <string name="evaluate_supplier">及时回复，可以增加用户好感哟。</string>
+
+
+    <string name="order_cancel">取消订单</string>
+    <string name="order_cancel_text1">请联系淘大集客服人员：</string>
+    <string name="order_cancel_text2">或者您的市场专员，进行订单取消</string>
+
+
+    <string name="system_sorry"> 对不起 </string>
+    <string name="system_info">系统正处于维护中，请稍后访问</string>
+
+    <string name="open_ticket_tips">开启需要专票后，每次购买的订单都会加收%1$s的税费。比如：该笔订单，%2$d元，需要专票，我们将收取%3$d元的税费，该笔订单实付为：%4$d元。
+\n备注：普票不需要加收税费。</string>
+
+    <string name="submit_ok">确定提交</string>
+
+    <string name="close_ticket_tips">确定要关闭开票信息功能吗？</string>
+
+
+    <string name="title_paired_devices">已配对</string>
+    <string name="scan">扫描</string>
+    <string name="bluetooth_device_list">蓝牙设备列表</string>
+    <string name="select_bluetooth_device">选择蓝牙设备</string>
+    <string name="none_bluetooth_device_found">没有找到蓝牙设备</string>
+    <string name="none_paired">未配对</string>
+    <string name="scaning">扫描</string>
+
+    <string name="str_conn_state_disconnect">连接失败</string>
+    <string name="str_conn_state_connecting">连接中</string>
+    <string name="str_connecting">连接中</string>
+    <string name="str_conn_state_connected">已连接</string>
+
+    <string name="str_disconnect">断开连接</string>
+    <string name="str_bluetooth_connect">连接蓝牙</string>
+    <string name="str_cann_printer">请先连接打印机</string>
+    <string name="str_bluetooth">蓝牙</string>
+    <string name="str_conn_successful">连接成功！</string>
+    <string name="str_conn_fail">连接失败！</string>
+    <string name="cut">未连接</string>
+    <string name="connected">已连接</string>
+    <string name="connecting">连接中...</string>
+    <string name="str_printer_out_of_paper">打印机缺纸</string>
+    <string name="str_printer_open_cover">打印机开盖</string>
+    <string name="str_printer_error">打印机出错</string>
+    <string name="bluetooth_is_not_enabled">蓝牙没有开启</string>
+
+    <string name="replace_to_new">2018.09.20之后的资金轨迹到新版查看</string>
+    <string name="replace_to_old">2018.09.20之前的数据在旧版查看</string>
+
+    <!--搜索提示语-->
+    <string name="tips_search_goods">很抱歉，暂时无搜索结果，建议您换一个关键字试试</string>
+
+
+    <string name="title_sale_on_type">当前出售的商品分类：</string>
+    <string name="title_sale_agreeing_type">审核中的商品分类：</string>
+    <string name="title_sale_disagree_type">已驳回的商品分类：</string>
+
+
+    <string name="supply_add_success_help1">我们将会在24个小时内与你联系，确认商品真实性，以便及时出售。</string>
+    <string name="supply_add_success_help2">审核通过的商品在《商品管理》的《已下架》列表，需要正常销售请点击“上架”按钮。</string>
+
+    <string name="dialog_recharge_tips">您暂无权限参与，此活动仅支持采购商用户参与。</string>
+
+
+    <!--注册门店类型提示语-->
+    <string name="tips_shop_type_content_new">请确保类型正确，以便于我们更好的为您服务！</string>
+    <string name="tips_shop_type_cancel_new">我再想想</string>
+    <string name="tips_shop_type_ok_new">确认保存</string>
+
+    <string name="tips_shop_type_content_edit">您对门店类型做了修改，是否需要保存？</string>
+    <string name="tips_shop_type_cancel_edit">暂不修改</string>
+    <string name="tips_shop_type_ok_edit">我要保存</string>
+
+    <!--注册采购商注册配送费-->
+    <string name="purchaser_send_money">指酒店、食堂、超市、菜市场等单位用户。</string>
+
+
+    <string name="store_image_tips">*方便我们送货司机更快的找到你。也方便平台更好的为该店向个人用户做营销。</string>
+    <string name="license_tips">*请上传原件，且填写一致</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="error_gif">长宽不小于 %1$dpx，且大小不超过 %2$sM。</string>
+</resources>

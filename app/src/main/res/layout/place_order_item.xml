@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:background="@color/gray_c9"
+        android:layout_height="0.5dp" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:padding="10dp"
+        android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="match_parent"
+        android:text="名称：牛肉（小牛肉）"
+
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/tv_pice"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:text="价格：25元/斤*5"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/tv_remak"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/red_f0"
+        android:layout_width="match_parent"
+        android:text="备注：你好"
+        android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>

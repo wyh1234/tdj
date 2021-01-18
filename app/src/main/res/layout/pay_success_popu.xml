@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?><!--根布局，常用作蒙层（就是变暗的背景）-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#8f000000"
+    >
+    <!--播放动画的内容，可以认为是popup的主要内容布局-->
+    <RelativeLayout
+        android:id="@+id/popup_anima"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_centerInParent="true"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/del_address_popu_bg"
+            android:layout_height="300dp">
+            <TextView
+                android:id="@+id/tv_del"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40dp"
+                android:textColor="@color/black_63"
+                android:textSize="18sp"
+                android:text="积分购买成功"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <RelativeLayout
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/tv_pay_way1"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="wrap_content"
+                    android:text="支付方式："
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/tv_pay_way"
+                    android:layout_toRightOf="@+id/tv_pay_way1"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/black_63"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/tv"
+                android:layout_below="@+id/rl"
+                android:layout_width="match_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="40dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/tv_cancle"
+                    android:layout_width="100dp"
+                    android:text="返回我的"
+                    android:textColor="#ff3333"
+                    android:background="@drawable/del_address_shap"
+                    android:textSize="12sp"
+                    android:gravity="center"
+                    android:layout_height="40dp" />
+
+
+                <Button
+                    android:id="@+id/tv_ok"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="100dp"
+                    android:text="返回购物车"
+                    android:background="@drawable/del_address_shap_one"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:gravity="center"
+                    android:layout_height="40dp" />
+
+
+            </RelativeLayout>
+
+
+
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_homepage"
+        android:icon="@mipmap/main_homepage_gray"
+        android:title="@string/item_02"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_market"
+        android:icon="@mipmap/main_market_gray"
+        android:title="@string/item_03"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_pickfood"
+        android:icon="@mipmap/main_pickfood_gray"
+        android:title="@string/item_04"
+        app:showAsAction="never" />
+</menu>

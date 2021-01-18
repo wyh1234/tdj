@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="30dp">
+
+    <LinearLayout
+        android:id="@+id/popup_window_context"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/z_round_rect_solid_white"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:gravity="center"
+            android:text="运费详情"
+            android:textColor="@color/black_63"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/gray_db" />
+
+
+
+       <!-- <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_weight="1"
+                android:text="酒店用品配送费"
+                android:textColor="@color/gray_66"
+                android:textSize="14sp" />
+
+            &lt;!&ndash;酒店用品配送费价格&ndash;&gt;
+            <TextView
+                android:id="@+id/tv_jdyppsf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="15dp"
+                android:text="15元"
+                android:textColor="@color/gray_66"
+                android:textSize="14sp" />
+        </LinearLayout>-->
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_freight_particulars_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </android.support.v7.widget.RecyclerView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="17dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:text="注:运费可能随品类变动,点此"
+                android:textColor="@color/gray_69"
+                android:textSize="12sp" />
+
+            <!--查看详情-->
+            <TextView
+                android:id="@+id/tv_see_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/check_detail"
+                android:textColor="@color/blue_1788f1"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginTop="15dp"
+            android:background="@color/gray_db" />
+
+        <TextView
+            android:id="@+id/tv_i_know"
+            android:layout_width="wrap_content"
+            android:layout_height="41dp"
+            android:layout_gravity="center"
+            android:gravity="center_vertical"
+            android:text="我知道了"
+            android:textColor="@color/orage_yellow_fea901" />
+    </LinearLayout>
+</LinearLayout>

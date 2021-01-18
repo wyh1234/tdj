@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/popup_window_context"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/today"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:paddingBottom="20dp"
+            android:paddingTop="20dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/textView_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:text="今天"
+                android:textColor="@color/black_63"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/date_tody"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/textView_1"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:textColor="@color/black_63"
+                android:textSize="16sp" />
+
+
+            <LinearLayout
+                android:id="@+id/today_x"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="下午"
+                    android:textColor="@color/s_gray66_orage_yellow_ff7d01"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/service_time_2_start"
+                    android:textColor="@color/s_gray66_orage_yellow_ff7d01"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="至"
+                    android:textColor="@color/s_gray66_orage_yellow_ff7d01"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/service_time_2_end"
+                    android:textColor="@color/s_gray66_orage_yellow_ff7d01"
+                    android:textSize="16sp" />
+
+                <com.base.glide.GlideImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="20dp"
+                    android:src="@drawable/s_select_round" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/split_line_1"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_below="@+id/today"
+            android:background="@color/gray_db" />
+
+        <RelativeLayout
+            android:id="@+id/tomorrow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/split_line_1"
+            android:layout_marginEnd="15dp"
+            android:layout_marginStart="15dp"
+            android:paddingBottom="20dp"
+            android:paddingTop="20dp">
+
+            <TextView
+                android:id="@+id/textView_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:text="明天"
+                android:textColor="@color/black_63"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/date_tomorrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/textView_2"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+
+                android:textColor="@color/black_63"
+                android:textSize="16sp" />
+
+
+            <LinearLayout
+                android:id="@+id/time_s"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:gravity="center_vertical"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="上午"
+                    android:textColor="@color/s_gray66_orage_yellow_ff7d01"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/s_gray66_orage_yellow_ff7d01"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="至"
+                    android:textColor="@color/s_gray66_orage_yellow_ff7d01"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/service_time_1_end"
+                    android:textColor="@color/s_gray66_orage_yellow_ff7d01"
+                    android:textSize="16sp" />
+
+                <com.base.glide.GlideImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="20dp"
+                    android:src="@drawable/s_select_round" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/time_x"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/time_s"
+                android:layout_marginTop="20dp"
+                android:visibility="gone"
+                android:gravity="center_vertical"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="下午"
+                    android:textColor="@color/s_gray66_orage_yellow_ff7d01"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/service_time_2_start"
+                    android:textColor="@color/s_gray66_orage_yellow_ff7d01"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="至"
+                    android:textColor="@color/s_gray66_orage_yellow_ff7d01"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/service_time_2_end"
+                    android:textColor="@color/s_gray66_orage_yellow_ff7d01"
+                    android:textSize="16sp" />
+
+                <com.base.glide.GlideImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="20dp"
+                    android:src="@drawable/s_select_round" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/split_line_top_2"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_below="@+id/tomorrow"
+            android:background="@color/gray_db" />
+
+        <TextView
+            android:id="@+id/cancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/split_line_top_2"
+            android:background="@drawable/s_gray_f2"
+            android:gravity="center"
+            android:padding="20dp"
+            android:text="取消"
+            android:textColor="@color/black_63"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_f5"
+  >
+    <include layout="@layout/integral_toobar_layout" />
+    <ScrollView
+        android:layout_below="@+id/intergral_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:id="@+id/rl_title"
+
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="@color/white"
+        android:layout_height="50dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:text="广告位置"
+            android:layout_marginLeft="15dp"
+            android:layout_height="wrap_content" />
+   <!--     <ImageView
+            android:id="@+id/iv"
+            android:layout_width="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:src="@mipmap/right_arrow_gary"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content" />-->
+        <TextView
+            android:id="@+id/tv_wz"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:textColor="#a3a3a3"
+            android:textSize="14sp"
+            android:text="开屏广告"
+            android:textColorHint="#a3a3a3"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+    <tools.extend.MyRecyclerViews
+        android:id="@+id/recyclerview"
+        android:layout_below="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </tools.extend.MyRecyclerViews>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_height="50dp">
+            <ImageView
+                android:id="@+id/iv_sel"
+                android:layout_width="wrap_content"
+                android:padding="10dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/goods_image_select"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/tv"
+                android:layout_width="wrap_content"
+                android:layout_toRightOf="@+id/iv_sel"
+                android:textColor="#000000"
+                android:textSize="12sp"
+                android:text="我已阅读，并接受"
+                android:layout_centerVertical="true"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/tv_agreement"
+                android:layout_width="wrap_content"
+                android:layout_toRightOf="@+id/tv"
+                android:textColor="@color/blue_2898eb"
+                android:textSize="12sp"
+                android:gravity="center_vertical"
+                android:text="《淘大集广告服务协议》"
+                android:layout_centerVertical="true"
+                android:layout_height="match_parent" />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:padding="@dimen/dp_10"
+            android:layout_height="70dp">
+            <Button
+                android:id="@+id/post_ok"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/r_round_rect_solid_blue_2898eb"
+                android:text="提交计划"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+    </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

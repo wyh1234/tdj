@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/dp_10"
+    android:layout_margin="20dp"
+    tools:context=".ui.activity.integral.fragment.ModifyPriceActivity">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:background="@drawable/z_rect_pro"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="49dp"
+            android:layout_height="45dp"
+            android:gravity="center"
+            android:text="价格:"
+            android:textColor="#666666"
+            android:textSize="14sp" />
+
+        <com.base.widget.BusinessEditText
+            android:id="@+id/stock"
+            android:layout_width="130dp"
+            android:layout_height="45dp"
+            android:background="@drawable/z_rect"
+            android:digits="1234567890."
+            android:gravity="center_vertical"
+            android:inputType="phone"
+            android:maxLength="9"
+            android:paddingStart="5dp" />
+
+        <TextView
+            android:id="@+id/tv_inventory"
+            android:layout_width="49dp"
+            android:layout_height="45dp"
+            android:gravity="center"
+            android:text="元"
+            android:textColor="#666666"
+            android:textSize="14sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/bt_cancel"
+            android:layout_width="106dp"
+            android:layout_height="45dp"
+            android:background="@color/help_button_view"
+            android:text="取消"
+            android:textColor="#ffffff"
+            android:textSize="16sp" />
+        <Button
+            android:id="@+id/bt_add"
+            android:layout_width="106dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="20dp"
+            android:background="@color/blue_2898eb"
+            android:text="确定"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</LinearLayout>

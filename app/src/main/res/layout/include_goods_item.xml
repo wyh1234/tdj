@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/iv"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="15dp"
+        android:layout_width="46dp"
+        android:scaleType="centerCrop"
+        android:background="@mipmap/kaiping"
+        android:layout_centerVertical="true"
+        android:layout_height="46dp" />
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_toRightOf="@+id/iv"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:text="牛肉"
+        android:textColor="#000000"
+        android:textSize="13sp"
+        android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tv_nickname"
+            android:layout_toRightOf="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:text="(新鲜小牛肉)"
+            android:textColor="@color/gray_66"
+            android:textSize="13sp"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+        <TextView
+            android:layout_below="@+id/rl"
+            android:layout_toRightOf="@+id/iv"
+            android:id="@+id/tv_content"
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:textColor="@color/gray_66"
+            android:textSize="13sp"
+            android:layout_height="wrap_content" />
+
+</RelativeLayout>

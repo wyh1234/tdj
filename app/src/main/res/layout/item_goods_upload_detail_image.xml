@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.base.glide.GlideImageView
+        android:id="@+id/iv_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+          />
+
+    <TextView
+        android:id="@+id/tv_delete"
+        android:layout_width="55.44dp"
+        android:layout_height="29.12dp"
+        android:layout_gravity="end"
+        android:layout_margin="20dp"
+        android:background="@drawable/z_round_rect_solid_fe3434"
+        android:gravity="center"
+        android:text="删除"
+        android:textColor="@color/white"
+        android:textSize="11.2sp" />
+
+    <TextView
+        android:id="@+id/tv_update"
+        android:layout_width="55.44dp"
+        android:layout_height="29.12dp"
+        android:layout_gravity="end"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/z_round_rect_solid_20a539"
+        android:gravity="center"
+        android:text="更改"
+        android:textColor="@color/white"
+        android:textSize="11.2sp" />
+
+</FrameLayout>

@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:id="@+id/ll"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+    <RelativeLayout
+        android:paddingLeft="14dp"
+        android:paddingRight="14dp"
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="wrap_content"
+        android:textSize="14sp"
+        android:textColor="@color/gray_66"
+        android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tv_status"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:textSize="13sp"
+            android:textColor="#2898eb"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/tv_type"
+        android:paddingLeft="14dp"
+        android:paddingRight="14dp"
+    android:layout_marginTop="10dp"
+    android:layout_width="match_parent"
+    android:textSize="14sp"
+    android:textColor="@color/gray_66"
+    android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/tv_detail"
+        android:paddingLeft="14dp"
+        android:paddingRight="14dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:textSize="14sp"
+        android:textColor="@color/gray_66"
+        android:layout_height="wrap_content" />
+    <RelativeLayout
+        android:paddingLeft="14dp"
+        android:paddingRight="14dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/tv4"
+        android:layout_width="wrap_content"
+        android:textSize="14sp"
+        android:layout_centerVertical="true"
+        android:textColor="@color/gray_66"
+        android:text="缴费金额:"
+        android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tv_money"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/tv4"
+            android:textSize="14sp"
+            android:textColor="#2898eb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/tv_appeal_cause"
+        android:paddingLeft="14dp"
+        android:paddingRight="14dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:textSize="14sp"
+        android:textColor="@color/gray_66"
+        android:layout_height="wrap_content" />
+        <RelativeLayout
+            android:paddingLeft="14dp"
+            android:paddingRight="14dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv5"
+                android:layout_width="wrap_content"
+                android:textSize="14sp"
+                android:layout_centerVertical="true"
+                android:textColor="@color/gray_66"
+                android:text="缴费图片:"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/tv_iamge"
+                android:layout_alignParentRight="true"
+                android:textSize="14sp"
+                android:padding="@dimen/dp_10"
+                android:text="点击查看>"
+                android:textColor="#2898eb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_marginTop="14dp"
+        android:background="#dddddd"
+        android:layout_height="1dp"/>
+    <RelativeLayout
+        android:id="@+id/rl_bottom"
+        android:paddingLeft="14dp"
+        android:paddingRight="14dp"
+        android:layout_width="match_parent"
+        android:layout_height="70dp">
+        <RelativeLayout
+            android:layout_centerVertical="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:textColor="@color/gray_66"
+            android:textSize="15dp"
+            android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/tv_remark"
+                android:layout_below="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:text="(请及时缴费，否则会影响提现)"
+                android:textColor="@color/red_dark"
+                android:textSize="15dp"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/tv_go_pay"
+            android:layout_width="62dp"
+            android:layout_centerVertical="true"
+            android:text="去缴费"
+            android:gravity="center"
+            android:textSize="13dp"
+            android:textColor="#2898eb"
+            android:background="@drawable/punish_shap_two"
+            android:layout_alignParentRight="true"
+            android:layout_height="27dp" />
+<!--        <TextView
+            android:id="@+id/tv_appeal"
+            android:layout_width="62dp"
+            android:text="申诉"
+            android:textSize="13dp"
+            android:textColor="@color/black_63"
+            android:background="@drawable/punish_shap_one"
+            android:gravity="center"
+            android:layout_toLeftOf="@+id/tv_go_pay"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            android:layout_height="27dp" />-->
+    </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:background="@color/gray_f5"
+            android:layout_height="10dp"/>
+    </LinearLayout>
+  <!--  <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/ll_one"
+        android:paddingBottom="20dp"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:paddingLeft="14dp"
+            android:paddingRight="14dp"
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_appeal_date"
+                android:layout_width="wrap_content"
+                android:textSize="14sp"
+                android:textColor="@color/gray_66"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/tv_appeal_status"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:textSize="13sp"
+                android:textColor="#2898eb"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/tv_appeal_item"
+            android:paddingLeft="14dp"
+            android:paddingRight="14dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:textSize="14sp"
+            android:textColor="@color/gray_66"
+            android:layout_height="wrap_content" />
+        <RelativeLayout
+            android:paddingLeft="14dp"
+            android:paddingRight="14dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv5"
+                android:textSize="14sp"
+                android:textColor="@color/gray_66"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:id="@+id/ss_tv"
+                android:layout_width="64dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/punish_image"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_toRightOf="@+id/tv5"
+                android:layout_height="64dp" />
+            <ImageView
+                android:id="@+id/ss_tv_one"
+                android:layout_width="64dp"
+                android:src="@mipmap/punish_image"
+                android:scaleType="centerCrop"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_toRightOf="@+id/ss_tv"
+                android:layout_height="64dp" />
+            <ImageView
+                android:id="@+id/ss_tv_two"
+                android:layout_width="64dp"
+                android:src="@mipmap/punish_image"
+                android:scaleType="centerCrop"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_toRightOf="@+id/ss_tv_one"
+                android:layout_height="64dp" />
+        </RelativeLayout>
+    </LinearLayout>-->
+    <!--<View
+        android:layout_width="match_parent"
+        android:background="@color/gray_f5"
+        android:layout_height="@dimen/dp_10"/>-->
+</LinearLayout>

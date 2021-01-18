@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_f5"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/today_deliver_goods_order_linearLayout_time"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/today_deliver_goods_order_time_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/gray_66"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/today_deliver_goods_order_text_other"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="     前送达配送中心"
+            android:textColor="@color/gray_66" />
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/today_deliver_goods_order_expandableListView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/linearLayout2"
+        android:layout_below="@+id/today_deliver_goods_order_linearLayout_time"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="10dp"
+        android:scrollingCache="false" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="共" />
+
+        <TextView
+            android:id="@+id/today_deliver_goods_order_dingdan_sum_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="个订单  总计:" />
+
+        <TextView
+            android:id="@+id/today_deliver_goods_order_dingdan_total_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0.00" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="元" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/today_deliver_goods_order_dingdan_print_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/balance"
+            android:text="全部打印"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:visibility="gone" />
+    </LinearLayout>
+</RelativeLayout>
+

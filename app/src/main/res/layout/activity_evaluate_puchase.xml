@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/yellow_fff1d4"
+        android:padding="10dp"
+        android:text="好评为5分，中评为3分，差评为1分。" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:background="@color/gray_f2"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:id="@+id/line_hide_name"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:paddingLeft="15dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:background="@color/gray_db" >
+
+        <com.base.glide.GlideImageView
+            android:id="@+id/img_hide_name"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/s_select_round" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="@string/hide_name_comment"
+            android:textColor="@color/gray_66"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/release"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/r_round_rect_solid_orange_ff7d01"
+        android:text="发布"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+</LinearLayout>

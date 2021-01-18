@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.activity.shopManagement.VegetablesCategoryActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:id="@+id/ll_sale_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/dp_10"
+                        android:text="请选择商品类型"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/middle_text" />
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rb_retail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp_10"
+                            android:text="零售" />
+
+                        <RadioButton
+                            android:id="@+id/rb_whole"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp_10"
+                            android:text="整件批" />
+                    </RadioGroup>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="45dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="15dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_shop_address_search"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:layout_marginStart="@dimen/dp_10"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="@dimen/dp_10"
+                            android:background="@mipmap/search_gray"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true" />
+
+                        <EditText
+                            android:id="@+id/et_shop_address"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:background="@color/transparent"
+                            android:hint="请输入关键字"
+                            android:singleLine="true"
+                            android:textSize="@dimen/middle_text" />
+
+                        <ImageView
+                            android:id="@+id/iv_clear_keyword"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:background="@mipmap/phone_clear"
+                            android:visibility="invisible" />
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/tv_search"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/large_text"
+                        android:layout_marginEnd="15dp"
+                        android:textColor="@color/blue_2898eb"
+                        android:layout_gravity="center"
+                        android:text="搜索"/>
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/tv_limit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_marginTop="20dp"
+                    android:text="最多可选择5个主营分类"
+                    android:textSize="@dimen/middle_text" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.25">
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/rv_level1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/gray_6e" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.75">
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/rv_level2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/gray_f2" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:padding="@dimen/dp_10">
+
+                <TextView
+                    android:id="@+id/tv_total_select"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="共0个分类"
+                    android:textSize="@dimen/low_text" />
+                <TextView
+                    android:id="@+id/tv_view_select_goods"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textSize="@dimen/low_text"
+                    android:text="点击查看"/>
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_confirm"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:background="@color/blue_2898eb"
+                android:gravity="center"
+                android:text="确认选择"
+                android:textColor="@color/white"
+                android:textSize="@dimen/large_text" />
+        </LinearLayout>
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/rl_select_goods"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:visibility="gone"
+        android:layout_marginBottom="50dp">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_select_goods"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </RelativeLayout>
+</RelativeLayout>

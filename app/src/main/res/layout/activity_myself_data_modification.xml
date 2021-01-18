@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/yellow_fff1d4"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/auditing_message"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="请准确填写信息，以便我们及时审核通过。"
+            android:textColor="@color/gray_66" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@mipmap/close_message"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_weight="8"
+            android:paddingStart="10dp"
+            android:text="@string/true_name"
+            android:textSize="16dp" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="21">
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="20"
+                android:background="@null"
+                android:cursorVisible="false"
+                android:gravity="center_vertical"
+                android:hint="@string/true_name_hint"
+                android:imeOptions="actionNext"
+                android:inputType=""
+                android:enabled="false"
+                android:onClick="editTextOnclick"
+                android:tag="@string/realname_tag"
+                android:textColor="@color/gray_ae"
+                android:textSize="17dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/shop_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_weight="8"
+            android:paddingStart="10dp"
+            android:text="@string/shop_name"
+            android:textSize="16dp" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="21">
+
+            <EditText
+                android:id="@+id/shop_name_hint"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="20"
+                android:background="@null"
+                android:enabled="false"
+                android:cursorVisible="false"
+                android:gravity="center_vertical"
+                android:hint="@string/shop_name_hint"
+                android:imeOptions="actionNext"
+                android:onClick="editTextOnclick"
+                android:textColor="@color/gray_ae"
+                android:textSize="17dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_weight="8"
+            android:paddingStart="10dp"
+            android:text="@string/palce"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/place"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginTop="8dp"
+            android:layout_weight="21"
+            android:gravity="center_vertical"
+            android:paddingStart="10dp" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="horizontal">
+
+        <TextView
+
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_weight="8"
+            android:paddingStart="10dp"
+            android:text="@string/address_detail"
+            android:textSize="16dp" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="21">
+
+            <TextView
+                android:id="@+id/address_detail"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="20"
+                android:background="@null"
+                android:cursorVisible="false"
+                android:gravity="center_vertical"
+                android:hint="@string/address_detail_hint"
+                android:imeOptions="actionNext"
+                android:tag="@string/storeAddress_tag"
+                android:textColor="@color/gray_ae"
+                android:textSize="17dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/purchaser_hide"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_weight="8"
+                android:paddingStart="10dp"
+                android:text="@string/place_market"
+                android:textSize="16dp" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="21">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="12dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/z_round_rect_gray_c9"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/register_market_localhost"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:tag="@string/marketId_tag" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="5dp"
+                        android:background="@mipmap/pulldown_triangle" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_weight="8"
+                android:paddingStart="10dp"
+                android:text="@string/market_NO"
+                android:textSize="16dp" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="21">
+
+                <EditText
+                    android:id="@+id/market_NO"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="20"
+                    android:background="@null"
+                    android:cursorVisible="false"
+                    android:gravity="center_vertical"
+                    android:hint="@string/market_NO_hint"
+                    android:imeOptions="actionNext"
+                    android:onClick="editTextOnclick"
+                    android:tag="@string/storeNumber_tag"
+                    android:textColor="@color/gray_ae"
+                    android:textSize="17dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/licence"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/r_white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="8"
+            android:gravity="center_vertical"
+            android:paddingStart="10dp"
+            android:text="营业执照："
+            android:textColor="@color/black_65"
+            android:textSize="16dp" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="15dp"
+            android:layout_weight="21"
+            android:gravity="end|center_vertical">
+
+            <TextView
+                android:id="@+id/licence_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:text="未认证，请认证" />
+
+            <TextView
+                android:layout_width="10dp"
+                android:layout_height="15dp"
+                android:layout_gravity="center_vertical"
+                android:background="@mipmap/ic_right_arrow_gary" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/foodQuality"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/r_white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:gravity="center_vertical"
+            android:paddingStart="10dp"
+            android:text="经营许可证："
+            android:textColor="@color/black_65"
+            android:textSize="16dp" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="15dp"
+            android:layout_weight="7"
+            android:gravity="end|center_vertical">
+
+            <TextView
+                android:id="@+id/foodQuality_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:text="未认证，请认证" />
+
+            <TextView
+                android:layout_width="10dp"
+                android:layout_height="15dp"
+                android:layout_gravity="center_vertical"
+                android:background="@mipmap/ic_right_arrow_gary" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/data_modification_OK"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/r_round_rect_solid_orange_ff7d01"
+        android:text="@string/save"
+        android:textColor="@color/white"
+        android:textSize="18dp" />
+</LinearLayout>

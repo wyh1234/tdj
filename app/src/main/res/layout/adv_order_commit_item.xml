@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_height="wrap_content">
+    <View
+        android:background="@color/gray_f5"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:paddingLeft="15dp"
+        android:layout_height="45dp">
+        <TextView
+            android:id="@+id/tv_num"
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:drawablePadding="5dp"
+            android:drawableLeft="@mipmap/guanggaojihua"
+            android:textSize="14sp"
+            android:textColor="@color/blue_2898eb"
+            android:layout_height="wrap_content" />
+        <RelativeLayout
+            android:id="@+id/rl_right"
+            android:layout_alignParentRight="true"
+            android:layout_width="120dp"
+            android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_right"
+            android:layout_toLeftOf="@+id/iv_right"
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:textSize="14sp"
+            android:text="计划详情"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:textColor="#222222"
+            android:layout_height="match_parent" />
+        <ImageView
+            android:id="@+id/iv_right"
+            android:paddingRight="15dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/order_goods_show"
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/ll_goods"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></LinearLayout>
+    <View
+    android:background="@color/gray_f5"
+    android:layout_width="match_parent"
+    android:layout_height="1dp"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_title3"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="50dp">
+        <TextView
+            android:id="@+id/tv_money"
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:textColor="#FA0505"
+            android:textSize="18sp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:text="合计金额"
+            android:layout_marginLeft="15dp"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+</LinearLayout>

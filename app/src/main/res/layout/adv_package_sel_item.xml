@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/white"
+    android:paddingTop="12dp"
+    android:paddingLeft="19dp"
+    android:paddingRight="19dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/adv_package_rl_select"
+        android:layout_height="75dp">
+        <ImageView
+            android:id="@+id/iv_sel"
+            android:layout_width="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/adv_package_image_select"
+            android:layout_alignParentRight="true"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tv_pice"
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="22dp"
+            android:textSize="21sp"
+            android:textColor="#FA0505"
+            android:layout_alignParentRight="true"
+            android:layout_height="wrap_content" />
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:paddingLeft="22dp"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/tv_adv_title"
+                android:layout_width="wrap_content"
+                android:textSize="16sp"
+                android:textColor="#000000  "
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/tv_adv_desc"
+                android:layout_width="wrap_content"
+                android:textSize="14sp"
+                android:layout_marginTop="7dp"
+                android:visibility="gone"
+                android:layout_below="@+id/tv_adv_title"
+                android:textColor="#FC5734"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

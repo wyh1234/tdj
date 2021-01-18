@@ -1,0 +1,527 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/rel_goods_image"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp">
+
+        <com.base.glide.GlideImageView
+            android:id="@+id/goods_image"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/head_portrait" />
+
+        <com.base.glide.GlideImageView
+            android:id="@+id/special_offer"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/icon_special_offer"
+            android:visibility="gone"
+            tools:visibility="visible" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/line_goods_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/rel_goods_image"
+        android:layout_marginStart="10dp"
+        android:layout_toRightOf="@+id/rel_goods_image"
+        android:orientation="horizontal">
+
+        <com.base.glide.GlideImageView
+            android:id="@+id/img_hot_sale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="3dp"
+            android:src="@mipmap/rexiao"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+        <com.base.glide.GlideImageView
+            android:id="@+id/jinpin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="3dp"
+            android:src="@mipmap/icon_jin_red"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/tv_isP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="3dp"
+            android:text="P"
+            android:textColor="@color/orange_yellow_ff7d01"
+            android:textSize="16sp"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/goods_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="name"
+            android:text=""
+            android:textColor="@color/black_63"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/textView_21"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="("
+            android:textColor="@color/black_63"
+            android:textSize="@dimen/middle_text"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/goods_nickName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="nickName"
+            android:textColor="@color/black_63"
+            android:textSize="@dimen/middle_text"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/textView_22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=")"
+            android:textColor="@color/black_63"
+            android:textSize="@dimen/middle_text"
+            android:visibility="gone" />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/goods_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line_goods_name"
+        android:layout_alignLeft="@id/line_goods_name"
+        android:layout_marginTop="5dp"
+        android:tag="description"
+        android:text="新鲜牛肉,内蒙直供。"
+        android:textColor="@color/gray_66"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/goods_content"
+        android:layout_alignLeft="@id/goods_content"
+        android:layout_marginTop="5dp">
+
+        <TextView
+            android:id="@+id/goods_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="25.00"
+            android:textColor="@color/red_dark"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/textView_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/goods_content"
+            android:layout_toEndOf="@id/goods_price"
+            android:text="元/"
+            android:textColor="@color/red_dark"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/goods_unit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/goods_content"
+            android:layout_toEndOf="@id/textView_3"
+            android:tag="unit"
+            android:text="斤"
+            android:textColor="@color/red_dark"
+            android:textSize="16sp" />
+
+
+        <LinearLayout
+            android:id="@+id/goods_spec_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/goods_content"
+            android:layout_toEndOf="@id/goods_unit"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="("
+                android:textColor="@color/red_dark"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/level2Value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/red_dark"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/level2Unit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/red_dark"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/specification_split"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="*"
+                android:textColor="@color/red_dark"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/level3Value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/red_dark"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/level3Unit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/red_dark"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=")"
+                android:textColor="@color/red_dark"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/goods_spec_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/goods_unit"
+            android:layout_marginLeft="5dp"
+            android:layout_toEndOf="@id/goods_unit"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:text="~"
+                android:textColor="@color/red_dark"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/goods_max_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/red_dark"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="元/"
+                android:textColor="@color/red_dark"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/goods_max_unit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/red_dark"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tv_cash_pledge_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:textColor="@color/orange_yellow_ff7d01"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/goods_content"
+        android:layout_alignLeft="@id/goods_content"
+        android:layout_marginTop="25dp">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_goods_property"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/goods_content"
+        android:layout_alignLeft="@id/goods_content"
+        android:layout_marginTop="45dp">
+        <TextView
+            android:id="@+id/tv_inventory_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/middle_text"/>
+        <TextView
+            android:id="@+id/tv_allowance_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:textSize="@dimen/middle_text"/>
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/textView_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rel_goods_image"
+        android:layout_alignStart="@+id/rel_goods_image"
+        android:layout_marginTop="10dp"
+        android:text=""
+        android:textColor="@color/gray_69"
+        android:visibility="gone" />
+
+
+    <TextView
+        android:id="@+id/update_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rel_goods_image"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="5dp"
+        android:tag="createTime_format_yyyy-MM-dd HH:mm"
+        android:text="2016-12-08 12:30"
+        android:textColor="@color/gray_69"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/textView_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rel_goods_image"
+        android:layout_marginTop="10dp"
+        android:layout_toLeftOf="@id/update_time"
+        android:text="更新时间："
+        android:textColor="@color/gray_69"
+        android:visibility="gone" />
+
+
+    <View
+        android:id="@+id/split_line_1"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@id/textView_4"
+        android:layout_alignStart="@+id/rel_goods_image"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="5dp"
+        android:background="@color/gray_db" />
+
+    <LinearLayout
+        android:id="@+id/verifyInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/split_line_1"
+        android:orientation="vertical"
+        android:paddingStart="10dp"
+        android:paddingEnd="@dimen/dp_10"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp">
+
+        <TextView
+            android:id="@+id/verifyInfo_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:textColor="@color/red_dark" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginTop="10dp"
+            android:background="@color/gray_db" />
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/relativelayout_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/verifyInfo"
+        android:layout_alignStart="@+id/rel_goods_image"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="10dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
+
+
+        <TextView
+            android:id="@+id/shelves_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/s_goods_count_input_keyset"
+            android:padding="10dp"
+            android:tag="onclick"
+            android:text="上架"
+            android:textColor="@color/gray_66" />
+
+        <TextView
+            android:id="@+id/stock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@+id/shelves_up"
+            android:paddingTop="10dp"
+            android:text="库存不足"
+            android:textColor="@color/red_dark"
+            android:textSize="14sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/stop_goods"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/s_goods_count_input_keyset"
+            android:paddingStart="20dp"
+            android:layout_toEndOf="@+id/shelves_up"
+            android:paddingTop="10dp"
+            android:paddingEnd="20dp"
+            android:paddingBottom="10dp"
+            android:tag="onclick"
+            android:visibility="gone"
+            android:text="停售中"
+            android:textColor="@color/red_f0" />
+
+        <TextView
+            android:id="@+id/goods_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/s_goods_count_input_keyset"
+            android:padding="10dp"
+            android:tag="onclick"
+            android:text="删除商品"
+            android:textColor="@color/gray_66" />
+
+        <TextView
+            android:id="@+id/view_reason"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/s_goods_count_input_keyset"
+            android:padding="10dp"
+            android:tag="onclick"
+            android:text="查看原因"
+            android:visibility="gone"
+            android:textColor="@color/gray_66" />
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignWithParentIfMissing="true"
+            android:layout_toStartOf="@+id/goods_delete"
+            android:layout_toEndOf="@+id/shelves_up"
+            android:gravity="end"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_price_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/s_goods_count_input_keyset"
+                android:padding="10dp"
+                android:tag="onclick"
+                android:text="改价"
+                android:layout_marginEnd="@dimen/dp_10"
+                android:textColor="@color/gray_66" />
+
+            <TextView
+                android:id="@+id/tv_inventory_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/s_goods_count_input_keyset"
+                android:padding="10dp"
+                android:tag="onclick"
+                android:text="库存修改"
+                android:layout_marginEnd="@dimen/dp_10"
+                android:textColor="@color/gray_66" />
+
+            <TextView
+                android:id="@+id/goods_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/s_goods_count_input_keyset"
+                android:padding="10dp"
+                android:tag="onclick"
+                android:text="编辑商品"
+                android:textColor="@color/gray_66" />
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <!--<View-->
+    <!--android:id="@+id/split_line_top"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="1px"-->
+    <!--android:background="@color/gray_db" />-->
+
+    <View
+        android:id="@+id/split_line_top_1"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_below="@+id/relativelayout_1"
+        android:background="@color/gray_f2" />
+
+    <!--<View-->
+    <!--android:id="@+id/split_line_top2"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="1px"-->
+    <!--android:layout_below="@+id/split_line_top_1"-->
+    <!--android:background="@color/gray_db" />-->
+</RelativeLayout>

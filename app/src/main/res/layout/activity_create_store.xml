@@ -1,0 +1,511 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:id="@+id/line_account"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/z_round_rect_top_solid_white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="15dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@mipmap/icon_orange_shop_logo"
+                        android:drawablePadding="10dp"
+                        android:text="@string/register_shop_name"
+                        android:textColor="@color/orange_yellow_ff7d01"
+                        android:textSize="17sp" />
+
+                    <EditText
+                        android:id="@+id/edit_shop_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:hint="@string/register_shop_hint_name"
+                        android:paddingLeft="15dp"
+                        android:textColor="@color/gray_66"
+                        android:textSize="17sp" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/orange_yellow_ffbd7f" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/z_round_rect_top_solid_white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="15dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@mipmap/icon_real_name"
+                        android:drawablePadding="10dp"
+                        android:text="负责人"
+                        android:textColor="@color/orange_yellow_ff7d01"
+                        android:textSize="17sp" />
+
+                    <EditText
+                        android:id="@+id/edit_leader_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:hint="请输入负责人姓名"
+                        android:paddingLeft="15dp"
+                        android:textColor="@color/gray_66"
+                        android:textSize="17sp" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/orange_yellow_ffbd7f" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/z_round_rect_top_solid_white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="15dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@mipmap/icon_orange_phone"
+                        android:drawablePadding="10dp"
+                        android:text="手机号"
+                        android:textColor="@color/orange_yellow_ff7d01"
+                        android:textSize="17sp" />
+
+                    <EditText
+                        android:id="@+id/edit_leader_phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:hint="请输入负责人手机号"
+                        android:paddingLeft="15dp"
+                        android:textColor="@color/gray_66"
+                        android:textSize="17sp" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@color/orange_yellow_ffbd7f" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:id="@+id/line_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="15dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@mipmap/icon_orange_shop_address"
+                        android:drawablePadding="10dp"
+                        android:text="@string/register_shop_address"
+                        android:textColor="@color/orange_yellow_ff7d01"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:id="@+id/text_shop_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:drawableRight="@mipmap/ic_right_arrow_gary"
+                        android:hint="@string/register_shop_hint_address"
+                        android:textColor="@color/gray_66"
+                        android:textSize="17sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/z_round_rect_buttom_5p_solid_white"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@color/orange_yellow_ffbd7f" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="15dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@mipmap/house_number"
+                        android:drawablePadding="10dp"
+                        android:text="门牌号"
+                        android:textColor="@color/orange_yellow_ff7d01"
+                        android:textSize="17sp" />
+
+                    <EditText
+                        android:id="@+id/edit_house_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:hint="补充信息，如6号楼1008"
+                        android:paddingLeft="15dp"
+                        android:textColor="@color/gray_66"
+                        android:textSize="17sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@color/orange_yellow_ffbd7f" />
+
+
+                <LinearLayout
+                    android:id="@+id/line_shop_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/r_round_rect_solid_transparent"
+                    android:orientation="horizontal"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="15dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@mipmap/icon_orange_shop_type"
+                        android:drawablePadding="10dp"
+                        android:text="@string/register_shop_type"
+                        android:textColor="@color/orange_yellow_ff7d01"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:id="@+id/text_shop_type"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:drawableRight="@mipmap/ic_right_arrow_gary"
+                        android:hint="@string/register_shop_hint_type"
+                        android:textColor="@color/gray_66"
+                        android:textSize="17sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@color/orange_yellow_ffbd7f" />
+
+
+                <LinearLayout
+                    android:id="@+id/line_get_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/r_round_rect_solid_transparent"
+                    android:orientation="horizontal"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="15dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@mipmap/icon_orange_get_time"
+                        android:drawablePadding="10dp"
+                        android:text="@string/register_shop_get_time"
+                        android:textColor="@color/orange_yellow_ff7d01"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:id="@+id/text_shop_get_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:drawableRight="@mipmap/ic_right_arrow_gary"
+                        android:textColor="@color/gray_66"
+                        android:textSize="17sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/z_round_rect_buttom_5p_solid_white"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@color/orange_yellow_ffbd7f" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="15dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@mipmap/icon_orange_shop_invite"
+                        android:drawablePadding="10dp"
+                        android:text="@string/register_shop_invite"
+                        android:textColor="@color/orange_yellow_ff7d01"
+                        android:textSize="17sp" />
+
+                    <EditText
+                        android:id="@+id/edit_shop_invite"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:hint="@string/register_shop_hint_invite"
+                        android:paddingLeft="15dp"
+                        android:textColor="@color/gray_66"
+                        android:textSize="17sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@color/orange_yellow_ffbd7f" />
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="15dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="15dp">
+
+                    <TextView
+                        android:id="@+id/tv_shop_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@mipmap/icon_orange_shop_camera"
+                        android:drawablePadding="10dp"
+                        android:text="@string/register_shop_camera"
+                        android:textColor="@color/orange_yellow_ff7d01"
+                        android:textSize="17sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignStart="@+id/tv_shop_image"
+                        android:layout_alignEnd="@+id/tv_shop_image"
+                        android:layout_below="@+id/tv_shop_image"
+                        android:textColor="@color/gainsboro"
+                        android:gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:textSize="@dimen/low_text"
+                        android:text="门店形象照可选填"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_toRightOf="@id/tv_shop_image"
+                        android:layout_toEndOf="@+id/tv_shop_image"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginRight="25dp">
+
+                        <com.base.glide.GlideImageView
+                            android:id="@+id/img_shop_picture"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@mipmap/icon_add_camera_gray" />
+
+                        <LinearLayout
+                            android:id="@+id/line_camera_wait"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/translucent"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:visibility="gone"
+                            tools:visibility="visible">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@mipmap/icon_gray_wait" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:text="正在审核中"
+                                android:textColor="@color/white"
+                                android:textSize="16sp" />
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="20dp"
+                    android:paddingBottom="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="温馨提示："
+                        android:textColor="@color/gray_66"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:lineSpacingMultiplier="1.2"
+                        android:text="@string/register_shop_tips"
+                        android:textColor="@color/orange_yellow_ff7d01"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+                <Button
+                    android:id="@+id/register_OK"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_margin="15dp"
+                    android:background="@drawable/r_round_rect_solid_orange_ff7d01"
+                    android:text="确定添加"
+                    android:textColor="@color/white"
+                    android:textSize="18dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

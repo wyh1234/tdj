@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/gray_f5"
+    android:layout_height="match_parent">
+    <include layout="@layout/integral_toobar_layout" />
+    <TextView
+        android:id="@+id/tv_day"
+        android:layout_width="match_parent"
+        android:background="#FEF3DD"
+        android:paddingLeft="20dp"
+        android:textSize="13sp"
+        android:gravity="center_vertical"
+        android:textColor="#FE0303"
+        android:layout_height="35dp" />
+    <ImageView
+        android:layout_width="match_parent"
+        android:src="@mipmap/saoma_bg"
+        android:scaleType="centerCrop"
+        android:layout_height="89dp" />
+    <RelativeLayout
+        android:id="@+id/rl_wallet"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_height="48dp">
+        <ImageView
+            android:id="@+id/iv"
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/tqb"
+            android:layout_marginLeft="15dp"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_marginLeft="6dp"
+            android:layout_toRightOf="@+id/iv"
+            android:layout_width="wrap_content"
+            android:textSize="13sp"
+            android:text="我的淘钱包"
+            android:textColor="#000000"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:id="@+id/iv_right"
+            android:layout_width="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/right_arrow_gary"
+            android:layout_marginRight="12dp"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tv_fee"
+            android:layout_marginRight="6dp"
+            android:layout_toLeftOf="@+id/iv_right"
+            android:layout_width="wrap_content"
+            android:textSize="13sp"
+            android:textColor="#000000"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="6dp"
+        android:layout_height="60dp">
+        <Button
+            android:id="@+id/btn"
+            android:layout_width="57dp"
+            android:layout_marginRight="@dimen/dp_10"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/query_button_shap"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:text="查询"
+            android:layout_height="30dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_toLeftOf="@+id/btn"
+            android:layout_height="33dp">
+            <TextView
+                android:id="@+id/tv_star"
+                android:layout_weight="1"
+                android:textSize="13sp"
+                android:textColor="#898989"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:drawableRight="@mipmap/date"
+                android:paddingRight="5dp"
+                android:background="@drawable/date_text_shap"
+                android:layout_height="match_parent" />
+            <View
+                android:layout_width="5dp"
+                android:layout_height="match_parent"/>
+            <TextView
+                android:id="@+id/tv_end"
+                android:layout_weight="1"
+                android:textSize="13sp"
+                android:textColor="#898989"
+                android:gravity="center"
+                android:paddingRight="5dp"
+                android:background="@drawable/date_text_shap"
+                android:layout_width="match_parent"
+                android:drawableRight="@mipmap/date"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+    </RelativeLayout>
+    <LinearLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="47dp">
+        <RelativeLayout
+            android:id="@+id/rl_scannaer_fee"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/tv_scannaer_fee"
+                android:layout_width="match_parent"
+                android:layout_centerVertical="true"
+                android:text="收费扫码"
+                android:textColor="@color/blue_2898eb"
+                android:textSize="15sp"
+                android:gravity="center"
+                android:layout_height="wrap_content" />
+            <View
+                android:id="@+id/view_scannaer_fee"
+                android:layout_width="95dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/blue_2898eb"
+                android:layout_centerHorizontal="true"
+                android:layout_height="1dp"/>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/rl_self_scannaer"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/tv_self_scannaer"
+                android:layout_width="match_parent"
+                android:layout_centerVertical="true"
+                android:text="自助扫码"
+                android:textColor="@color/black_65"
+                android:textSize="15sp"
+                android:gravity="center"
+                android:layout_height="wrap_content" />
+            <View
+                android:id="@+id/view_self_scannaer"
+                android:visibility="gone"
+                android:layout_width="95dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/blue_2898eb"
+                android:layout_centerHorizontal="true"
+                android:layout_height="1dp"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_bottom"
+        android:layout_marginTop="1dp"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="83dp">
+        <RelativeLayout
+            android:id="@+id/rl"
+            android:layout_centerVertical="true"
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_money"
+            android:layout_width="wrap_content"
+            android:textColor="#666666"
+            android:textSize="14sp"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tv_count"
+            android:layout_toRightOf="@+id/tv_money"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:textColor="#666666"
+            android:textSize="14sp"
+            android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/tv_date"
+                android:layout_below="@+id/tv_money"
+                android:layout_marginTop="12dp"
+                android:layout_width="wrap_content"
+                android:textColor="#666666"
+                android:textSize="14sp"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/right_arrow_gary"
+            android:layout_marginRight="12dp"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>

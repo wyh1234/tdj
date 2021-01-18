@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/gray_db" />
+    <Button
+        android:id="@+id/login_out"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/s_round_rect_solid_orage_yellow_fea901"
+        android:text="退出登录"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+
+</LinearLayout>

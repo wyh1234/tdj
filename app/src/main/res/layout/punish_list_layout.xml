@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:background="@mipmap/bg_3x"
+        android:orientation="vertical"
+        >
+        <RelativeLayout
+            android:id="@+id/title"
+            android:layout_marginTop="24dp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+            <ImageView
+                android:id="@+id/btn_back"
+                android:layout_width="@dimen/dp_40"
+                android:src="@mipmap/back_home_one"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:layout_centerVertical="true"
+                android:layout_height="match_parent" />
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_right"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:text="缴费说明"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_below="@+id/title"
+            android:gravity="center_vertical"
+            android:paddingLeft="14dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/tv_total"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:textSize="15sp"
+                android:layout_height="wrap_content" />`
+            <TextView
+                android:layout_below="@+id/tv_total"
+                android:textSize="15sp"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+<!--    <com.androidkun.xtablayout.XTabLayout
+        android:id="@+id/wtab"
+        android:layout_width="match_parent"
+        app:xTabDisplayNum="3"
+        app:xTabBackgroundColor="#2898eb"
+        app:xTabSelectedBackgroundColor="@color/white"
+        app:xTabIndicatorColor="@color/white"
+        app:xTabIndicatorHeight="2dp"
+        app:xTabIndicatorWidth="23dp"
+        app:xTabSelectedTextColor="#2898eb"
+        app:xTabTextColor="@color/white"
+        app:xTabTextSize="15sp"
+        android:layout_height="@dimen/dp_40">
+    </com.androidkun.xtablayout.XTabLayout>-->
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#2898eb"
+        app:tabBackground="@drawable/tab_background"
+        app:tabIndicatorHeight="0dp"
+        app:tabMode="fixed"
+        app:tabPaddingBottom="2dp"
+        app:tabPaddingTop="5dp"
+        app:tabSelectedTextColor="#2898eb"
+        app:tabTextColor="@color/white" />
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/ll_item"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="40dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/tv_tab"
+                    android:textColor="@drawable/filter_textcolor_select"
+                    android:text="审核中"
+                    android:gravity="center"
+                    android:layout_centerInParent="true"
+                    android:textSize="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/count_image"
+                    android:visibility="gone"
+                    android:layout_toRightOf="@+id/tv_tab"
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="-2dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_count_red"
+                    android:gravity="center"
+                    android:text="2"
+                    android:includeFontPadding="false"
+                    android:textColor="@color/white"
+                    android:textSize="9sp" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/tv_tab1"
+            android:textColor="@drawable/filter_textcolor_select"
+            android:layout_weight="1"
+            android:text="申诉失败"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:textSize="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/count_image1"
+                    android:layout_toRightOf="@+id/tv_tab1"
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="-2dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_count_red"
+                    android:gravity="center"
+                    android:text="2"
+                    android:includeFontPadding="false"
+                    android:textColor="@color/white"
+                    android:textSize="9sp" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/tv_tab2"
+            android:layout_weight="1"
+            android:textColor="@drawable/filter_textcolor_select"
+            android:text="申诉成功"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:textSize="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/count_image2"
+                    android:visibility="gone"
+                    android:layout_toRightOf="@+id/tv_tab2"
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="-2dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_count_red"
+                    android:gravity="center"
+                    android:text="2"
+                    android:includeFontPadding="false"
+                    android:textColor="@color/white"
+                    android:textSize="9sp" />
+            </RelativeLayout>
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:background="#dddddd"
+            android:layout_height="1dp"/>
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_marginTop="7dp"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

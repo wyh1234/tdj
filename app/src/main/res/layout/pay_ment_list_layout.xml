@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/gray_f5"
+    android:layout_height="match_parent">
+    <include layout="@layout/integral_toobar_layout" />
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_below="@+id/intergral_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="30dp">
+        <TextView
+            android:id="@+id/tv_classify"
+            android:layout_width="wrap_content"
+            android:textSize="14sp"
+            android:drawablePadding="7dp"
+            android:paddingLeft="14dp"
+            android:paddingRight="14dp"
+            android:gravity="center"
+            android:drawableRight="@mipmap/sort_gray"
+            android:textColor="@color/gray_66"
+            android:text="分类"
+            android:layout_height="match_parent">
+
+        </TextView>
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_toRightOf="@+id/tv_classify"
+            android:layout_width="wrap_content"
+            android:textSize="14sp"
+            android:drawablePadding="7dp"
+            android:paddingLeft="14dp"
+            android:layout_marginLeft="2dp"
+            android:paddingRight="14dp"
+            android:gravity="center"
+            android:drawableRight="@mipmap/sort_gray"
+            android:textColor="@color/gray_66"
+            android:layout_height="match_parent">
+        </TextView>
+
+        <TextView
+            android:id="@+id/tv_money"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:textSize="14sp"
+            android:paddingRight="14dp"
+            android:gravity="center"
+            android:textColor="@color/gray_66"
+            android:layout_height="match_parent">
+        </TextView>
+    </RelativeLayout>
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl"
+        app:srlAccentColor="@android:color/white"
+        app:srlEnableRefresh="true">
+
+        <com.scwang.smartrefresh.layout.header.ClassicsHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+
+        <com.scwang.smartrefresh.layout.footer.ClassicsFooter
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_empty"
+        android:layout_below="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@mipmap/layout_empty" />
+
+    </LinearLayout>
+    
+</RelativeLayout>

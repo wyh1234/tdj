@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/ll1"
+        android:layout_width="308dp"
+        android:layout_height="45dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/z_rect_pro"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <com.base.widget.BusinessEditText
+            android:id="@+id/price"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/z_rect"
+            android:gravity="center_vertical"
+            android:inputType="numberDecimal"
+            android:maxLength="9"
+            android:paddingStart="5dp" />
+
+
+        <LinearLayout
+            android:id="@+id/ll_popup"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+            <LinearLayout
+                android:id="@+id/im_popupwindow"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="元 / "
+                    android:textColor="#999999"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/level1Unit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="斤"
+                    android:textColor="#999999"
+                    android:textSize="14sp" />
+
+                <com.base.glide.GlideImageView
+                    android:layout_width="20dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="5dp"
+                    android:src="@mipmap/bottom_arrow_gary" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll2"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_below="@+id/ll1"
+        android:layout_alignLeft="@+id/ll1"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="49dp"
+            android:layout_height="45dp"
+            android:background="@drawable/z_rect_pro"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="每"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_ll_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="箱"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="113dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/z_rect_pro"
+            android:orientation="horizontal">
+
+            <com.base.widget.BusinessEditText
+                android:id="@+id/level2Value"
+                android:layout_width="63dp"
+                android:layout_height="45dp"
+                android:background="@drawable/z_rect"
+                android:gravity="center_vertical"
+                android:inputType="numberDecimal"
+                android:maxLength="9"
+                android:paddingStart="5dp" />
+
+
+            <LinearLayout
+                android:id="@+id/im_pop"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/level2Unit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="斤" />
+
+                <com.base.glide.GlideImageView
+                    android:layout_width="20dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="5dp"
+                    android:src="@mipmap/bottom_arrow_gary" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_lv3"
+        android:layout_width="135dp"
+        android:layout_height="45dp"
+        android:layout_below="@+id/ll1"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@id/ll2"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="22dp"
+            android:layout_height="45dp"
+            android:gravity="center"
+            android:text="*"
+            android:textSize="15sp" />
+
+        <com.base.widget.BusinessEditText
+            android:id="@+id/level3Value"
+            android:layout_width="63dp"
+            android:layout_height="45dp"
+            android:background="@drawable/z_rect"
+            android:gravity="center_vertical"
+            android:inputType="numberDecimal"
+            android:maxLength="9"
+            android:paddingStart="5dp" />
+
+
+        <LinearLayout
+            android:id="@+id/im_popup"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/z_rect_pro"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/level3Unit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="斤" />
+
+            <com.base.glide.GlideImageView
+                android:layout_width="20dp"
+                android:layout_height="15dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="5dp"
+                android:src="@mipmap/bottom_arrow_gary" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll3"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_below="@+id/ll2"
+        android:layout_alignLeft="@+id/ll1"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/z_rect_pro"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="49dp"
+            android:layout_height="45dp"
+            android:gravity="center"
+            android:text="库存:"
+            android:textColor="#666666"
+            android:textSize="14sp" />
+
+        <com.base.widget.BusinessEditText
+            android:id="@+id/stock"
+            android:layout_width="130dp"
+            android:layout_height="45dp"
+            android:background="@drawable/z_rect"
+            android:digits="1234567890"
+            android:gravity="center_vertical"
+            android:inputType="phone"
+            android:maxLength="9"
+            android:paddingStart="5dp" />
+
+        <TextView
+            android:id="@+id/tv_inventory"
+            android:layout_width="49dp"
+            android:layout_height="45dp"
+            android:gravity="center"
+            android:text="斤"
+            android:textColor="#666666"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_below="@+id/ll3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/bt_cancle"
+            android:layout_width="106dp"
+            android:layout_height="45dp"
+            android:background="@color/help_button_view"
+            android:text="取消"
+            android:textColor="#ffffff"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/bt_add"
+            android:layout_width="106dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="20dp"
+            android:background="@color/blue_2898eb"
+            android:text="添加规格"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:padding="@dimen/dp_10">
+    <TextView
+        android:id="@+id/tv_item_title"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:textSize="@dimen/middle_text"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:background="@drawable/z_round_rect_solid_blue_light"/>
+    <TextView
+        android:id="@+id/tv_cancle"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="5dp"
+        android:text="x"/>
+</RelativeLayout>

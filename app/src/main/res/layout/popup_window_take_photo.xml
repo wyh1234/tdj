@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="bottom">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/gray_db" />
+
+    <TextView
+        android:id="@+id/text_camera"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+       android:gravity="center"
+        android:text="拍摄"
+        android:textSize="18sp"
+        android:textColor="@color/gray_69"
+        android:background="@drawable/r_white"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/gray_db" />
+    <TextView
+        android:id="@+id/text_album"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="从手机相册选择"
+        android:textSize="18sp"
+        android:textColor="@color/gray_69"
+        android:background="@drawable/r_white"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/gray_db" />
+    <TextView
+        android:id="@+id/text_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="取消"
+        android:textSize="18sp"
+        android:textColor="@color/gray_69"
+        android:background="@drawable/r_white"/>
+</LinearLayout>

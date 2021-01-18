@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingEnd="20dp"
+    android:paddingStart="20dp">
+
+    <LinearLayout
+        android:id="@+id/image_popup_window"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_subaccount_ppw"
+        android:orientation="vertical"
+        android:paddingEnd="20dp"
+        android:paddingStart="20dp"
+        android:paddingTop="15dp">
+
+        <TextView
+            android:id="@+id/help_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="110dp"
+            android:padding="20dp"
+            android:text="11111111111111111111111111111111111111111111111111111111111111"
+            android:textColor="@color/text_ppw_subaccount"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:paddingStart="30dp"
+            android:paddingTop="15dp"
+            android:text="请输入短信邀请码"
+            android:textColor="@color/orange_yellow_ff7e00"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/verify_code"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginStart="30dp"
+            android:background="@drawable/z_round_rect_orange_ff7d01"
+            android:paddingStart="5dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginEnd="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="30dp"
+            android:background="@color/gray_db" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:layout_marginStart="15dp"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="拒绝" />
+
+            <View
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:background="@color/gray_db" />
+
+            <TextView
+                android:id="@+id/ok"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="同意" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

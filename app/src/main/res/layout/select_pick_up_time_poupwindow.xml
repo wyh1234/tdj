@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?><!--根布局，常用作蒙层（就是变暗的背景）-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#8f000000"
+    >
+    <!--播放动画的内容，可以认为是popup的主要内容布局-->
+    <RelativeLayout
+        android:id="@+id/popup_anima"
+        android:layout_width="match_parent"
+        android:background="#ffffff"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:gravity="center"
+            android:text="选择提货时间"
+            android:textColor="#000000"
+            android:textSize="19sp"
+            android:layout_width="match_parent"
+            android:layout_height="56dp" />
+        <View
+            android:id="@+id/view"
+            android:background="#ECECEC"
+            android:layout_below="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"/>
+        <LinearLayout
+            android:id="@+id/ll_bottom"
+            android:orientation="vertical"
+            android:layout_below="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </LinearLayout>
+
+
+
+
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/z_round_raudis_3_solid_gray_db" android:state_selected="true" />
+    <item android:drawable="@drawable/z_round_raudis_3_solid_gray_db" android:state_pressed="true" />
+    <item android:drawable="@drawable/z_round_raudis_3_solid_gray_db" android:state_checked="true" />
+    <item android:drawable="@drawable/z_round_raudis_3_solid_gray_db" android:state_enabled="false" />
+    <item android:drawable="@drawable/z_round_raudis_3_solid_orageyellow_fea901" />
+
+</selector>

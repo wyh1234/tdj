@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.login.RegisterPurchaserExplainActivity"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:padding="20dp">
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="门店"
+    android:textSize="16sp"
+    android:textColor="@color/orange_yellow_ff7d01"
+    android:background="@drawable/z_rect_orange_yellow"
+    android:paddingStart="15dp"
+    android:paddingEnd="15dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/gray_69"
+        android:textSize="14sp"
+        android:layout_marginTop="10dp"
+        android:text="@string/purchaser_send_money"
+        android:lineSpacingMultiplier="1.2"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black_65"
+        android:textSize="16sp"
+        android:layout_marginTop="25dp"
+        android:text="配送费："/>
+
+    <TextView
+        android:id="@+id/text_send_money"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/gray_69"
+        android:textSize="14sp"
+        android:layout_marginTop="10dp"
+        android:text="@string/register_shop_hint_invite"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray_db"
+        android:layout_marginTop="20dp"/>
+</LinearLayout>

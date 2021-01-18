@@ -1,0 +1,656 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="cn.com.taodaji">
+    <!-- 允许程序发送SMS短信 -->
+    <uses-permission android:name="android.permission.SEND_SMS" /> <!-- 允许程序读取短信息 -->
+    <uses-permission android:name="android.permission.READ_SMS" /> <!-- 允许程序监控一个将收到短信息，记录或处理 -->
+    <uses-permission android:name="android.permission.RECEIVE_SMS" /> <!-- 打电话 -->
+    <uses-permission android:name="android.permission.CALL_PHONE" /> <!-- 照相机权限 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" /> <!-- 高德地图SDK（包含其搜索功能）需要的基础权限 -->
+    <!-- 允许程序打开网络 -->
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- 允许程序设置内置sd卡的写权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> <!-- 允许程序获取网络状态 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- 允许程序访问WiFi网络信息 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- 允许程序读写手机状态和身份 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" /> <!-- 允许程序访问CellID或WiFi热点来获取粗略的位置 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- <uses-permission android:name="android.permission.READ_LOGS" /> -->
+    <!-- 佳博打印机所需要的权限 -->
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- <uses-permission android:name="android.permission.WRITE_SETTINGS" /> -->
+    <!-- 定位权限 -->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- 通过GPS芯片接收卫星的定位信息，定位精度达10米以内 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:name=".application.MyApplication"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/tdj_logo"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:persistent="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:windowSoftInputMode="adjustPan|stateHidden"
+        tools:replace="android:icon,android:theme">
+        <activity android:name=".ui.activity.shopManagement.OneKeySearchActivity"></activity>
+        <activity android:name=".ui.activity.shopManagement.OneKeyActivity"></activity>
+        <activity android:name=".ui.activity.integral.fragment.ModifyPriceActivity"
+            android:theme="@style/TransparentWindow"/>
+        <activity android:name=".ui.activity.shopManagement.SelectMainCategoryActivity" />
+        <activity android:name=".ui.activity.shopManagement.AddMainCategoryActivity" />
+        <activity android:name=".ui.activity.shopManagement.VerifyMainCategoryActivity" />
+        <activity android:name=".ui.activity.shopManagement.SaleCategoryManagementActivity" />
+        <activity android:name=".ui.pay.PayCompleteActivity" />
+        <activity
+            android:name=".ui.activity.myself.TodayDeliverScreeningActivity"
+            android:theme="@style/TransparentWindow" />
+        <activity
+            android:name=".ui.fragment.ModifyInventoryActivity"
+            android:theme="@style/TransparentWindow" />
+        <activity android:name=".ui.activity.myself.PickupOrderDetailActivity" />
+        <activity android:name=".ui.activity.myself.FeeDetailActivity" />
+        <activity android:name=".ui.pay.BuyPackageActivity" />
+        <activity android:name=".ui.activity.myself.AutomaticRenewalActivity" />
+        <activity android:name=".ui.activity.myself.PickupDetailActivity" />
+        <activity android:name=".ui.activity.myself.PickupFeeActivity" />
+        <activity android:name=".ui.activity.myself.UsuallyProblemActivity" />
+        <activity android:name=".ui.activity.myself.PickupServiceActivity" />
+        <activity
+            android:name=".ui.activity.shopManagement.GoodsNameCustomerActivity"
+            android:theme="@style/TransparentWindow" />
+
+        <activity
+            android:name=".ui.activity.purchaseBill.PhotoViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.orderPlace.ComplainTypeActivity"
+            android:theme="@style/TransparentWindow" />
+        <activity android:name=".ui.activity.homepage.PovertyAlleviationActivity" />
+        <activity android:name=".ui.activity.orderPlace.LogisticsEvaluationActivity" />
+        <activity android:name=".ui.activity.orderPlace.LogisticsComplaintsActivity" />
+        <activity android:name=".ui.activity.orderPlace.DirverMapActivity" />
+        <activity android:name=".ui.activity.myself.ShareRewardRuleActivity" />
+        <activity android:name=".ui.activity.integral.PointsDetailActivity" />
+        <activity android:name=".ui.activity.integral.ShopVipActivity" />
+        <activity android:name=".ui.activity.integral.PointsShopRulesActivity" />
+        <activity
+            android:name=".ui.activity.login.SelectMarketOrTypeActivity"
+            android:theme="@style/TransparentWindow" />
+        <activity android:name=".ui.activity.myself.SelectDeliveryWarehouseActivity" />
+
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="2.4" /> <!-- 适配华为（huawei）刘海屏 -->
+        <meta-data
+            android:name="android.notch_support"
+            android:value="true" /> <!-- 适配小米（xiaomi）刘海屏 -->
+        <meta-data
+            android:name="notch.config"
+            android:value="portrait|landscape" />
+
+        <activity
+            android:name=".ui.activity.employeeManagement.SelecteShopActivity"
+            android:theme="@style/TransparentWindow" />
+        <activity android:name=".ui.activity.myself.ShopTypeSearchActivity" />
+        <activity
+            android:name=".ui.activity.shopManagement.CreateStoreActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden" /> <!-- Image Selector Entry -->
+        <activity
+            android:name="me.nereo.multi_image_selector.MultiImageSelectorActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity android:name=".ui.activity.employeeManagement.LicenseActivity" />
+        <activity android:name=".ui.activity.shopManagement.StoreImageActivity" />
+        <activity android:name=".ui.activity.shopManagement.ShopInformationActivity" />
+        <activity android:name=".ui.activity.employeeManagement.EidtEmployeeInfoActivity" />
+        <activity android:name=".ui.activity.myself.NoticeGetSuccessDetailActivity" />
+        <activity android:name=".ui.activity.myself.NoticeAfterSaleDetailActivity" />
+        <activity android:name=".ui.activity.myself.NoticePayDetailActivity" />
+        <activity android:name=".ui.activity.myself.NoticeWaitManageActivity" />
+        <activity android:name=".ui.activity.myself.ShareShopListActivity" />
+        <activity android:name=".ui.activity.myself.IdentityManageActivity" /> <!-- 开始页  android:theme="@style/Theme.AppStartLoadTranslucent" -->
+        <activity
+            android:name=".ui.activity.employeeManagement.PopupBottomActivity"
+            android:theme="@style/TransparentWindow" />
+        <activity android:name=".ui.activity.employeeManagement.ChainShopActivity" />
+        <activity android:name=".ui.activity.employeeManagement.AddEmployeeActivity" />
+        <activity
+            android:name=".ui.activity.employeeManagement.DialogActivity"
+            android:theme="@style/TransparentWindow" />
+        <activity
+            android:name=".ui.activity.employeeManagement.CreateHeadquartersActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity android:name=".ui.activity.employeeManagement.EmployeesManagementActivity" />
+        <activity android:name=".ui.activity.shopManagement.EditAddressManagementActivity" />
+
+        <activity android:name=".ui.activity.shopManagement.StoresManagementActivity" />
+        <activity android:name=".ui.activity.shopManagement.AddressManagementActivity" />
+        <activity
+            android:name=".ui.activity.login.XiaoQuAddressActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+
+        <activity
+            android:name=".ui.activity.tdjc.MyPickupCodeActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name=".ui.activity.tdjc.PickUpOrderActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+
+        <activity
+            android:name=".ui.activity.tdjc.MyPickupAddressActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+
+        <activity
+            android:name=".ui.activity.tdjc.SeachPickUpActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+
+
+        <activity
+            android:name=".ui.activity.tdjc.SelectPickUpActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name=".ui.activity.login.ShopAddressActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name=".ui.activity.linkPage.StartActivity"
+            android:theme="@style/Theme.AppStartLoadTranslucent">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="main"
+                    android:scheme="taodj" />
+                <!-- <data android:scheme="myapp" android:host="jp.app" android:pathPrefix="/openwith"/> -->
+            </intent-filter>
+        </activity> <!-- 引导页 -->
+        <activity
+            android:name=".ui.activity.linkPage.GuideActivity"
+            android:theme="@style/ImageTranslucentTheme" /> <!-- 登录 -->
+        <activity
+            android:name=".ui.activity.login.ChooseLoginActivity"
+            android:launchMode="singleInstance"
+            android:theme="@style/ImageTranslucentTheme" />
+        <activity
+            android:name=".ui.activity.login.LoginActivity"
+            android:theme="@style/ImageTranslucentTheme"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".ui.activity.login.SelectRegisterActivity"
+            android:theme="@style/ImageTranslucentTheme"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".ui.activity.login.LoginPurchaserActivity"
+            android:theme="@style/ImageTranslucentTheme"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+
+
+        <activity
+            android:name=".ui.activity.login.RegisterPurchaserFirstActivity"
+            android:theme="@style/ImageTranslucentTheme"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".ui.activity.login.RegisterPurchaserSecondActivity"
+            android:theme="@style/ImageTranslucentTheme"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".ui.activity.login.RegisterActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".ui.activity.penalty.PunishListActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+
+        <activity
+            android:name=".ui.activity.myself.MySelfSupYearMoney"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".ui.activity.myself.FlagshipStroeActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".ui.activity.myself.MyEquitiesActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".ui.pay.YearMoneyPayActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".ui.activity.myself.YearMoneyRenewActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".ui.activity.login.ForgetPasswordActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" /> <!-- 主页面所有页面管理器 -->
+        <activity
+            android:name=".ui.activity.homepage.ManageActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".ui.activity.integral.IntegralShopMainActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".ui.activity.integral.ShopFiltrateActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".ui.activity.integral.SubmitOrderActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".ui.activity.integral.IntegralShopPayActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".ui.activity.integral.BuyIntegralActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".ui.activity.integral.IntegralShopPaySuccessActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".ui.activity.integral.AddAddressActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".ui.activity.integral.WebViewActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".ui.activity.integral.RedactAddressActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity android:name=".ui.activity.homepage.AttractInvestmentActivity" /> <!-- 主页面商品搜索 -->
+        <activity
+            android:name=".ui.activity.homepage.SearchNewActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".ui.activity.penalty.AppealActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <activity
+
+            android:name=".ui.activity.homepage.SearchGoodsActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".ui.activity.homepage.SearchShopActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden" /> <!-- 图片上传 -->
+        <activity android:name=".ui.activity.myself.ImageUploadActivity" /> <!-- 资料修改 -->
+        <activity
+            android:name=".ui.activity.myself.DataModificationActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".ui.activity.myself.MyNameCardActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".ui.activity.penalty.PunishPayActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".ui.activity.penalty.PunishPaySuccessActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".ui.activity.penalty.AppealDetailsActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".ui.activity.orderPlace.SubmitOrderConfirmationActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".ui.activity.advertisement.CreateTfAdvManageActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".ui.activity.advertisement.SelGoodsActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".ui.activity.myself.NewDepositRefundDetailActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".ui.activity.advertisement.AdvPackageSelActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".ui.activity.scanner.ScannerFeeActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".ui.activity.scanner.ScannerFeeListActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".ui.activity.scanner.ScannerFeeListDetailsActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <activity
+            android:name=".ui.activity.myself.PaymentListActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".ui.activity.advertisement.MarketingManageMentActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".ui.activity.myself.PayManageActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity android:name=".ui.activity.shopManagement.VegetablesCategoryActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity
+            android:name=".ui.activity.advertisement.AdvOrderCommitActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".ui.activity.advertisement.AdvOrderPayDetailsActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <activity
+            android:name=".ui.activity.advertisement.TfAdvCheckDetailsActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <activity
+            android:name=".ui.activity.advertisement.TfAdvertisementManageActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <activity
+            android:name=".ui.activity.login.PhoneReBindFirstActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".ui.activity.login.PhoneReBindSecondActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity android:name=".ui.activity.login.UpdatePassWordActivity" />
+        <activity android:name=".ui.activity.myself.AboutMyselfActivity" />
+        <activity android:name=".ui.activity.myself.HelpCenterActivity" />
+        <activity android:name=".ui.activity.myself.GoodsNeedActivity" />
+        <activity android:name=".ui.activity.myself.MeaningPostActivity" />
+        <activity android:name=".ui.activity.myself.AboutTdjActivity" />
+        <activity android:name=".ui.activity.myself.GoodsReceiptAddressActivity" />
+        <activity android:name=".ui.activity.myself.GoodsReceiptAddressAddActivity" />
+        <activity android:name=".ui.activity.myself.SubAccountActivity" />
+        <activity android:name=".ui.activity.myself.SubAccountCreateActivity" />
+        <activity android:name=".ui.activity.shopManagement.ShopManagementActivity" />
+        <activity android:name=".ui.activity.shopManagement.ReleaseCommodityGoodsCreateActivity" />
+        <activity android:name=".ui.activity.shopManagement.ReleaseGoodsActivity" />
+
+        <activity android:name=".ui.activity.shopManagement.CommodityCategoryActivity" />
+        <activity android:name=".ui.activity.shopManagement.SpecificationActivity" />
+        <activity android:name=".ui.activity.shopManagement.SpecificationAddActivity" />
+        <activity android:name=".ui.activity.shopManagement.CommodityCategoryNextActivity" />
+        <activity android:name=".ui.activity.market.MarketStrollShopListActivity" />
+        <activity android:name=".ui.activity.wallet.SupplierMonthBillActivity" />
+        <activity android:name=".ui.pay.PurchaserOrderConfirmaActivity" />
+        <activity
+            android:name=".ui.activity.market.ShopDetailInformationActivity"
+            android:launchMode="singleTop" />
+        <activity android:name=".ui.activity.market.ShopDetailActivity" />
+        <activity android:name=".ui.activity.market.ShopDetailInformationSeachActivity" />
+        <activity android:name=".ui.activity.market.MarketShopMapActivity" />
+        <activity
+            android:name=".ui.activity.market.GoodsDetailActivity"
+            android:theme="@style/ImageTranslucentTheme" />
+
+        <activity
+            android:name=".ui.activity.market.ShopGoodsDetailActivity"
+            android:theme="@style/ImageTranslucentTheme" />
+        <activity android:name=".ui.activity.orderPlace.OrderDetailActivity" />
+        <activity android:name=".ui.activity.orderPlace.SubmitOrderActivity" />
+        <activity android:name=".ui.activity.orderPlace.OrderListActivity" />
+        <activity
+            android:name=".ui.pay.OrderConfirmActivity"
+            android:alwaysRetainTaskState="true" />
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop" />
+        <activity android:name=".ui.activity.orderPlace.OrderPrintBlueToothSetting" />
+        <activity android:name=".ui.activity.wallet.SupplyMoneyActivity" />
+        <activity android:name=".ui.activity.wallet.MyBankCardListActivity" />
+        <activity android:name=".ui.activity.wallet.MyBankCardAddActivity" />
+        <activity android:name=".ui.activity.wallet.MyBankCardDetailActivity" />
+        <activity android:name=".ui.activity.wallet.SupplyMoneyListActivity" />
+        <activity android:name=".ui.activity.wallet.SupplyMoneyDetailActivity" />
+        <activity android:name=".ui.activity.wallet.WithDrawalsActivity" />
+        <activity android:name=".ui.activity.orderPlace.AfterSalesCreateActivity" />
+        <activity android:name=".ui.activity.orderPlace.AfterSalesListActivity" />
+        <activity android:name=".ui.activity.orderPlace.AfterSalesDetailActivity" />
+        <activity android:name=".ui.activity.homepage.CommendActivity" />
+        <activity android:name=".ui.activity.homepage.StoreRecommendActivity" />
+        <activity android:name=".ui.activity.homepage.StoreRecommendDetailActivity" />
+        <activity android:name=".ui.activity.shopManagement.ImageUploadMoreActivity" />
+        <activity android:name=".ui.activity.shopManagement.DetailedActivity" />
+        <activity android:name=".ui.activity.myself.SelfNewsActivity" />
+        <activity android:name=".ui.activity.myself.NewsContentActivity" />
+        <activity android:name=".ui.activity.myself.SettingActivity" />
+        <activity android:name=".ui.activity.myself.SettingPurchaserActivity" />
+        <activity android:name=".ui.activity.myself.NewsListActivity" />
+        <activity android:name=".ui.activity.shopManagement.LookQualificationsActivity" />
+        <activity android:name=".ui.activity.login.AgreementActivity" />
+        <activity android:name=".ui.activity.homepage.SpecialActivitiesActivity" />
+        <activity
+            android:name="tools.loadingDownFile.ApkSaveActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/Transparent" />
+        <activity android:name=".ui.activity.myself.ShareActivity" />
+        <activity android:name=".ui.activity.wallet.AlipayAccountBindingActivity" />
+        <activity android:name=".ui.activity.wallet.RechargeMoneyActivity" />
+        <activity android:name=".ui.pay.RechargeMoneyPayActivity" />
+        <activity android:name=".ui.activity.homepage.OftenBuyActivity" />
+        <activity android:name=".ui.activity.homepage.PickFoodActivity"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity
+            android:name=".ui.activity.homepage.HomeOftenBuyActivity"
+            android:windowSoftInputMode="stateHidden|stateUnchanged" />
+        <activity android:name=".ui.activity.homepage.SpecialOfferActivity" />
+        <activity android:name=".ui.activity.homepage.ContrastPriceActivity" />
+        <activity android:name=".ui.activity.purchaseBill.MonthlyBillActivity" />
+        <activity android:name=".ui.activity.evaluate.EvaluatePurchaseActivity" />
+        <activity android:name=".ui.activity.evaluate.EvaluateAllActivity" />
+        <activity android:name=".ui.activity.evaluate.EvaluateManageActivity" />
+        <activity android:name=".ui.activity.evaluate.EvaluateSupplierReplyActivity" />
+        <activity android:name=".ui.activity.evaluate.EvaluateSupplierActivity" />
+        <activity android:name=".ui.activity.myself.PunishRuleIntroduceActivity" />
+        <activity android:name=".ui.activity.shopManagement.ReleaseGoodsHelpActivity" />
+        <activity android:name=".ui.activity.purchaseBill.PurchaseMoneyListActivity" />
+        <activity android:name=".ui.activity.purchaseBill.FiltrateTransactionActivity" />
+        <activity android:name=".ui.activity.purchaseBill.PurchaseOrderFormDetailActivity" />
+        <activity android:name=".ui.activity.purchaseBill.PurchaseOrderFormItemDetailActivity" />
+        <activity android:name=".ui.activity.purchaseBill.PurchaseRechargeDetailActivity" />
+        <activity android:name=".ui.activity.purchaseBill.PurchaseWithDepositeDetailActivity" />
+        <activity android:name=".ui.activity.purchaseBill.PurchaseAfterSaleActivity" />
+        <activity android:name=".ui.activity.cashCoupon.CashCouponActivity" />
+        <activity android:name=".ui.activity.cashCoupon.NewCashCouponActivity" />
+        <activity android:name=".ui.activity.cashCoupon.CashCouponCardPwdActivity" />
+        <activity android:name=".ui.activity.myself.QQNumberAddActivity" />
+        <activity android:name=".ui.activity.cashCoupon.CashCouponsGetActivity" />
+        <activity android:name=".ui.activity.cashCoupon.UseExplainActivity" />
+        <activity android:name=".ui.activity.cashCoupon.DistributionFeeStatementActivity" />
+        <activity android:name=".ui.activity.shopManagement.GoodsSearchReleaseActivity" />
+        <activity android:name=".ui.activity.wallet.DetailFiltrateActivity" />
+        <activity android:name=".ui.activity.ocr.RealNameAuthenticationActivity" />
+        <activity android:name=".ui.activity.ocr.RealNamePurchaserAuthenticationActivity" />
+        <activity android:name=".ui.activity.ocr.RealNameAuthenticationShowActivity" />
+        <activity android:name=".ui.activity.myself.ShippingAddressActivity" />
+        <activity android:name=".ui.activity.shopManagement.GoodsUploadDetailActivity" />
+        <activity android:name=".ui.activity.login.CityActivity" />
+        <activity android:name=".ui.activity.myself.LeagueActivity" />
+        <activity android:name=".ui.activity.evaluate.EvaluateUpdatePurchaseActivity" />
+        <activity android:name=".ui.activity.openTicket.InvoiceTitleActivity" />
+        <activity android:name=".ui.activity.homepage.AppletWebActivity" />
+        <activity android:name=".ui.activity.purchaseBill.SupplierOrderAfterSaleActivity" />
+        <activity android:name=".ui.activity.purchaseBill.SupplierOrderGetCashActivity" />
+        <activity android:name=".ui.activity.purchaseBill.SupplierOrderPaymentActivity" />
+        <activity android:name=".ui.activity.purchaseBill.SupplierOrderFormItemDetailActivity" />
+        <activity android:name=".ui.activity.myself.HelpCenterQuestionDetailSupplierActivity" />
+        <activity android:name=".ui.activity.myself.HelpCenterSupplierActivity" />
+        <activity android:name=".ui.activity.myself.HelpCenterServiceDetailSupplierActivity" />
+        <activity android:name=".ui.activity.wallet.SupplyMoneyNewListActivity" />
+        <activity android:name=".ui.activity.wallet.SupplyMoneyFilterListActivity" />
+        <activity android:name=".ui.activity.shopManagement.WholesaleExplainActivity" />
+        <activity
+            android:name=".ui.activity.login.SystemFixActivity"
+            android:launchMode="singleInstance"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".ui.activity.openTicket.TicketStatusActivity" /> <!-- 图片查看的 -->
+        <activity
+            android:name="com.base.glide.nineImageView.ImagesActivity"
+            android:theme="@style/ImagesStyle" />
+
+<!--        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="cn.com.taodaji.fileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths_public" />
+        </provider>-->
+        <!--
+                    7.0之后文件共享需要使用FileProvider的功能，uri的获取又不一样了。
+             takephoto里面已经有了，不需要在添加
+        -->
+        <!--
+                  <provider
+                  android:name="android.support.v4.content.FileProvider"
+                  android:authorities="${applicationId}.provider"
+                  android:exported="false"
+                  android:grantUriPermissions="true">
+                  <meta-data
+                      android:name="android.support.FILE_PROVIDER_PATHS"
+                      android:resource="@xml/provider_paths" />
+              </provider>
+        -->
+        <!--
+                  如果你使用的第三方库也配置了同样的FileProvider, 可以通过继承FileProvider类来解决合并冲突的问题，示例如下：
+
+              <provider
+                  android:name=".utils.BuglyFileProvider"
+                  android:authorities="${applicationId}.fileProvider"
+                  android:exported="false"
+                  android:grantUriPermissions="true"
+                  tools:replace="name,authorities,exported,grantUriPermissions">
+                  <meta-data
+                      android:name="android.support.FILE_PROVIDER_PATHS"
+                      android:resource="@xml/provider_paths"
+                      tools:replace="name,resource"/>
+              </provider>
+        -->
+        <!-- bugly -->
+  <!--      <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind" />
+        <activity
+            android:name="com.alipay.sdk.app.H5AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" />-->
+        <activity
+            android:name="com.tencent.bugly.beta.ui.BetaActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@android:style/Theme.Translucent" /> <!-- QQ分享 -->
+        <activity
+            android:name="com.umeng.qq.tencent.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent1105981855" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.umeng.qq.tencent.AssistActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" /> <!-- wechat callback -->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:theme="@style/Translucent" />
+        <activity android:name=".ui.activity.homepage.RichScanHintActivity" />
+        <activity android:name=".ui.activity.orderPlace.AfterSalesRequestActivity" />
+        <activity android:name=".ui.activity.orderPlace.AfterSalesRequestOrderActivity" /> <!-- 佳博蓝牙打印机 -->
+        <!-- <service -->
+        <!-- android:name="com.gprinter.service.GpPrintService" -->
+        <!-- android:enabled="true" -->
+        <!-- android:exported="true" -->
+        <!-- android:label="GpPrintService"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="com.gprinter.aidl.GpPrintService" /> -->
+        <!-- </intent-filter> -->
+        <!-- </service> -->
+        <!-- <service -->
+        <!-- android:name="com.gprinter.service.AllService" -->
+        <!-- android:permission="android.permission.BIND_JOB_SERVICE" /> -->
+        <!-- 自动更新 -->
+        <service android:name="tools.loadingDownFile.DownLoadService" /> <!-- sugar ORM数据库 -->
+        <meta-data
+            android:name="DATABASE"
+            android:value="com_tdj2.0.db" />
+        <meta-data
+            android:name="VERSION"
+            android:value="13" />
+        <meta-data
+            android:name="QUERY_LOG"
+            android:value="true" />
+        <meta-data
+            android:name="DOMAIN_PACKAGE_NAME"
+            android:value="cn.com.taodaji.model.sqlBean" /> <!-- 高德地图的key -->
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="4bf7ffed08aa0753b462f89d56ea2f8b" /> <!-- 友盟分享的key -->
+        <!--
+                  <meta-data
+                  android:name="UMENG_APPKEY"
+                  android:value="5a5db8a4f29d9850ca0000f8" />
+        -->
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="ying yong bao" /> <!-- 友盟推送的key -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="5a5db8a4f29d9850ca0000f8" />
+        <meta-data
+            android:name="UMENG_MESSAGE_SECRET"
+            android:value="6190a0e186168b2ca3478f821120efce" />
+
+        <activity android:name=".ui.activity.myself.TodayDeliverGoodsOrderManageActivity" />
+        <activity
+            android:name=".ui.activity.myself.SypplyNameCardActivity"
+            android:theme="@style/ImageTranslucentTheme" />
+        <activity android:name=".ui.activity.myself.SupplyCurrentSaleTypeActivity" />
+        <activity android:name=".ui.activity.myself.SupplyAskNewSaleTypeActivity" />
+        <activity
+            android:name=".ui.activity.login.RegisterSupplyFirstActivity"
+            android:theme="@style/ImageTranslucentTheme"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity android:name=".ui.activity.shopManagement.ShopWindowDeclareActivity" />
+        <activity
+            android:name=".ui.activity.login.RegisterSupplySecondActivity"
+            android:theme="@style/ImageTranslucentTheme"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity android:name=".ui.activity.myself.FavoriteActivity" />
+        <activity android:name=".ui.activity.orderPlace.OrderDetailPurActivity" />
+        <activity android:name=".ui.activity.orderPlace.OrderDetailSupActivity" />
+        <activity android:name=".ui.activity.packingCash.PackingCashCurrentActivity" />
+        <activity android:name=".ui.activity.packingCash.PackingCashHistoryActivity" />
+        <activity android:name=".ui.activity.packingCash.PackingCashProgressActivity" />
+        <activity android:name=".ui.activity.packingCash.PackingCashReturnActivity" />
+        <activity android:name=".ui.activity.purchaseBill.DepositRefundDetailActivity" />
+        <activity android:name=".ui.activity.login.PackingCashExplainActivity" />
+        <activity android:name=".ui.activity.homepage.BannerSalesWebViewActivity" />
+
+        <service android:name="com.amap.api.location.APSService" />
+
+        <activity android:name=".ui.activity.login.RegisterPurchaserShopTypeActivity" />
+        <activity android:name=".ui.activity.login.RegisterPurchaserExplainActivity" />
+    </application>
+
+</manifest>

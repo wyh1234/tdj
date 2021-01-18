@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/supplier"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.base.glide.GlideImageView
+            android:id="@+id/customerLogo"
+            android:layout_width="33dp"
+            android:layout_height="33dp"
+            android:layout_margin="5dp"
+            android:src="@drawable/head_portrait"
+            app:siv_shape_type="circle" />
+
+        <TextView
+            android:id="@+id/customerName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="********"
+            android:textColor="@color/black_63"
+            android:textSize="16sp"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"/>
+
+        <TextView
+            android:id="@+id/evaluate_time"
+            android:layout_width="wrap_content"
+            android:layout_height="33dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="15dp"
+            android:text="0000-00-00"
+            android:gravity="center_vertical"
+            android:textColor="@color/gray_69" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/evaluate_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="**********************************************************"
+        android:textColor="@color/gray_66" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingStart="10dp" />
+
+    <RelativeLayout
+        android:id="@+id/supplier_reply"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_response"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/evaluate_response_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="2017-06-17" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@id/evaluate_response_time"
+            android:text="销售商回复" />
+
+        <TextView
+            android:id="@+id/evaluate_response_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/evaluate_response_time"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black_63" />
+    </RelativeLayout>
+
+</LinearLayout>

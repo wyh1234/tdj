@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.activity.shopManagement.OneKeySearchActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:padding="5dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_shop_address_search"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="@dimen/dp_10"
+                android:background="@mipmap/search_gray"
+                android:focusable="true"
+                android:focusableInTouchMode="true" />
+
+            <EditText
+                android:id="@+id/et_shop_address"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:background="@color/transparent"
+                android:hint="输入关键字快速查找"
+                android:singleLine="true"
+                android:textSize="@dimen/middle_text" />
+
+            <ImageView
+                android:id="@+id/iv_clear_keyword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@mipmap/phone_clear"
+                android:visibility="invisible" />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tv_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/large_text"
+            android:textColor="@color/blue_2898eb"
+            android:layout_gravity="center"
+            android:text="搜索"/>
+    </LinearLayout>
+
+    <com.base.swipetoloadlayout.SwipeToLoadLayout
+        android:id="@+id/swipeToLoadLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <include
+            android:id="@id/swipe_refresh_header"
+            layout="@layout/swipe_twitter_header" />
+
+        <com.base.viewModel.adapter.MyRecyclerView
+            android:id="@+id/swipe_target"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <include
+            android:id="@id/swipe_load_more_footer"
+            layout="@layout/swipe_twitter_footer" />
+    </com.base.swipetoloadlayout.SwipeToLoadLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="@dimen/dp_10"
+            android:orientation="horizontal">
+            <CheckBox
+                android:id="@+id/cb_select_all"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:button="@null"
+                android:layout_gravity="center"
+                android:background="@drawable/blue_select_round"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="@dimen/middle_text"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="@dimen/dp_10"
+                android:text="全选"/>
+            <TextView
+                android:id="@+id/tv_total_order"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/low_text"
+                android:text="共0个"
+                android:layout_gravity="center" />
+            <View
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tv_print_all"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:background="@color/blue_2898eb"
+            android:textSize="@dimen/large_text"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:text="确认"/>
+    </LinearLayout>
+
+</LinearLayout>

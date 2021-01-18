@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/black_63"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingStart="10dp">
+
+
+    <!--style="@style/CustomCheckboxThemeRound"-->
+    <CheckBox
+        android:id="@+id/cart_checked"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:button="@null"
+        android:drawableLeft="@drawable/s_select_round"
+        android:drawablePadding="5dp"
+        android:text="全选"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/cart_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="0.0"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@id/cart_price"
+            android:text="总计:"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/cart_price"
+            android:text="元"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cart_price"
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:id="@+id/textView_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:text="(共"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/count_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_toEndOf="@+id/textView_1"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_toEndOf="@+id/count_image"
+                android:ellipsize="marquee"
+                android:singleLine="true"
+                android:text="件商品不含配送费和押金)"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/cart_pay"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@drawable/r_orange_ff7d01"
+        android:gravity="center_vertical"
+        android:paddingEnd="15dp"
+        android:paddingStart="15dp"
+        android:text="去结算"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+</LinearLayout>

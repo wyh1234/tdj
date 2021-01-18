@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/more_grid_linear"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="0dp"
+    android:orientation="vertical">
+
+    <GridView
+        android:id="@+id/more_grid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:minHeight="0dp"
+        android:stretchMode="columnWidth" />
+</LinearLayout>

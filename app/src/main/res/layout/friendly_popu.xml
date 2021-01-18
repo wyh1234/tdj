@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?><!--根布局，常用作蒙层（就是变暗的背景）-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#8f000000"
+    >
+    <!--播放动画的内容，可以认为是popup的主要内容布局-->
+    <RelativeLayout
+        android:id="@+id/popup_anima"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_centerInParent="true"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:background="@drawable/del_address_popu_bg"
+            android:layout_height="250dp">
+
+            <TextView
+                android:id="@+id/tv1"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/black_63"
+                android:textSize="18sp"
+                android:text="温馨提示"
+                android:layout_marginTop="20dp"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_below="@+id/tv1"
+                android:layout_marginTop="40dp"
+                android:textColor="@color/black_63"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:lineSpacingExtra="10dp"
+                android:text="当前订单为纯积分购买的商品,一旦下单购买订单将无法被取消,请谨慎操作！"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <RelativeLayout
+                android:id="@+id/tv"
+                android:layout_below="@+id/rl"
+                android:layout_width="match_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="30dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_cancle"
+                    android:layout_width="80dp"
+                    android:text="取消"
+                    android:textColor="#ff3333"
+                    android:background="@drawable/del_address_shap"
+                    android:textSize="12sp"
+                    android:gravity="center"
+                    android:layout_height="40dp" />
+
+
+                <TextView
+                    android:id="@+id/tv_ok"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="80dp"
+                    android:text="确定"
+                    android:background="@drawable/del_address_shap_one"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:gravity="center"
+                    android:layout_height="40dp" />
+
+
+            </RelativeLayout>
+
+
+
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

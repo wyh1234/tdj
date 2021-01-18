@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:id="@+id/popup_window_context"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/z_round_rect_solid_white"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end">
+
+            <Button
+                android:id="@+id/popupWindow_close"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@mipmap/close_circle" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="说明：为该店铺当前状态的设置。" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="使用：点击按钮，切换店铺状态" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="状态一：营业中，属于店铺正常接单状态。" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="状态二：暂停营业，表明店铺今日不营业。" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="状态三：歇业中，表明店铺违反淘大集平台规定，接受处分中。" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/gray_db" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="当前状态：" />
+
+            <TextView
+                android:id="@+id/shop_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="歇业一周"
+                android:textColor="@color/blue_2898eb" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/date_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="（2016-10-20 13：00" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="——" />
+
+            <TextView
+                android:id="@+id/date_end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2016-10-27 13：00）" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/state_remark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:text="原因：违反公平交易原则" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/business"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/s_round_rect_solid_green"
+                android:text="营业中"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/rest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/r_round_rect_solid_orange_ff7d01"
+                android:text="暂停营业"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="经办人："
+            android:textColor="@color/s_gray69_orage_ff7401" />
+
+        <TextView
+            android:id="@+id/handle_operator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="系统"
+            android:textColor="@color/s_gray69_orage_ff7401" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/create_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="2016-12-25 12:36"
+        android:textColor="@color/s_gray69_orage_ff7401" />
+
+    <TextView
+        android:id="@+id/handle_info"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_height="wrap_content"
+        android:text="换货成功，换货金额100元"
+        android:textColor="@color/s_gray69_orage_ff7401" />
+
+
+</LinearLayout>

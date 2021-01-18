@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="15dp"
+        android:paddingStart="10dp"
+        android:paddingTop="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="支付金额 " />
+
+        <TextView
+            android:id="@+id/money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" 元" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/pay_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/gray_db" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@color/gray_f2" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/gray_db" />
+
+        <RelativeLayout
+            android:id="@+id/alipay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.base.glide.GlideImageView
+                android:id="@+id/alipay_logo"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_margin="15dp"
+                android:src="@mipmap/alipay" />
+
+            <TextView
+                android:id="@+id/alipay_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/alipay_logo"
+                android:layout_marginTop="5dp"
+                android:layout_toEndOf="@+id/alipay_logo"
+                android:text="支付宝支付" />
+
+            <TextView
+                android:id="@+id/alipay_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/alipay_name"
+                android:layout_marginTop="5dp"
+                android:layout_toEndOf="@+id/alipay_logo"
+                android:text="推荐安装支付宝5.0及以上版本的用户使用" />
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/alipay_hb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.base.glide.GlideImageView
+                android:id="@+id/alipay_logo_hb"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_margin="15dp"
+                android:src="@mipmap/huabei" />
+
+            <TextView
+                android:id="@+id/alipay_name_hb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/alipay_logo_hb"
+                android:layout_marginTop="5dp"
+                android:layout_toEndOf="@+id/alipay_logo_hb"
+                android:text="花呗支付" />
+
+            <TextView
+                android:id="@+id/alipay_description_hb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/alipay_name_hb"
+                android:layout_marginTop="5dp"
+                android:layout_toEndOf="@+id/alipay_logo_hb"
+                android:text="推荐使用支付宝5.0以上版本" />
+
+   <!--         <com.base.glide.GlideImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/s_select_round" />-->
+        </RelativeLayout>
+
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/gray_db" />
+
+        <RelativeLayout
+            android:id="@+id/wxpay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.base.glide.GlideImageView
+                android:id="@+id/wxpay_logo"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_margin="15dp"
+                android:src="@mipmap/wxpay" />
+
+            <TextView
+                android:id="@+id/wxpay_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/wxpay_logo"
+                android:layout_marginTop="5dp"
+                android:layout_toEndOf="@+id/wxpay_logo"
+                android:text="微信支付" />
+
+            <TextView
+                android:id="@+id/wxpay_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/wxpay_name"
+                android:layout_marginTop="5dp"
+                android:layout_toEndOf="@+id/wxpay_logo"
+                android:text="推荐安装微信5.0及以上版本的用户使用" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/gray_db" />
+
+        <RelativeLayout
+            android:id="@+id/tdj"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.base.glide.GlideImageView
+                android:id="@+id/tdj_logo"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_margin="15dp"
+                android:src="@mipmap/tdj_logo" />
+
+            <TextView
+                android:id="@+id/tdj_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/tdj_logo"
+                android:layout_marginTop="5dp"
+                android:layout_toEndOf="@+id/tdj_logo"
+                android:text="第三方支付" />
+
+            <TextView
+                android:id="@+id/tdj_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tdj_name"
+                android:layout_marginTop="5dp"
+                android:layout_toEndOf="@+id/tdj_logo"
+                android:text="" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/gray_db" />
+    </LinearLayout>
+</LinearLayout>

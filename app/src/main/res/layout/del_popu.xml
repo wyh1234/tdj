@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?><!--根布局，常用作蒙层（就是变暗的背景）-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#8f000000"
+    >
+    <!--播放动画的内容，可以认为是popup的主要内容布局-->
+    <RelativeLayout
+        android:id="@+id/popup_anima"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_centerInParent="true"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/del_address_popu_bg"
+            android:layout_height="200dp">
+                <TextView
+                    android:id="@+id/tv_del"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="50dp"
+                    android:textColor="@color/black_63"
+                    android:textSize="18sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+            <RelativeLayout
+                android:id="@+id/tv"
+                android:layout_below="@+id/rl"
+                android:layout_width="match_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="50dp"
+                android:layout_marginLeft="60dp"
+                android:layout_marginRight="60dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_cancle"
+                    android:layout_width="80dp"
+                    android:text="取消"
+                    android:textColor="#ff3333"
+                    android:background="@drawable/del_address_shap"
+                    android:textSize="12sp"
+                    android:gravity="center"
+                    android:layout_height="40dp" />
+
+
+                <TextView
+                    android:id="@+id/tv_ok"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="80dp"
+                    android:text="确定"
+                    android:background="@drawable/del_address_shap_one"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:gravity="center"
+                    android:layout_height="40dp" />
+
+
+            </RelativeLayout>
+
+
+
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?><!--根布局，常用作蒙层（就是变暗的背景）-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#8f000000">
+    <!--播放动画的内容，可以认为是popup的主要内容布局-->
+    <RelativeLayout
+        android:id="@+id/popup_anima"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="280dp"
+            android:layout_height="260dp"
+            android:layout_centerInParent="true"
+            >
+            <RelativeLayout
+                android:id="@+id/rl"
+                android:background="@mipmap/notify_bg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/tv"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="70dp"
+
+                    android:text="请联系您的区域负责人申请试用"
+                    android:textColor="#9c9c9c"
+                    android:gravity="center"
+                    android:textSize="12sp"
+                    android:layout_height="wrap_content" />
+                <Button
+                    android:id="@+id/btn"
+                    android:layout_below="@+id/tv"
+                    android:textSize="13sp"
+                    android:background="@drawable/notify_btn_shap"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:text="我知道了"
+                    android:layout_width="120dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_height="50dp" />
+         
+            </RelativeLayout>
+
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

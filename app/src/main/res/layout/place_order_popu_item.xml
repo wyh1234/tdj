@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?><!--根布局，常用作蒙层（就是变暗的背景）-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#8f000000"
+    >
+    <!--播放动画的内容，可以认为是popup的主要内容布局-->
+    <RelativeLayout
+        android:id="@+id/popup_anima"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_centerInParent="true"
+            android:layout_width="280dp"
+            android:layout_marginTop="150dp"
+            android:layout_marginBottom="150dp"
+            android:background="#ffffff"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/tv"
+                android:layout_width="match_parent"
+                android:text="商品备注信息确认"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:textSize="18dp"
+                android:layout_height="wrap_content" />
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/list_reamk"
+                android:layout_below="@+id/tv"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="80dp"
+                android:layout_height="wrap_content">
+            </android.support.v7.widget.RecyclerView>
+            <RelativeLayout
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/tv_total"
+                    android:layout_width="match_parent"
+                    android:text="共备注商品3个"
+                    android:layout_marginRight="15dp"
+
+                    android:gravity="right"
+                    android:layout_height="wrap_content" />
+                <RelativeLayout
+                    android:layout_below="@+id/tv_total"
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/tv_cnnal"
+                        android:layout_width="100dp"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:background="@color/recharge"
+                        android:text="取消"
+                        android:layout_height="30dp" />
+                    <TextView
+                        android:id="@+id/tv_btn"
+                        android:layout_toRightOf="@+id/tv_cnnal"
+                        android:layout_width="100dp"
+                        android:layout_marginLeft="50dp"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:background="@color/recharge"
+                        android:text="确定"
+                        android:layout_height="30dp" />
+                </RelativeLayout>
+                </RelativeLayout>
+
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,221 @@
+apply plugin: 'com.android.application'
+//apply plugin: 'android-apt'
+// 依赖插件脚本
+apply from: 'tinker-support.gradle'
+
+android {
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    aaptOptions.cruncherEnabled = false
+    aaptOptions.useNewCruncher = false
+
+
+    compileSdkVersion 27
+    buildToolsVersion '28.0.3'
+
+
+    defaultConfig {
+        applicationId "cn.com.taodaji"
+        minSdkVersion 19
+        targetSdkVersion 27
+        versionCode 202101014
+        versionName "3.7.4"
+        multiDexEnabled true
+
+
+
+        externalNativeBuild {
+            cmake {
+                cppFlags "-frtti -fexceptions"
+                arguments "-DANDROID_ARM_NEON=TRUE"
+            }
+        }
+        ndk {
+            //设置支持的SO库架构
+            abiFilters 'x86', 'armeabi-v7a', 'x86_64', 'arm64-v8a'
+        }
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+    externalNativeBuild {
+        cmake {
+            path "CMakeLists.txt"
+        }
+    }
+    // 签名配置
+    signingConfigs {
+        release {
+            try {
+                storeFile file("./keystore/taodaji.keystore")
+                storePassword "Aa123456"
+                keyAlias "taodaji.keystore"
+                keyPassword "Aa123456"
+            } catch (ex) {
+                throw new InvalidUserDataException(ex.toString())
+            }
+        }
+
+        debug {
+            storeFile file("./keystore/debug.keystore")
+//            keyAlias 'taodaji.keystore'
+//            keyPassword 'Aa123456'
+//            storeFile file('./keystore/taodaji.keystore')
+//            storePassword 'Aa123456'
+        }
+    }
+    buildTypes {
+        debug {
+            buildConfigField "String", "ENVIRONMENT", "\"test\""
+            debuggable true
+            minifyEnabled false
+            signingConfig signingConfigs.debug
+        }
+        release {
+            buildConfigField "String", "ENVIRONMENT", "\"real\""
+            //minifyEnabled true//混淆打包
+            // shrinkResources true//去掉不用资源
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    sourceSets {
+        main {
+            res.srcDirs = ['src/main/res', 'src/main/res/anim']
+//            jniLibs.srcDirs = ['libs']
+        }
+    }
+    productFlavors {
+    }
+}
+
+/**   依赖冲突
+ http://www.paincker.com/gradle-dependencies*/
+
+
+configurations.all {
+    resolutionStrategy {
+        //force强制设置某个模块的版本。
+        force 'com.android.support:support-annotations:27.0.1'
+    }
+}
+dependencies {
+
+    //Local Unit Tests单元测试  在jvm中只对java代码测试，android代码无法使用
+
+    //Instrumented Unit Tests 可以直接测试Android SDK的API
+    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
+    testImplementation 'junit:junit:4.12'
+
+    //use espresso,UI testing with Espresso, single app
+
+    //Espresso非常适合用于单页面测试
+
+    //noinspection GradleCompatible
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test:rules:1.0.2'
+    androidTestImplementation 'org.hamcrest:hamcrest-library:1.3'
+    androidTestImplementation 'org.mockito:mockito-core:1.10.19'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-intents:3.0.2'
+
+    //Espresso的IdlingResource异步接口依赖：
+    androidTestImplementation 'com.android.support.test.espresso:espresso-idling-resource:3.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-web:3.0.2'
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:3.0.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    androidTestImplementation('com.android.support.test.espresso:espresso-contrib:3.0.2') {
+        transitive false
+    }
+
+    //use uiautomator,UI testing with UI Automator, crossing app. 这个需要 minSDK >= 18，如果不需要和其他app交互，可以注释该行
+
+    //UIAutomator比较适合多页面或跨应用的功能测试。
+    androidTestImplementation 'com.android.support.test.uiautomator:uiautomator-v18:2.1.3'
+    androidTestImplementation 'org.hamcrest:hamcrest-integration:1.3'
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+
+    //    debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.3'
+
+    //    releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.3'
+
+    //高德2D地图,加定位
+    implementation files('libs/AMap2DMap_5.2.0_AMapSearch_6.5.0_AMapLocation_4.5.0_20190121.jar')
+
+    //sugar数据库操作框架
+    implementation 'com.github.satyan:sugar:1.5'
+
+    //支付宝支付sdk
+//    implementation files('libs/alipaySdk-20161222.jar')
+
+    //微信支付sdk
+    implementation 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:+'
+
+    //佳博蓝牙打印机sdk
+
+    //    implementation files('libs/gprintersdkv22.jar')
+
+    //    implementation files('libs/xUtils-2.6.14.jar')
+
+    //    implementation files('libs/jcc-bate-0.7.3.jar')
+
+    //佳博蓝牙打印机依赖的包
+
+    //    implementation files('libs/ksoap2-android-assembly-2.6.5-jar-with-dependencies.jar')
+
+    //    compileOnly 'org.projectlombok:lombok:1.16.20'
+
+    //    annotationProcessor "org.projectlombok:lombok:1.16.20"
+
+    //    implementation 'com.zyinux:specialstring:1.0.3'
+    implementation 'com.contrarywind:Android-PickerView:4.1.8'
+
+    //友盟分享的集成sdk
+    implementation files('libs/umeng-common-2.1.0.jar')
+    implementation files('libs/SocialSDK_QQ_Simplify.jar')
+    implementation files('libs/SocialSDK_Sina_Simplify.jar')
+    implementation files('libs/SocialSDK_WeChat_Simplify.jar')
+    implementation files('libs/SocialSDK_WeiXin_Full.jar')
+    implementation files('libs/umeng_social_api.jar')
+    implementation files('libs/umeng_social_net.jar')
+    implementation files('libs/umeng_social_tool.jar')
+    implementation files('libs/umeng_shareboard_widget.jar')
+    implementation files('libs/umeng_social_shareboard.jar')
+    implementation files('libs/umeng_social_shareview.jar')
+    api project(':base')
+    api project(':PushSDK')
+    api project(':ocr_ui')
+    api project(':ShortcutBadger')
+    api project(':zxinglibrary')
+    implementation 'com.apkfuns.logutils:library:1.5.1.1'
+    implementation 'com.github.razerdp:BasePopup:1.9.4'
+    implementation 'com.bigkoo:convenientbanner:2.0.5'
+    implementation 'com.jakewharton:butterknife:8.2.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.2.1'
+    implementation 'com.scwang.smartrefresh:SmartRefreshHeader:1.0.4-7'
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.3'
+    implementation files('libs/umeng-analytics-8.1.1.jar')
+    implementation 'com.github.tbruyelle:rxpermissions:0.10.2'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    implementation files('libs/tbs_sdk_thirdapp_v3.6.0.1310_43612_sharewithdownload_withoutGame_obfs_20180706_163319.jar')
+    implementation 'com.github.ForgetAll:LoadingDialog:v1.0.1'
+    implementation 'com.google.code.gson:gson:2.8.4'
+    implementation files('libs/gprintersdkv1.jar')
+    implementation 'com.zhihu.android:matisse:0.5.2-beta2'
+    implementation 'liji.library.dev:citypickerview:5.1.0'
+    implementation (name: 'alipaySdk-15.6.8-20191021122455-noUtdid', ext: 'aar')
+    implementation 'com.github.princekin-f:EasyFloat:1.3.4'
+    compile 'com.liyi.view:image-viewer:2.0.4'
+}

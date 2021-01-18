@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.bigkoo.convenientbanner.ConvenientBanner
+            android:id="@+id/banner"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="#ffffff"
+            app:canLoop="true" />
+
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/function_buttons"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/store_list"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_height="match_parent" />
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/ll_bg"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:layout_height="72dp">
+        <ImageView
+            android:id="@+id/image_one"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <View
+            android:layout_width="15dp"
+            android:layout_height="match_parent"/>
+        <ImageView
+            android:id="@+id/image_two"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <View
+            android:layout_width="15dp"
+            android:layout_height="match_parent"/>
+        <ImageView
+            android:id="@+id/image_three"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <View
+            android:layout_width="15dp"
+            android:layout_height="match_parent"/>
+        <ImageView
+            android:id="@+id/image_four"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_height="55dp">
+        <LinearLayout
+            android:background="@mipmap/juxing_bg"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:gravity="center_horizontal|bottom"
+                android:layout_height="30dp">
+                <TextView
+                    android:text="今日爆品"
+                    android:textColor="@color/red_dark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="25dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="0dp"
+                    android:background="@mipmap/jingxi_bg"
+                    android:gravity="center"
+                    android:text="惊喜不断"
+                    android:textColor="@color/white"
+                    android:textSize="10sp" />
+                <View
+                    android:layout_width="15dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/red_dark"
+                    android:layout_height="2dp"/>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_bxs_one"
+            android:layout_weight="1"
+            android:background="@mipmap/juxing_bg"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:gravity="bottom"
+                android:layout_height="30dp">
+
+                <TextView
+                    android:id="@+id/tv_name_type"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:textColor="@color/black" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="25dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="本地菜"
+                    android:textColor="@color/gray_66"
+                    android:textSize="10sp" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:src="@mipmap/te_bg"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_bxs"
+            android:layout_weight="1"
+            android:background="@mipmap/juxing_bg"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <RelativeLayout
+
+            android:gravity="bottom"
+            android:layout_width="match_parent"
+            android:layout_height="30dp">
+            <TextView
+                android:text="扶贫馆"
+                android:layout_marginLeft="15dp"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="20dp">
+                <TextView
+                    android:text="精准扶贫"
+                    android:textColor="@color/gray_66"
+                    android:textSize="10sp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:src="@mipmap/fp_bg"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/hy_ll"
+            android:background="@mipmap/juxing_bg"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="30dp">
+            <FrameLayout
+                android:layout_width="60dp"
+                android:layout_marginLeft="15dp"
+                android:layout_height="match_parent">
+                <TextView
+                    android:text="本地服务"
+                    android:textColor="@color/black"
+                    android:layout_gravity="bottom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/inforeadedcount_tv"
+                    android:background="@drawable/inforeadedcount_tv_bg"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:textSize="9sp"
+                    android:textColor="@color/white"
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content" />
+            </FrameLayout>
+        </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="20dp">
+                <FrameLayout
+                    android:layout_width="75dp"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="通知  信息"
+                        android:textColor="@color/gray_66"
+                        android:textSize="10sp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </FrameLayout>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:src="@mipmap/hotel2x"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:background="@color/home_e9"
+        android:layout_height="1dp"/>
+
+    <tools.extend.MyRecyclerViews
+        android:id="@+id/swipe_target"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_height="40dp">
+        <RelativeLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_centerInParent="true"
+                android:text="促销活动"
+                android:textColor="@color/red_dark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <View
+                android:layout_width="15dp"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:background="@color/red_dark"
+                android:layout_height="2dp"/>
+        </RelativeLayout>
+        <View
+            android:layout_width="1dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_height="match_parent"/>
+        <RelativeLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:textColor="@color/black"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+        <View
+            android:layout_width="1dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_height="match_parent"/>
+        <RelativeLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:textColor="@color/black"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:background="@color/home_e9"
+        android:layout_height="1dp"/>
+
+
+</LinearLayout>

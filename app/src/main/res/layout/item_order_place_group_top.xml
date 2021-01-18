@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/gray_f2" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/purchaser"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="酒店名称："
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/order_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="123456" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/supplier"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <com.base.glide.GlideImageView
+                android:id="@+id/customerLogo"
+                android:layout_width="40dp"
+                android:layout_height="45dp"
+                android:layout_margin="5dp"
+                app:siv_shape_type="circle" />
+
+            <TextView
+                android:id="@+id/customerName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:text="123456"
+                android:textColor="@color/black_63"
+                android:textSize="16sp" />
+            <TextView
+                android:id="@+id/tv_shipping_line_code"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:textColor="@color/black_63"
+                android:layout_height="wrap_content"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_c"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <com.base.glide.GlideImageView
+                android:id="@+id/c_Logo"
+                android:layout_width="40dp"
+                android:layout_height="45dp"
+                android:layout_margin="5dp"
+                android:visibility="gone"
+                app:siv_shape_type="circle" />
+
+            <TextView
+                android:id="@+id/cName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:text="123456"
+                android:textColor="@color/black_63"
+                android:textSize="16sp" />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/order_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingEnd="10dp"
+            android:text="待收货"
+            android:textColor="@color/red_ff0700" />
+    </LinearLayout>
+</LinearLayout>

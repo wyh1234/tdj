@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:addStatesFromChildren="true"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_image_bg"
+        android:background="@drawable/bug_itegral_list_shap_sel"
+        android:layout_width="90dp"
+        android:gravity="center"
+        android:layout_marginTop="15dp"
+        android:layout_height="60dp">
+
+        <RelativeLayout
+            android:id="@+id/rl"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_num"
+            android:layout_width="wrap_content"
+            android:text="2000"
+            android:textColor="#F32F31"
+            android:textSize="@dimen/sp_16"
+            android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/tv_jf"
+                android:layout_toRightOf="@+id/tv_num"
+                android:layout_width="wrap_content"
+                android:text="积分"
+                android:textColor="#F32F31"
+                android:layout_marginTop="3dp"
+                android:textSize="@dimen/sp_12"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_below="@+id/rl"
+            android:layout_marginTop="5dp"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv1"
+                android:layout_width="wrap_content"
+                android:text="售价"
+                android:textColor="#F32F31"
+                android:textSize="9sp"
+                android:layout_marginTop="3dp"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/tv_money"
+                android:layout_toRightOf="@+id/tv1"
+                android:layout_width="wrap_content"
+                android:text="2000"
+                android:textColor="#F32F31"
+
+                android:textSize="@dimen/sp_12"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

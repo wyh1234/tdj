@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 内部颜色 -->
+    <solid android:color="#FC9437" />
+    <!-- 圆角的幅度 -->
+    <corners
+        android:radius="9dp" />
+    <padding android:left="6dp" android:right="6dp"/>
+</shape>

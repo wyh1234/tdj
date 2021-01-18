@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.base.swipetoloadlayout.SwipeToLoadLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/swipeToLoadLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@id/swipe_refresh_header"
+        layout="@layout/swipe_twitter_header" />
+
+    <LinearLayout
+        android:id="@id/swipe_target"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" />
+
+
+    <include
+        android:id="@id/swipe_load_more_footer"
+        layout="@layout/swipe_twitter_footer" />
+</com.base.swipetoloadlayout.SwipeToLoadLayout>

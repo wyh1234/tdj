@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_f2"
+    android:orientation="vertical">
+
+
+    <FrameLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="155dp"
+        android:background="@color/blue_2898eb">
+
+        <TextView
+            android:id="@+id/money_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:paddingStart="16dp"
+            android:text="供货款"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/supplier_money"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="0.00"
+            android:textColor="@color/white"
+            android:textSize="35sp" />
+    </FrameLayout>
+
+
+    <LinearLayout
+        android:id="@+id/purchaser_hide"
+        android:layout_width="match_parent"
+        android:layout_height="67.5dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/withdrawalMoney_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:text="可提现货款"
+                android:textColor="@color/gray_69" />
+
+            <TextView
+                android:id="@+id/withdrawalMoney"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="0.00元"
+                android:textColor="@color/gray_66"
+                android:textSize="17sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:background="@color/gray_db" />
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/freezeMoney_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="冻结货款"
+                android:textSize="14sp"
+                android:textColor="@color/gray_69" />
+
+            <TextView
+                android:id="@+id/freezeMoney"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="0.00元"
+                android:textColor="@color/gray_66"
+                android:textSize="17sp" />
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+    <include
+        layout="@layout/t_split_line"
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+    <LinearLayout
+        android:id="@+id/tx_balance"
+        android:layout_width="match_parent"
+        android:layout_height="42.5dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingEnd="16dp"
+        android:paddingStart="16dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableLeft="@mipmap/pickup_wallet"
+            android:text="淘钱包余额" />
+
+        <TextView
+            android:id="@+id/tx_tqb"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textAlignment="textEnd"
+            android:text="" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="元"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/my_bankCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include
+            layout="@layout/t_split_line"
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="42.5dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingEnd="16dp"
+            android:paddingStart="16dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="我的提现账户"
+                android:drawableLeft="@mipmap/bankcard"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:text="添加"
+                android:textColor="@color/blue_2898eb" />
+
+            <com.base.glide.GlideImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@mipmap/right_arrow_gary" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <include
+        layout="@layout/t_split_line"
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/gray_db" />
+
+    <LinearLayout
+        android:id="@+id/tx_Ok"
+        android:layout_width="match_parent"
+        android:layout_height="42.5dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingEnd="16dp"
+        android:paddingStart="16dp">
+
+        <TextView
+            android:id="@+id/tx_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableLeft="@mipmap/tx"
+            android:text="提现" />
+
+
+        <com.base.glide.GlideImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@mipmap/right_arrow_gary" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/gray_db" />
+
+    <TextView
+        android:id="@+id/title_help"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="供货款冻结7天后可提现"
+        android:textColor="@color/gray_69"
+        android:textSize="12sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/gray_db" />
+
+
+    <Button
+        android:id="@+id/btn_add_cash"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/r_round_rect_solid_orange_ff7d01"
+        android:text="我要充值"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        android:visibility="gone"/>
+
+</LinearLayout>

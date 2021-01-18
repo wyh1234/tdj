@@ -1,0 +1,161 @@
+<resources>
+
+    <!-- Base application  Theme.AppCompat.NoActionBar  -->
+    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
+        <!-- Customize your theme here. -->
+        <!--colorPrimary 对应ActionBar的颜色。-->
+        <!--colorPrimaryDark对应通知栏的颜色-->
+        <!--colorAccent 对应EditText编辑时、RadioButton选中、CheckBox等选中时的颜色。-->
+        <item name="colorPrimary">@color/orange_yellow_ff7d01</item>
+        <item name="colorPrimaryDark">@color/orange_yellow_ff7d01</item>
+        <item name="colorAccent">@color/orange_yellow_ff7d01</item>
+        <item name="android:colorBackground">@color/white</item>
+        <item name="android:textColor">@color/gray_66</item>
+        <item name="android:editTextColor">@color/black_65</item>
+        <item name="android:textColorHint">@color/bg_color_hint_theme</item>
+
+        <item name="toolbarStyle">@style/CustomerToolbar</item>
+        <item name="android:dropDownListViewStyle">@style/dropDownStyle</item>
+        <item name="android:checkboxStyle">@style/CustomCheckboxTheme</item>
+        <item name="android:radioButtonStyle">@style/CustomRadioButtonTheme</item>
+
+    </style>
+
+
+    <!-- Checkbox 样式主题-->
+    <style name="CustomCheckboxTheme" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/s_checkbox</item>
+        <item name="android:textColor">@color/s_gray66_orage_yellow_ff7d01</item>
+        <item name="android:paddingStart">5dp</item>
+    </style>
+    <!-- Checkbox 样式主题-->
+    <style name="CustomCheckboxThemeRound" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:background">@drawable/s_select_round</item>
+        <item name="android:paddingStart">5dp</item>
+    </style>
+    <!-- RadioButton 样式主题-->
+    <style name="CustomRadioButtonTheme" parent="@android:style/Widget.CompoundButton.RadioButton">
+        <item name="android:button">@drawable/s_radio_button</item>
+        <item name="android:textColor">@color/s_gray66_orage_yellow_ff7d01</item>
+        <item name="android:paddingStart">5dp</item>
+    </style>
+
+    <!-- ratingBar 样式主题-->
+    <style name="myRatingBarStyle" parent="android:Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/ratingbar</item>
+        <item name="android:minHeight">20dp</item>
+        <item name="android:maxHeight">50dp</item>
+    </style>
+
+    <!-- 首页底部标签栏. -->
+    <style name="BottomNavigationView">
+        <item name="android:addStatesFromChildren">true</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:gravity">bottom|center_horizontal</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <!--解决开始页，黑白屏问题-->
+    <style name="Theme.AppStartLoadTranslucent" parent="ImageTranslucentTheme">
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowDisablePreview">true</item>
+        <item name="android:windowNoTitle">true</item>
+
+    </style>
+    <!--    这个主题可以把toolbar和背景图片和通知栏融为一体
+    但toolbar,根布局颜色设置与标题布局的颜色一致，并将内容布局设置为白色；
+    -->
+    <style name="ImageTranslucentTheme" parent="AppTheme" />
+    <!--背景全透明-->
+    <style name="Transparent" parent="AppTheme">
+        <!--<item name="android:windowDisablePreview">true</item>-->
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+    <!--背景半透明-->
+    <style name="Translucent" parent="AppTheme">
+        <!--<item name="android:windowDisablePreview">true</item>-->
+        <item name="android:windowBackground">@color/translucent</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+    　　　
+    <!-- PopupWindow 动画 样式 -->
+    <style name="AnimBottomPopupWindow" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/translate_bottom_in</item>
+        <item name="android:windowExitAnimation">@anim/translate_bottom_out</item>
+    </style>
+
+    <!--  流式布局-->
+    <declare-styleable name="FluidLayout">
+        <attr name="gravity">
+            <flag name="top" value="0x30" />
+            <flag name="bottom" value="0x50" />
+            <flag name="center" value="0x11" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="FluidLayout_Layout">
+        <attr name="layout_gravity">
+            <flag name="top" value="0x30" />
+            <flag name="bottom" value="0x50" />
+            <flag name="center" value="0x11" />
+        </attr>
+    </declare-styleable>
+
+    <!-- 解决自定义toolbar不能居中的问题 -->
+    <style name="CustomerToolbar" parent="Widget.AppCompat.Toolbar">
+        <item name="contentInsetStart">16dp</item>
+        <item name="contentInsetEnd">16dp</item>
+    </style>
+
+    <!--toolbar的弹层颜色和位置-->
+    <style name="ToolbarPopupTheme" parent="@style/ThemeOverlay.AppCompat.ActionBar">
+        <!-- 设置Menu菜单的背景色 -->
+        <item name="android:itemBackground">@color/gray_f5</item>
+        <!-- 设置Menu菜单的字体颜色 -->
+        <item name="android:textColor">@color/gray_66</item>
+        <!-- 设置Menu窗口不覆盖Toolbar视图 -->
+        <item name="overlapAnchor">false</item>
+    </style>
+
+
+    <!--dropDown 分割线-->
+    <style name="dropDownStyle">
+        <item name="android:divider">@color/gray_db</item>
+        <item name="android:dividerHeight">1dp</item>
+        <item name="android:dropDownWidth">100dp</item>
+    </style>
+
+    <style name="filtrateTextViewStyle">
+        <item name="android:textColor">@color/s_gray66_orage_yellow_ff7d01</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@drawable/bg_backgroud_orange_text_square_type</item>
+    </style>
+
+    <style name="dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item><!--边框-->
+        <item name="android:windowIsFloating">true</item><!--是否浮现在activity之上-->
+        <item name="android:windowIsTranslucent">false</item><!--半透明-->
+        <item name="android:windowNoTitle">true</item><!--无标题-->
+        <item name="android:windowBackground">@color/transparent</item><!--背景透明-->
+        <item name="android:backgroundDimEnabled">false</item><!--模糊-->
+    </style>
+
+    <style name="TransparentWindow" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <!--设置Dialog的windowFrame框为无-->
+        <item name="android:windowFrame">@null</item>
+        <!--是否浮现在activity之上-->
+        <item name="android:windowIsFloating">true</item>
+        <!--设置窗口内容不覆盖-->
+        <item name="android:windowContentOverlay">@null</item>
+        <!--设置动画，在这里使用让它继承系统的Animation.Dialog-->
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <!--背景是否模糊显示-->
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+</resources>

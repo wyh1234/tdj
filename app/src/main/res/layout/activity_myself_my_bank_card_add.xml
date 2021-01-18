@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/yellow_fff1d4"
+        android:padding="10dp"
+        android:text="为保证账户资金安全，只能绑定认证用户本人的银行卡。" />
+
+    <TextView
+        android:id="@+id/textView_1"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/textView"
+        android:layout_marginTop="10dp"
+        android:gravity="end|center_vertical"
+        android:text="持卡人：" />
+
+
+    <TextView
+        android:id="@+id/textView_3"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/textView_1"
+        android:layout_marginTop="10dp"
+        android:gravity="end|center_vertical"
+        android:text="开户行：" />
+
+    <TextView
+        android:id="@+id/textView_4"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/textView_3"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="10dp"
+        android:gravity="end|center_vertical"
+        android:text="开户支行：" />
+
+    <TextView
+        android:id="@+id/textView_2"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/textView_4"
+        android:gravity="end|center_vertical"
+        android:text="银行卡号：" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@id/textView_1"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@id/textView_1"
+        android:gravity="center_vertical"
+        android:text="姓名" />
+
+
+    <LinearLayout
+        android:id="@+id/et_bankCard_name1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textView_3"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@+id/textView_3"
+        android:background="@drawable/z_round_rect_solid_white"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@mipmap/bc" />
+
+        <TextView
+            android:id="@+id/bankCard_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="10dp"
+            android:text="中国银行"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/et_bankCard_name2"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@id/textView_4"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@id/textView_4"
+        android:background="@drawable/z_round_rect_solid_white"
+        android:gravity="center_vertical"
+        android:hint="必须填写正确，否则提现不成功"
+        android:paddingStart="10dp"
+        android:textColorHint="@color/gray_69"
+        android:textSize="16sp" />
+
+    <com.base.utils.BandCardEditText
+        android:id="@+id/et_bankCard_no"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@id/textView_2"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@id/textView_2"
+        android:background="@drawable/z_round_rect_solid_white"
+        android:gravity="center_vertical"
+        android:hint="请输入16位或19位银行卡号"
+        android:inputType="phone"
+        android:maxLength="23"
+        android:paddingStart="10dp"
+        android:textColorHint="@color/gray_69"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/bankCard_bind"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView_2"
+        android:layout_margin="30dp"
+        android:background="@drawable/r_round_rect_solid_blue_2898eb"
+        android:gravity="center"
+        android:padding="15dp"
+        android:text="绑定"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+    <TextView
+        android:id="@+id/tv_add_card_tips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/large_text"
+        android:text="如何查询开户支行"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/bankCard_bind"/>
+</RelativeLayout>

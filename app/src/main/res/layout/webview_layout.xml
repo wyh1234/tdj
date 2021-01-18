@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+    <!--    <View
+            android:background="#f5f5f5"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"/>-->
+    <!--    <ProgressBar
+            android:id="@+id/myProgressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="2dp" />-->
+    <include layout="@layout/integral_toobar_layout" />
+
+    <cn.com.taodaji.ui.activity.integral.tools.SimpleWebView
+        android:id="@+id/wv_program"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+    <ImageView
+        android:id="@+id/network_fail"
+        android:layout_width="200dip"
+        android:layout_height="150dip"
+        android:layout_gravity="center"
+        android:layout_marginTop="180dip"
+        android:visibility="gone"
+        />
+    <TextView
+        android:id="@+id/tv_refresh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="点击刷新"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:layout_marginTop="8dip"
+        android:clickable="true"
+        android:visibility="gone"
+        />
+
+</LinearLayout>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/auditing_message_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:background="@color/yellow_fff1d4"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/auditing_message"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="必须填写线下签属协议的贵公司支付宝。否者提现不成功。"
+            android:textColor="@color/gray_66" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_weight="8"
+            android:paddingStart="10dp"
+            android:text="支付宝账户"
+            android:textSize="16dp" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="21">
+
+            <EditText
+                android:id="@+id/identification_no"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginEnd="12dp"
+                android:layout_weight="20"
+                android:background="@drawable/z_round_rect_gray_c9"
+                android:gravity="center_vertical"
+                android:hint="支付宝账户"
+                android:inputType="text"
+                android:paddingStart="10dp"
+                android:tag="identificationCard"
+                android:textColor="@color/gray_66"
+                android:textSize="17dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/identification_OK"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/r_round_rect_solid_orange_ff7d01"
+        android:onClick="onClick"
+        android:text="确定绑定"
+        android:textColor="@color/white"
+        android:textSize="18dp" />
+
+</LinearLayout>

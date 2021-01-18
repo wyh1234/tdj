@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <com.base.glide.GlideImageView
+            android:id="@+id/shop_logo"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_margin="5dp"
+            app:siv_shape_type="circle" />
+
+        <RelativeLayout
+            android:id="@+id/shop_name_group"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:id="@+id/shop_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="周记蔬菜批发店铺"
+                android:textColor="@color/black_63"
+                android:textSize="18sp"
+                android:singleLine="true"
+                android:ellipsize="end"/>
+            <TextView
+                android:id="@+id/tv_isShow"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/shop_name"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:paddingLeft="7dp"
+                android:paddingRight="7dp"
+                android:background="@drawable/btn_shap"
+                android:drawableLeft="@mipmap/myselfsup_qj"
+                android:text="旗舰店"
+                android:gravity="center"
+                android:layout_toEndOf="@+id/shop_name"
+                android:textColor="@color/white"
+                android:textSize="9sp" />
+
+            <TextView
+                android:id="@+id/stroll_shop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="5dp"
+                android:background="@drawable/z_round_rect_red"
+                android:padding="5dp"
+                android:text="进店逛逛"
+                android:textColor="@color/red_light" />
+
+            <LinearLayout
+                android:id="@+id/ll_attention"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/shop_name"
+                android:layout_marginTop="10dp">
+
+                <include layout="@layout/item_shop_evaluate_new" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/ll_attention"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="已成交"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/orderNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="笔"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:text="共" />
+
+                <TextView
+                    android:id="@+id/productNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="件商品" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/gray_db" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/shop_goods_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/gray_db" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/shop_market"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:text="市场编号："
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/shop_market_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="103"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

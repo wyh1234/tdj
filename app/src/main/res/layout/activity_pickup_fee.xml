@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_6e"
+    android:orientation="vertical"
+    tools:context=".ui.activity.myself.PickupFeeActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_shop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="20dp">
+
+        <com.base.glide.GlideImageView
+            android:id="@+id/giv_shop_logo"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:padding="5dp"
+            android:src="@drawable/myself_headportrait"
+            app:siv_border_color="@color/white_90"
+            app:siv_border_width="5dp"
+            app:siv_shape_type="circle" />
+
+        <TextView
+            android:id="@+id/tv_shop_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/giv_shop_logo"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_toEndOf="@id/giv_shop_logo"
+            android:text="每日鲜水果"
+            android:textColor="@color/black"
+            android:textSize="@dimen/middle_text" />
+
+        <TextView
+            android:id="@+id/tv_shop_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/giv_shop_logo"
+            android:layout_marginStart="15dp"
+            android:layout_marginBottom="15dp"
+            android:layout_toEndOf="@id/giv_shop_logo"
+            android:drawablePadding="5dp"
+            android:textSize="@dimen/low_text" />
+
+        <ImageView
+            android:layout_width="9dp"
+            android:layout_height="15.5dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/right_arrow_gary" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_marginTop="10dp"
+        android:padding="20dp">
+        <TextView
+            android:id="@+id/tv_rest_fee_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/middle_text"
+            android:textColor="@color/black"
+            android:text="当前剩余（元）"/>
+        <TextView
+            android:id="@+id/tv_rest_fee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_below="@+id/tv_rest_fee_text"
+            android:textSize="30sp"
+            android:text="20000.0"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_rest_fee"
+            android:textSize="@dimen/low_text"
+            android:text="目前仅用于接货费和扫码费的扣款"/>
+        <Button
+            android:id="@+id/btn_buy_pickup_package"
+            android:layout_width="100dp"
+            android:layout_height="32dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignBottom="@id/tv_rest_fee"
+            android:background="@mipmap/buy_pickup_package3x"/>
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="@dimen/dp_10">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gainsboro"/>
+        <TextView
+            android:id="@+id/tv_pickup_tip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/low_text"
+            android:text="当《淘钱包余额》低于200元时，将无法提现供货款。低于负500元或以上，店铺将直接关闭，请及时添加余额，以免影响店铺运营。"
+            android:layout_marginTop="@dimen/dp_10" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_remove_balance"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/large_text"
+        android:textColor="@color/blue_2898eb"
+        android:text="余额转出"
+        android:background="@drawable/z_round_rect_stroke_blue_2898eb"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/low_text"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:text="关闭所有接货仓服务3天后，才可将余额转出"/>
+</LinearLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="15dp"
+    android:background="@drawable/r_transparent_white">
+
+    <TextView
+        android:id="@+id/text_type_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ewe"
+        android:textColor="@color/black_63"
+        android:textSize="16sp" />
+</LinearLayout>

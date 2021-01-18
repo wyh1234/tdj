@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="tag_first" type="id" />
+
+    <item name="swipe_target" type="id" />
+    <item name="swipe_refresh_header" type="id" />
+    <item name="swipe_load_more_footer" type="id" />
+
+    <item name="popup_window_context" type="id" />
+
+
+
+
+
+</resources>

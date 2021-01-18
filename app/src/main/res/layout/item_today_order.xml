@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/rl_item"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:background="@drawable/bg_unselect_problem"
+    android:padding="5dp"
+    android:orientation="vertical"
+    android:layout_margin="@dimen/dp_10">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+            <TextView
+                android:id="@+id/tv_item_title"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textSize="@dimen/middle_text"
+                android:textColor="@color/black" />
+            <TextView
+                android:id="@+id/tv_item_num"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/middle_text"
+                android:textColor="@color/black"/>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tv_item_nickname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:maxLines="1"
+            android:visibility="gone"
+            android:textSize="@dimen/low_text"
+            android:textColor="@color/gray" />
+    </LinearLayout>
+</RelativeLayout>

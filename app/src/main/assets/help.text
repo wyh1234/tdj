@@ -1,0 +1,198 @@
+
+
+
+gradlew processDebugManifest --stacktrace
+
+
+
+
+
+
+
+
+
+RecycleView
+
+1、滑动不流畅
+
+解决方法：嵌套滑动不激活。
+
+mRecycleView.setNestedScrollingEnable(false);
+
+2、当NestedScrollView嵌套RecycleView布局由Fragment管理，Fragment切换时会自动滑动到ReycleView的顶部。
+
+解决方法：在NestedScrollView唯一子布局中加入 android:descendantFocusability=“blocksDescendants”
+
+android:descendantFocusability 有三个属性
+
+优先于子控件获取焦点
+
+“beforeDescendants"
+
+当子控件不需要焦点时，获取焦点
+
+”afterDescendants“
+
+覆盖所有子控件获取焦点
+
+”blocksDescendants“
+
+3、Android的布局属性：android:clipToPadding
+默认android:clipToPadding的值为true。
+当把android:clipToPadding的属性设置为false时候 滑动的时候会忽略padding
+
+
+4,recyclerView.scrollBy(0, top);recyclerView.scrollTo(0, top);
+scrollBy是内部就是调用了scrollTo的，实现了基于当前位置的相对滑动，而scrollTo则是实现了“绝对滑动”。
+ 需要注意的一点就是mScrollX／mScrollY这两个属性的规则，mScrollX表示的是view的左边缘到view的内容的左边缘的水平距离，
+ 类似的，mScrollY表示的是view的上边缘与view内容的上边缘的竖直方向的距离。
+
+基于scrollTo/scrollBy的特性，我们可以很容易的利用它们来实现view的滑动，
+解决一些常见的问题，比如，登陆界面的键盘遮挡输入框的问题。但是需要注意的是，使用这两个方法进行view的滑动，
+只能对view的内容进行滑动，对于view本身并不能滑动。
+
+
+
+
+View方法说明：
+1.getHitRect: Hit rectangle in parent's coordinates
+获取View可点击矩形左、上、右、下边界相对于父View的左顶点的距离（偏移量）
+
+2.getDrawingRect: The (scrolled) drawing bounds of the view
+获取View的绘制范围，即左、上、右、下边界相对于此View的左顶点的距离（偏移量），即0、0、View的宽、View的高
+
+3.getLocalVisibleRect: 获取View在第一个可滚动的上级View（父View或祖父View或...）中的可见区域相对于此View的左顶点的距离（偏移量）
+在第一个可滚动的上级View中的可见区域，即使被其他浮动View完全遮挡，也返回true
+不在第一个可滚动的上级View中的可见区域时，返回false，此时获取到的值为View距离第一个可滚动的上级View的左顶点的距离（偏移量）
+
+4.getGlobalVisibleRect: 获取View在第一个可滚动的上级View（父View或祖父View或...）中的可见区域相对于屏幕左顶点的距离（偏移量）
+在第一个可滚动的上级View中的可见区域，即使被其他浮动View完全遮挡，也返回true
+不在第一个可滚动的上级View中的可见区域时，返回false，此时获取到的值为View距离第一个可滚动的上级View的左顶点的距离（偏移量）
+
+
+MotionEvent的getX()，getY()与getRawX(),getRawY()区别
+
+如果某个Activity中实现OnTouchListener接口，需要重写onTouch(View view，MotionEvent event)这个方法，
+getRawX()和getRawY()获得的是相对屏幕的位置，getX()和getY()获得的永远是相对view的触摸位置坐标（这两个值不会超过view的长度和宽度）。
+
+RawX,RawY 相对于屏幕位置坐标
+X,Y 相对于容器的位置坐标
+
+
+
+/*//能够识别的最小滑动举例
+        ViewConfiguration.getScaledTouchSlop();
+
+//最小加速度
+        ViewConfigurationgetScaledMinimumFlingVelocity();
+
+//最大加速度
+        ViewConfiguration.getScaledMaximumFlingVelocity();
+
+//滚动距离
+        ViewConfiguration.getScaledOverscrollDistance();
+
+//Filing距离
+        ViewConfiguration.getScaledOverflingDistance();*/
+
+
+        //静止,没有滚动
+        public static final int SCROLL_STATE_IDLE = 0;
+
+        //正在被外部拖拽,一般为用户正在用手指滚动
+        public static final int SCROLL_STATE_DRAGGING = 1;
+
+        //自动滚动开始
+        public static final int SCROLL_STATE_SETTLING = 2;
+
+dy > 0 时为手指向上滚动,列表滚动显示下面的内容
+dy < 0 时为手指向下滚动,列表滚动显示上面的内容
+
+RecyclerView.canScrollVertically(1)的值表示是否能向下滚动，false表示已经滚动到底部
+RecyclerView.canScrollVertically(-1)的值表示是否能向上滚动，false表示已经滚动到顶部
+
+
+
+
+
+onTouch和onTouchEvent有什么区别，又该如何使用？
+
+从源码中可以看出，这两个方法都是在View的dispatchTouchEvent中调用的，onTouch优先于onTouchEvent执行。
+如果在onTouch方法中通过返回true将事件消费掉，onTouchEvent将不会再执行。
+
+View有两个很重要的方法：invalidate和requestLayout，常用于View重绘和更新。
+
+
+
+
+
+
+
+
+Invalidate：
+To farce a view to draw,call invalidate().——摘自View类源码
+从上面这句话看出，invalidate方法会执行draw过程，重绘View树。
+当View的appearance发生改变，比如状态改变（enable，focus），背景改变，隐显改变等，这些都属于appearance范畴，都会引起invalidate操作。
+所以当我们改变了View的appearance，需要更新界面显示，就可以直接调用invalidate方法。
+View（非容器类）调用invalidate方法只会重绘自身，ViewGroup调用则会重绘整个View树。
+
+
+RequestLayout：
+To initiate a layout, call requestLayout(). This method is typically called by a view on itself when it believes that it can no longer fit within its current bounds.——摘自View源码
+从上面这句话看出，当View的边界，也可以理解为View的宽高，发生了变化，不再适合现在的区域，可以调用requestLayout方法重新对View布局。
+View执行requestLayout方法，会向上递归到顶级父View中，再执行这个顶级父View的requestLayout，所以其他View的onMeasure，onLayout也可能会被调用。
+
+1.invalidate和postInvalidate：invalidate方法只能用于UI线程中，在非UI线程中，可直接使用postInvalidate方法，这样就省去使用handler的烦恼。
+
+
+空格：&#160;
+窄空格：&#8201;
+一个汉字宽度的空格：&#160;&#160;&#8201;【用两个空格（&#160;&#160;）占一个汉字的宽度时，两个空格比一个汉字略窄，三个空格（&#160;&#160;&#160;）比一个汉字略宽】
+在实际使用中需要灵活使用&#160;和&#8201;的组合。
+
+android:text="真实姓名:"
+android:text="身&#160;&#160;份&#160;&#160;证:"
+
+
+
+
+
+//波纹效果
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+android:color="?android:colorPrimaryDark">
+       <item android:id="@android:id/mask"        android:drawable="@drawable/ic_launcher">
+       </item>
+</ripple>
+
+
+
+
+  tools:layoutManager="GridLayoutManager"  LinearLayoutManager
+        tools:listitem="@layout/item"
+        tools:spanCount="2"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

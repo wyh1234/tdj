@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="103dp"
+        android:layout_height="104dp">
+
+        <ImageView
+            android:id="@+id/item_pay_pic"
+            android:layout_width="93dp"
+            android:layout_height="94dp"
+            android:layout_centerInParent="true"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/upload_image" />
+
+        <ImageView
+            android:id="@+id/back_pic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:paddingLeft="10dp"
+            android:paddingBottom="10dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/guanbi_image" />
+    </RelativeLayout>
+</RelativeLayout>

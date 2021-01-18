@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:paddingLeft="15dp"
+        android:layout_height="45dp">
+        <TextView
+            android:id="@+id/tv_num"
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:drawablePadding="5dp"
+            android:drawableLeft="@mipmap/guanggaojihua"
+            android:textSize="14sp"
+            android:textColor="@color/blue_2898eb"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv_right"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:textSize="14sp"
+            android:paddingRight="15dp"
+            android:paddingLeft="5dp"
+            android:text="新建计划"
+            android:gravity="center_vertical"
+            android:textColor="@color/blue_2898eb"
+            android:layout_height="match_parent" />
+        <ImageView
+            android:id="@+id/iv_right"
+            android:layout_toLeftOf="@+id/tv_right"
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rl_time"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="50dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:text="投放日期"
+            android:layout_marginLeft="15dp"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:id="@+id/iv"
+            android:layout_width="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:src="@mipmap/right_arrow_gary"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_toLeftOf="@+id/iv"
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:textColor="#a3a3a3"
+            android:textSize="14sp"
+            android:textColorHint="#a3a3a3"
+            android:layout_marginRight="5dp"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+    <View
+        android:background="@color/gray_f5"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+    <RelativeLayout
+        android:id="@+id/rl_title2"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="50dp">
+        <TextView
+            android:id="@+id/tv_type"
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:text="投放商品"
+            android:layout_marginLeft="15dp"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:id="@+id/iv2"
+            android:layout_width="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:src="@mipmap/right_arrow_gary"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tv_type_right"
+            android:layout_toLeftOf="@+id/iv2"
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:textColor="#a3a3a3"
+            android:textSize="14sp"
+            android:hint="请选择需要投放的商品"
+            android:textColorHint="#a3a3a3"
+            android:layout_marginRight="5dp"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/ll_contain"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></LinearLayout>
+    <View
+        android:background="@color/gray_f5"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_title1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:text="广告套餐"
+            android:textColor="#000000"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_sel_adv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:hint="请选择广告套餐"
+            android:textColor="#a3a3a3"
+            android:textColorHint="#a3a3a3"
+
+            android:drawablePadding="5dp"
+            android:drawableRight="@mipmap/right_arrow_gary"
+            android:layout_marginRight="15dp"
+            android:src="@mipmap/right_arrow_gary" />
+
+        <EditText
+            android:id="@+id/ed_sel_adv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:layout_centerVertical="true"
+            android:gravity="right"
+            android:visibility="gone"
+            android:layout_alignParentRight="true"
+            android:inputType="number"
+            android:paddingRight="35dp"
+            android:hint="请输入投放天数"
+            android:textColor="#000000"
+            android:textColorHint="#a3a3a3"
+            android:textSize="14sp" />
+        <TextView
+            android:id="@+id/tv_dw"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="天"
+            android:textColor="#000000"
+            android:layout_marginRight="15dp"
+     />
+
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/tv_adv_tj"
+        android:layout_width="match_parent"
+        android:paddingLeft="15dp"
+        android:visibility="gone"
+        android:gravity="center_vertical"
+        android:textSize="13sp"
+        android:textColor="@color/gray_66"
+        android:layout_height="@dimen/dp_40" />
+    <View
+        android:background="@color/gray_f5"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+    <RelativeLayout
+        android:id="@+id/rl_title3"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="50dp">
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:text="备注"
+            android:layout_marginLeft="15dp"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:id="@+id/iv3"
+            android:layout_width="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:src="@mipmap/right_arrow_gary"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tv_remark"
+            android:layout_toLeftOf="@+id/iv3"
+            android:gravity="center_vertical|right"
+            android:layout_marginLeft="40dp"
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:textColor="#a3a3a3"
+            android:textSize="14sp"
+            android:hint="突出商品特色、服务保障、产地、价格优势"
+            android:textColorHint="#a3a3a3"
+            android:layout_marginRight="5dp"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="PasswordShowState">
+        <attr name="state_password_show" format="boolean" />
+    </declare-styleable>
+    <!--dropDown 验证码-->
+    <declare-styleable name="VerifyCodeView">
+        <attr name="codeTextSize" format="dimension" />
+        <attr name="codeBackground" format="color" />
+        <attr name="codeLength" format="integer" />
+        <attr name="isContainChar" format="boolean" />
+        <attr name="pointNum" format="integer" />
+        <attr name="linNum" format="integer" />
+    </declare-styleable>
+    <declare-styleable name="SwipeToLoadLayout">
+        <attr name="refresh_enabled" format="boolean" />
+        <attr name="load_more_enabled" format="boolean" />
+
+        <attr name="swipe_style" format="enum">
+            <enum name="classic" value="0" />
+            <enum name="above" value="1" />
+            <enum name="blew" value="2" />
+            <enum name="scale" value="3" />
+        </attr>
+
+        <attr name="drag_ratio" format="float" />
+
+        <attr name="refresh_trigger_offset" format="dimension" />
+        <attr name="load_more_trigger_offset" format="dimension" />
+        <attr name="refresh_final_drag_offset" format="dimension" />
+        <attr name="load_more_final_drag_offset" format="dimension" />
+
+        <attr name="swiping_to_refresh_to_default_scrolling_duration" format="integer" />
+        <attr name="release_to_refreshing_scrolling_duration" format="integer" />
+        <attr name="refresh_complete_delay_duration" format="integer" />
+        <attr name="refresh_complete_to_default_scrolling_duration" format="integer" />
+        <attr name="default_to_refreshing_scrolling_duration" format="integer" />
+        <attr name="swiping_to_load_more_to_default_scrolling_duration" format="integer" />
+        <attr name="release_to_loading_more_scrolling_duration" format="integer" />
+        <attr name="load_more_complete_delay_duration" format="integer" />
+        <attr name="load_more_complete_to_default_scrolling_duration" format="integer" />
+        <attr name="default_to_loading_more_scrolling_duration" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="NineGridView">
+        <attr name="ngv_singleImageSize" format="dimension" />
+        <attr name="ngv_singleImageRatio" format="float" />
+        <attr name="ngv_gridSpacing" format="dimension" />
+        <attr name="ngv_maxSize" format="integer" />
+        <attr name="ngv_mode" format="enum">
+            <enum name="fill" value="0" />
+            <enum name="grid" value="1" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="ShapeImageView">
+        <attr name="siv_border_width" format="dimension" />
+        <attr name="siv_border_color" format="color" />
+        <attr name="siv_radius" format="dimension" />
+        <attr name="siv_pressed_alpha" format="float" />
+        <attr name="siv_pressed_color" format="color" />
+        <attr name="siv_shape_type" format="enum">
+            <enum name="rectangle" value="0" />
+            <enum name="circle" value="1" />
+            <enum name="roundRect" value="2" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="CircleProgressView">
+        <attr name="cpv_progressNormalColor" format="color" />
+        <attr name="cpv_progressReachColor" format="color" />
+        <attr name="cpv_progressTextColor" format="color" />
+        <attr name="cpv_progressTextSize" format="dimension" />
+        <attr name="cpv_progressTextOffset" format="dimension" />
+        <attr name="cpv_progressNormalSize" format="dimension" />
+        <attr name="cpv_progressReachSize" format="dimension" />
+        <attr name="cpv_radius" format="dimension" />
+        <attr name="cpv_progressTextVisible" format="boolean" />
+        <attr name="cpv_progressStartArc" format="integer" />
+        <attr name="cpv_progressTextSkewX" format="dimension" />
+        <attr name="cpv_progressTextPrefix" format="string" />
+        <attr name="cpv_progressTextSuffix" format="string" />
+        <attr name="cpv_innerBackgroundColor" format="color" />
+        <attr name="cpv_progressStyle" format="enum">
+            <enum name="Normal" value="0" />
+            <enum name="FillInner" value="1" />
+            <enum name="FillInnerArc" value="2" />
+        </attr>
+        <attr name="cpv_innerProgressColor" format="color" />
+        <attr name="cpv_innerPadding" format="dimension" />
+        <attr name="cpv_outerColor" format="color" />
+        <attr name="cpv_outerSize" format="dimension" />
+        <attr name="cpv_reachCapRound" format="boolean" />
+    </declare-styleable>
+
+
+</resources>

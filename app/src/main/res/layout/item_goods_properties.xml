@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/tv_item_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="出售规格："
+            android:textColor="@color/black_65" />
+
+        <TextView
+            android:id="@+id/tv_item_content"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_weight="1"
+            android:textAlignment="textEnd"
+            android:singleLine="true"
+            android:textColor="@color/black_65" />
+
+        <ImageView
+            android:layout_width="8dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:src="@mipmap/ic_right_arrow_gary" />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/gray_db" />
+</LinearLayout>

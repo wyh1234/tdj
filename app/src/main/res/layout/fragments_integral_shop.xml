@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_f6f4f4"
+    android:orientation="vertical">
+
+    <include layout="@layout/integral_toobar_layout" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@color/red_f0"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:layout_marginTop="10dp">
+
+            <EditText
+                android:id="@+id/ed_name"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="60dp"
+                android:background="@drawable/z_round_rect_solid_white_transparent_one"
+                android:drawableLeft="@mipmap/sousuo_bg"
+                android:drawablePadding="10dp"
+                android:hint="请输入要搜索的商品"
+                android:paddingLeft="15dp"
+                android:textColor="@color/gray_69"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_seach"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:text="搜索"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="-35dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/integra_home_bg">
+
+        <LinearLayout
+            android:id="@+id/ll"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <RelativeLayout
+                android:id="@+id/rl_zh"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="综合"
+                    android:textColor="@color/red_f0"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/tv"
+                    android:src="@mipmap/hongse_bottom" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="@dimen/dp_10"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center"
+                android:background="@color/gray_f6f4f4" />
+
+            <RelativeLayout
+                android:id="@+id/rl_xl"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tv1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="销量"
+                    android:textColor="@color/gray_66"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/iv1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/tv1"
+                    android:src="@mipmap/quanhui" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="@dimen/dp_10"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center"
+                android:background="@color/gray_f6f4f4" />
+
+            <RelativeLayout
+                android:id="@+id/rl_jg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tv2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="价格"
+                    android:textColor="@color/gray_66"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/iv2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/tv2"
+                    android:src="@mipmap/quanhui" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="@dimen/dp_10"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center"
+                android:background="@color/gray_f6f4f4" />
+            <!--  <RelativeLayout
+                  android:id="@+id/rl_filtrate"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:gravity="center"
+                  android:layout_weight="1">
+                  <TextView
+                      android:id="@+id/tv3"
+                      android:layout_width="wrap_content"
+                      android:text="筛选"
+                      android:textSize="14sp"
+                      android:layout_centerVertical="true"
+                      android:textColor="@color/gray_66"
+                      android:layout_height="wrap_content" />
+                  <ImageView
+                      android:layout_width="wrap_content"
+                      android:src="@mipmap/saixuan"
+                      android:layout_marginLeft="5dp"
+                      android:layout_toRightOf="@+id/tv3"
+                      android:layout_centerVertical="true"
+                      android:layout_height="wrap_content" />
+              </RelativeLayout>-->
+        </LinearLayout>
+
+
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/refreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/ll"
+            app:srlAccentColor="@android:color/white"
+            app:srlEnableRefresh="true">
+
+            <com.scwang.smartrefresh.layout.header.ClassicsHeader
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerView_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+
+            <com.scwang.smartrefresh.layout.footer.ClassicsFooter
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_empty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@mipmap/layout_empty" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</LinearLayout>

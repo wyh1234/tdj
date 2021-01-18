@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/base_loading"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_below="@+id/title"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/tv_mess"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:text="努力加载中..."
+        android:textColor="@color/black_63" />
+
+
+    <ImageView
+        android:id="@+id/iv_gif_loading"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_above="@+id/tv_mess"
+        android:layout_centerHorizontal="true" />
+
+
+    <!--<FrameLayout-->
+    <!--android:id="@+id/iv_gif_loading"-->
+    <!--android:layout_width="90dp"-->
+    <!--android:layout_height="160dp"-->
+    <!--android:layout_above="@+id/tv_mess"-->
+    <!--android:layout_centerHorizontal="true">-->
+
+    <!--<ImageView-->
+    <!--android:id="@+id/iv_arm_left"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginStart="30dp"-->
+    <!--android:layout_marginTop="75dp"-->
+    <!--android:src="@mipmap/ic_arm" />-->
+
+    <!--<ImageView-->
+    <!--android:id="@+id/iv_foot_left"-->
+    <!--android:layout_width="15dp"-->
+    <!--android:layout_height="15dp"-->
+    <!--android:layout_gravity="end"-->
+    <!--android:layout_marginTop="120dp"-->
+    <!--android:layout_marginEnd="10dp"-->
+    <!--android:src="@mipmap/ic_foot" />-->
+
+    <!--<ImageView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:scaleType="fitStart"-->
+    <!--android:src="@mipmap/ic_self" />-->
+
+    <!--<ImageView-->
+    <!--android:id="@+id/iv_arm_right"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginStart="27dp"-->
+    <!--android:layout_marginTop="60dp"-->
+    <!--android:src="@mipmap/ic_arm" />-->
+
+
+    <!--<ImageView-->
+    <!--android:id="@+id/iv_foot_right"-->
+    <!--android:layout_width="15dp"-->
+    <!--android:layout_height="15dp"-->
+    <!--android:layout_marginStart="10dp"-->
+    <!--android:layout_marginTop="120dp"-->
+    <!--android:src="@mipmap/ic_foot" />-->
+
+    <!--</FrameLayout>-->
+
+</RelativeLayout>

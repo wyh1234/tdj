@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
+        <!-- Customize your theme here. -->
+        <!--colorPrimary 对应ActionBar的颜色。-->
+        <!--colorPrimaryDark对应通知栏的颜色-->
+        <!--colorAccent 对应EditText编辑时、RadioButton选中、CheckBox等选中时的颜色。-->
+        <item name="colorPrimary">@color/orange_yellow_ff7d01</item>
+        <item name="colorPrimaryDark">@color/orange_yellow_ff7d01</item>
+        <item name="colorAccent">@color/orange_yellow_ff7d01</item>
+        <item name="android:colorBackground">@color/white</item>
+        <item name="android:textColor">@color/gray_66</item>
+        <item name="android:editTextColor">@color/black_65</item>
+        <item name="android:textColorHint">@color/bg_color_hint_theme</item>
+
+        <item name="toolbarStyle">@style/CustomerToolbar</item>
+        <item name="android:dropDownListViewStyle">@style/dropDownStyle</item>
+        <item name="android:checkboxStyle">@style/CustomCheckboxTheme</item>
+        <item name="android:radioButtonStyle">@style/CustomRadioButtonTheme</item>
+
+
+        <!--设置window背景是否绘制toolbar背景-->
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <!--设置状态栏为不透明-->
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+
+        <!--导航栏为不透明-->
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:navigationBarColor">@color/black_63</item>
+
+
+        <!--设置波纹颜色-->
+
+        <!--android:background="?android:attr/selectableItemBackground"波纹有边界-->
+        <!--android:background="?android:attr/selectableItemBackgroundBorderless"波纹超出边界-->
+        <item name="android:colorControlHighlight">@color/ffb976</item>
+
+
+        <!--共享元素-->
+        <item name="android:windowContentTransitions">true</item>
+        <!--A启动B-->
+        <!--A退出的动画和B进入的动画同步进行-->
+        <item name="android:windowAllowEnterTransitionOverlap">true</item>
+        <!--B返回的动画和A重新进入的动画同步进行-->
+        <item name="android:windowAllowReturnTransitionOverlap">true</item>
+
+
+        <!--<item name="android:windowSharedElementExitTransition">@transition/def_transition</item>-->
+        <!--<item name="android:windowSharedElementReenterTransition">@transition/def_transition</item>-->
+        <!--<item name="android:windowSharedElementEnterTransition">@transition/def_transition</item>-->
+        <!--<item name="android:windowSharedElementReturnTransition">@transition/def_transition</item>-->
+
+        <item name="android:windowSharedElementEnterTransition">@android:transition/move</item>
+        <item name="android:windowSharedElementExitTransition">@android:transition/move</item>
+        <item name="android:windowSharedElementReenterTransition">@android:transition/move</item>
+        <item name="android:windowSharedElementReturnTransition">@android:transition/move</item>
+
+
+        <!--Android 5.0(API 21)支持这些出入过渡效果：-->
+        <!--explode—从屏幕中心位置移入移出视图；-->
+        <!--slide—从屏幕地边缘位置移入移出视图；-->
+        <!--fade—通过改变视图的透明度从屏幕中添加或删除视图；-->
+        <item name="android:windowEnterTransition">@android:transition/fade</item>
+        <item name="android:windowExitTransition">@android:transition/fade</item>
+
+    </style>
+
+    <!--    这个主题可以把toolbar和背景图片和通知栏融为一体
+    但toolbar,根布局颜色设置与标题布局的颜色一致，并将内容布局设置为白色；
+    -->
+    <style name="ImageTranslucentTheme" parent="AppTheme">
+        <!--设置window背景是否绘制toolbar背景-->
+        <item name="android:windowDrawsSystemBarBackgrounds">false</item>
+        <!--设置状态栏为透明-->
+        <item name="android:windowTranslucentStatus">true</item>
+        <!--设置状态栏为透明色-->
+        <item name="android:statusBarColor">@android:color/transparent</item>
+
+        <!--导航栏不透明-->
+        <item name="android:windowTranslucentNavigation">false</item>
+        <!--导航栏为黑色-->
+        <item name="android:navigationBarColor">@color/black_63</item>
+
+    </style>
+
+
+</resources>

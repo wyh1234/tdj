@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/blue_2898eb"
+        android:clipToPadding="true">
+        <!--android:background="@android:color/transparent"-->
+        <!--  自定义控件-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+
+                <com.base.glide.GlideImageView
+                    android:id="@+id/goods_search_back_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="29dp"
+                    android:layout_margin="5dp"
+                    android:src="@mipmap/left_arrow_white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/z_round_rect_solid_white_transparent_new"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <EditText
+                    android:id="@+id/goods_search_edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:hint="@string/goods_classify"
+                    android:imeOptions="actionDone"
+                    android:singleLine="true"
+                    android:textColor="@color/gray_66"
+                    android:textColorHint="@color/gray_69"
+                    android:textSize="16dp" />
+
+                <com.base.glide.GlideImageView
+                    android:id="@+id/goods_search_clear_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:src="@mipmap/phone_clear" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="10dp"
+                android:layout_height="0dp" />
+
+            <TextView
+                android:id="@+id/goods_search_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginLeft="10dp"
+                android:text="搜索"
+                android:background="@drawable/r_round_rect_solid_blue_2898eb"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:id="@+id/goods_search_list_linearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/goods_search_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+
+        <TextView
+            android:id="@+id/goods_search_clear_record_btn"
+            android:layout_width="116.5dp"
+            android:layout_height="27.5dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="49dp"
+            android:background="@drawable/z_round_rect_right_orageyellow"
+            android:gravity="center"
+            android:text="清空搜索记录"
+            android:textColor="@color/orange_yellow_ff7d01"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/goods_search_null_linearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="100dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="很抱歉,暂无该商品分类"
+            android:textColor="#333333"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/goods_search_select_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/z_round_rect_blue_2898eb"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="自定义添加商品分类"
+            android:textColor="@color/blue_2898eb" />
+    </LinearLayout>
+</LinearLayout>

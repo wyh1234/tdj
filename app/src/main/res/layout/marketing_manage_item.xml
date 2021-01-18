@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:paddingRight="10dp"
+    android:paddingLeft="10dp"
+    android:paddingTop="10dp"
+    android:orientation="vertical"
+    android:background="@color/gray_f5"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:background="@color/white"
+        android:paddingTop="@dimen/dp_10"
+        android:paddingBottom="@dimen/dp_10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/iv"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_10"
+            android:layout_width="62dp"
+            android:scaleType="centerCrop"
+            android:layout_height="62dp" />
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_toRightOf="@+id/iv"
+            android:layout_width="wrap_content"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_below="@+id/tv_title"
+            android:layout_toRightOf="@+id/iv"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="3dp"
+            android:textColor="#a4a4a4"
+            android:textSize="12sp"
+            android:layout_height="wrap_content" />
+        <RelativeLayout
+            android:layout_marginTop="3dp"
+            android:layout_below="@+id/tv_content"
+            android:layout_toRightOf="@+id/iv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_money"
+            android:layout_width="wrap_content"
+            android:textColor="#FB0202"
+            android:textSize="14sp"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tv_ulit"
+            android:layout_toRightOf="@+id/tv_money"
+            android:layout_width="wrap_content"
+            android:visibility="gone"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:background="@drawable/marketing_tag_shap"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:textColor="#a4a4a4"
+            android:textSize="12sp"
+            android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+    <View
+        android:layout_below="@+id/tv_content"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+    <RelativeLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="30dp">
+        <TextView
+            android:id="@+id/tv_desc"
+            android:layout_centerVertical="true"
+            android:drawableLeft="@mipmap/wenhao"
+            android:drawablePadding="5dp"
+            android:gravity="center"
+            android:textSize="@dimen/sp_12"
+            android:paddingLeft="@dimen/dp_10"
+            android:textColor="#a4a4a4"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+        <Button
+            android:id="@+id/btn"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/dp_10"
+            android:text="立即投放"
+            android:textSize="12sp"
+            android:background="@drawable/marketing_btn_shap"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:layout_width="70dp"
+            android:layout_height="20dp" />
+
+    </RelativeLayout>
+</LinearLayout>

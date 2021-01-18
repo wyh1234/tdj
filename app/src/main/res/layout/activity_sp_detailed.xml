@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/gray_f5"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:padding="10dp"
+        android:textColor="#666666"
+        android:textSize="15sp"
+        android:background="@color/white"
+        android:text="规格说明 ：以《斤、个、 双、 卷 、张》为最小单位结束的商品,表示以该单位同意售后，以《克、千克、毫升、升、寸》 为最小单位结束的商品，表示以该单位的上一级单位同意售后。
+       "
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:padding="10dp"
+        android:textColor="#666666"
+        android:textSize="15sp"
+        android:background="@color/white"
+        android:text=" 示例：5元/斤，50元/包（10斤），500元/箱（10包*10斤）售后单位为斤。
+5元/袋（10克），50元/箱（10袋*10克）售后单位为袋。
+所以请根据商品性质选择最小结束单位。"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

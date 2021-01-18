@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cn.com.taodaji.ui.fragment.MyDrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:id="@+id/canScrolView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:background="@color/gray_6c"
+            android:text="该类商品存在瑕疵，非烂坏不换"
+            android:textColor="@color/red"
+            android:gravity="center"
+            android:layout_height="30dp"/>
+        <RelativeLayout
+            android:id="@+id/search_edit_group"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:id="@+id/search_edit"
+                android:layout_toRightOf="@+id/search_heard"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="50dp"
+                android:background="@drawable/offenbuy_seach_shap"
+                android:gravity="center_vertical"
+                android:hint="搜索商品"
+                android:imeOptions="actionDone"
+                android:paddingStart="5dp"
+                android:singleLine="true"
+                android:textSize="16sp" />
+          <!--  <TextView
+                android:id="@+id/right_text"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="搜索"
+                />-->
+            <com.base.glide.GlideImageView
+                android:id="@+id/right_icons"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:paddingRight="@dimen/dp_10"
+                android:paddingLeft="@dimen/dp_10"
+                android:layout_height="match_parent"/>
+        </RelativeLayout>
+        <!--<include layout="@layout/toolbar_customer_simple_title" />-->
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tabLayout"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            app:tabMode="fixed" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/gray_db" />
+
+        <LinearLayout
+            android:id="@+id/tabLayout_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical" />
+
+        <android.support.design.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/tabLayout_viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <FrameLayout
+                android:id="@+id/shopping_floating_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|bottom"
+                android:layout_margin="20dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp">
+                <!--  android:src="@mipmap/shopping_cart"-->
+                <ImageView
+                    android:id="@+id/iv_shopping_cart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/shopping_cart" />
+
+                <TextView
+                    android:id="@+id/tv_shopping_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="16dp"
+                    android:layout_gravity="end"
+                    android:background="@drawable/bg_count_red"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:text="0"
+                    android:textColor="@color/white"
+                    android:textSize="10dp" />
+            </FrameLayout>
+        </android.support.design.widget.CoordinatorLayout>
+    </LinearLayout>
+
+
+    <com.base.viewModel.adapter.MyRecyclerView
+        android:id="@+id/right_drawer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        android:background="@color/white"
+        android:paddingEnd="5dp" />
+</cn.com.taodaji.ui.fragment.MyDrawerLayout>

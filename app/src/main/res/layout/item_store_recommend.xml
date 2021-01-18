@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="10dp">
+
+    <com.base.glide.GlideImageView
+        android:id="@+id/market_image"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginEnd="5dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/head_portrait" />
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/market_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="李记店铺"
+            android:textColor="@color/black_63"
+            android:textSize="16sp"
+             />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/market_name"
+            android:layout_marginTop="5dp"
+            android:text="主营：" />
+
+        <TextView
+            android:id="@+id/mainCommodity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/market_name"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@id/textView"
+            android:text="白菜" />
+
+        <TextView
+            android:id="@+id/market_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textView"
+            android:layout_marginTop="5dp"
+            android:text="素菜：" />
+
+        <TextView
+            android:id="@+id/textView_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/market_address"
+            android:layout_marginTop="5dp"
+            android:text="市场编号：" />
+
+        <TextView
+            android:id="@+id/market_NO"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/market_address"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@id/textView_1"
+            android:text="白菜" />
+
+    </RelativeLayout>
+
+</LinearLayout>

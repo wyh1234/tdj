@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/rl_sy"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="44dp">
+        <TextView
+            android:id="@+id/tv_money"
+            android:textStyle="bold"
+            android:textSize="23sp"
+            android:gravity="bottom"
+            android:textColor="@color/orange_yellow_ff7d01"
+            android:text="0"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+        <TextView
+            android:textSize="14sp"
+            android:layout_toLeftOf="@+id/tv_money"
+            android:textColor="@color/orange_yellow_ff7d01"
+            android:text="￥"
+            android:gravity="bottom"
+            android:layout_width="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/tv_orderNo"
+        android:layout_width="match_parent"
+        android:layout_marginTop="12dp"
+        android:textColor="@color/gray_69"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:text="订单编号：123456"
+        android:layout_height="wrap_content" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="43dp"
+
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/iv"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:src="@mipmap/tijiao"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_below="@+id/iv"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_10"
+            android:textSize="14sp"
+            android:text="订单提交成功"
+            android:textColor="@color/gray_66"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_marginTop="60dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/btn_pay"
+            android:layout_width="120dp"
+            android:background="@color/orange_yellow_ff7d01"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:text="直接付款"
+            android:layout_marginLeft="48dp"
+            android:layout_height="@dimen/dp_40" />
+        <Button
+            android:id="@+id/btn_order"
+            android:layout_alignParentRight="true"
+            android:layout_width="120dp"
+            android:background="@drawable/order_confirma_shap"
+            android:textColor="#ff6633"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:text="订单中心"
+            android:layout_marginRight="48dp"
+            android:layout_height="@dimen/dp_40" />
+    </RelativeLayout>
+</LinearLayout>

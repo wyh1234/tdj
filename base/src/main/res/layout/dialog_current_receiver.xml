@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="10dp"
+        android:layout_margin="20dp"
+        android:background="@drawable/z_round_rect_solid_white">
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="15dp"
+            android:paddingTop="5dp"
+            android:paddingEnd="15dp"
+            android:textAlignment="center"
+            android:textSize="@dimen/large_text"
+            android:textColor="@color/black"
+            android:paddingBottom="5dp"
+            android:text="当前收货人" />
+        <TextView
+            android:id="@+id/tv_tips"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:lineSpacingMultiplier="1.5"
+            android:background="#FEE7D2"
+            android:textColor="@color/orange_yellow_ff7e01"
+            android:textSize="@dimen/low_text"
+            android:textAlignment="center"
+            android:text="优先留本店座机或固定电话" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:orientation="horizontal"
+            android:padding="@dimen/dp_10">
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/middle_text"
+                android:textColor="@color/black"
+                android:textAlignment="textEnd"
+                android:text="收货人："/>
+            <EditText
+                android:id="@+id/et_receiver_name"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:hint="请输入当前收货人"
+                android:textSize="@dimen/middle_text"
+                android:textAlignment="textStart"
+                android:textColor="@color/black" />
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/gray_db" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/dp_10">
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/middle_text"
+                android:textColor="@color/black"
+                android:textAlignment="textEnd"
+                android:text="电话："/>
+            <EditText
+                android:id="@+id/et_receiver_phone"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:hint="请输入当前收货人的电话"
+                android:textSize="@dimen/middle_text"
+                android:textAlignment="textStart"
+                android:textColor="@color/black" />
+        </LinearLayout>
+        <View
+            android:id="@+id/spit_line"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/gray_db" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/bt_cancel"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="2dp"
+                android:layout_marginBottom="1dp"
+                android:layout_weight="0.5"
+                android:background="@drawable/r_white"
+                android:gravity="center"
+                android:padding="20dp"
+                android:text="取消" />
+            <View
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:background="@color/gray_db" />
+            <Button
+                android:id="@+id/bt_ok"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="2dp"
+                android:layout_marginBottom="1dp"
+                android:layout_weight="0.5"
+                android:background="@drawable/r_white"
+                android:gravity="center"
+                android:padding="20dp"
+                android:text="确定" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

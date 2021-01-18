@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:visibility="visible">
+
+    <ImageView
+        android:id="@+id/iv_bg_top"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/bg_supply_name_top" />
+
+    <LinearLayout
+        android:id="@+id/auditing_message_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="76dp"
+        android:background="@color/transparent05"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/auditing_message"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="完善的信息，可以提高您的店铺诚信度。"
+            android:textColor="@color/white" />
+
+        <com.base.glide.GlideImageView
+            android:id="@+id/auditing_message_close"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@mipmap/close_message" />
+
+    </LinearLayout>
+
+    <com.base.glide.GlideImageView
+        android:id="@+id/myself_headportrait"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="140dp"
+        android:background="@drawable/myself_headportrait_big"
+        android:padding="3dp"
+        android:scaleType="fitXY"
+        app:siv_shape_type="circle" />
+    <RelativeLayout
+        android:id="@+id/rl_shop_name"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
+        android:layout_below="@+id/myself_headportrait"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/shop_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tag="@string/storeName_tag"
+        android:text="我的头像"
+        android:layout_centerVertical="true"
+        android:textColor="@color/black_4b"
+        android:textSize="18sp" />
+        <TextView
+            android:id="@+id/tv_shop_evaluate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/shop_evaluate_shap"
+            android:layout_toRightOf="@+id/shop_name"
+            android:textColor="@color/white"
+            android:textSize="13sp" />
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/line_supply_sale_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_shop_name"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="出售商品类别："
+            android:textColor="@color/gray_66"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_supply_sale_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:text="****"
+            android:textColor="@color/gray_68"
+            android:textSize="16sp"
+            android:maxLines="1"
+            />
+
+        <ImageView
+            android:id="@+id/img_go_sale_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_supply_sale_type"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"/>
+    </LinearLayout>
+
+
+</RelativeLayout>

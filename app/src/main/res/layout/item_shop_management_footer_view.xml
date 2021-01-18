@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:addStatesFromChildren="true"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="30dp">
+
+    <TextView
+        android:id="@+id/bt_ok"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/s_round_rect_blue_2898eb"
+        android:gravity="center_horizontal"
+        android:padding="10dp"
+        android:text="+发布商品"
+        android:textColor="@color/blue_2898eb"
+        android:textSize="18sp" />
+
+</LinearLayout>

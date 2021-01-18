@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_color">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/z_round_rect_solid_white_big"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/img_stutas"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@mipmap/icon_get_sucess" />
+
+            <TextView
+                android:id="@+id/text_order_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:text="提现成功提现成功提现成功提现成功提现成功提现成功"
+                android:textColor="@color/black_65"
+                android:textSize="16sp"
+                android:layout_weight="1"
+              />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/text_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1200元"
+                    android:textColor="@color/red_dark"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/orange_yellow_fdf8f4"
+            android:orientation="vertical"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginEnd="1dp"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingStart="10dp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="发起人:"
+                        android:textColor="@color/black_65"
+                        android:textSize="16sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                       >
+
+                        <TextView
+                            android:id="@+id/text_start_person"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="****************"
+                            android:textColor="@color/black_65"
+                            android:textSize="16sp"
+                            android:layout_weight="1"
+                            />
+                        <TextView
+                            android:id="@+id/text_start_role"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/z_round_rect_orange_ff7d01"
+                            android:paddingStart="8dp"
+                            android:paddingEnd="8dp"
+                            android:text="厨师"
+                            android:layout_marginStart="2dp"
+                            android:textColor="@color/orange_yellow_ff7d01"
+                            android:textSize="14sp"
+                            />
+
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/ll_pay_person"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="5dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="付款人:"
+                        android:textColor="@color/black_65"
+                        android:textSize="16sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+                        <TextView
+                            android:id="@+id/text_pay_person"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="*******************"
+                            android:textColor="@color/black_65"
+                            android:textSize="16sp"
+                            android:layout_weight="1"
+                            />
+
+                        <TextView
+                            android:id="@+id/text_pay_role"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/z_round_rect_orange_ff7d01"
+                            android:paddingStart="8dp"
+                            android:paddingEnd="8dp"
+                            android:text="厨师"
+                            android:layout_marginStart="2dp"
+                            android:textColor="@color/orange_yellow_ff7d01"
+                            android:textSize="14sp" />
+
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/text_manage_time_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="下单时间："
+                    android:textColor="@color/black_65"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/text_manage_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2018-10-20   12:22:12"
+                    android:textColor="@color/black_65"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+            <LinearLayout
+
+                android:id="@+id/ll_after_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:id="@+id/text_after_time_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="售后时间："
+                    android:textColor="@color/black_65"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/text_after_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2018-10-20   12:22:12"
+                    android:textColor="@color/black_65"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/text_wait_shop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="黄牛在大青岛"
+                android:textColor="@color/orange_yellow_ff7d01"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/text_go_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="10dp"
+                    android:paddingTop="3dp"
+                    android:paddingEnd="10dp"
+                    android:paddingBottom="3dp"
+                    android:singleLine="true"
+                    android:text="查看详情"
+                    android:textColor="@color/gray_69"
+                    android:textSize="16sp"
+                    android:drawableRight="@mipmap/icon_gray_right_circle"
+                    android:drawablePadding="5dp"
+                    android:background="@drawable/r_transparent_white"/>
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingBottom="15dp"
+    android:paddingEnd="10dp"
+    android:paddingStart="10dp"
+    android:paddingTop="15dp">
+
+    <TextView
+        android:id="@+id/tv_title_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="共22件商品   1000元    配送费15元    合计1015元"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_title_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="支付情况：使用代金券15元   支付宝800元    余额200元"
+        android:textSize="12sp" />
+</LinearLayout>

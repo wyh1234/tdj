@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:test="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_f2"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/yellow_fff1d4"
+        android:padding="10dp"
+        android:text="请输入已获得的代金劵卡密领取代金劵
+领取代金劵后可以在购买商品下单时选择符合使用条件的代金劵抵扣订单金额" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingStart="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="卡密代金券" />
+
+        <EditText
+            android:id="@+id/ed_cardPwd"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@null"
+            android:hint="请输入代金券卡密号"
+            android:paddingStart="10dp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/gray_db" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingStart="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="        验证码" />
+
+        <EditText
+            android:id="@+id/ed_verify"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint="请输入验证码"
+            android:paddingStart="10dp" />
+
+        <com.base.widget.VerifyCodeView
+            android:id="@+id/vcv_verify"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="30dp"
+            test:codeBackground="@color/verify_color"
+            test:codeLength="4"
+            test:codeTextSize="20sp"
+            test:isContainChar="true"
+            test:linNum="10"
+            test:pointNum="0" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/bt_cardPwd_get"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="30dp"
+        android:background="@drawable/r_round_rect_solid_orange_ff7d01"
+        android:gravity="center"
+        android:text="确定领取"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+</LinearLayout>

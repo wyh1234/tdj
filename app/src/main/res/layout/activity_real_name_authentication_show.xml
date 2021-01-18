@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_heard"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@color/blue_2898eb"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.base.glide.GlideImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@mipmap/verified" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="已实名审核通过"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="真实姓名："
+            android:textColor="@color/black_4b"
+            android:textSize="21dp" />
+
+        <TextView
+            android:id="@+id/real_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black_4b"
+            android:textSize="21dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="身份证号："
+            android:textColor="@color/black_4b"
+            android:textSize="21dp" />
+
+        <TextView
+            android:id="@+id/real_id_number_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black_4b"
+            android:textSize="21dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal"
+        android:paddingBottom="50dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="身份照片："
+            android:textColor="@color/black_4b"
+            android:textSize="21dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.base.glide.GlideImageView
+                android:id="@+id/id_card_fornt_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="120dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/head_portrait" />
+
+            <com.base.glide.GlideImageView
+                android:id="@+id/id_card_back_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:minHeight="120dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/head_portrait" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

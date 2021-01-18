@@ -1,0 +1,60 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        jcenter()
+        google()
+        mavenCentral()
+        maven { url 'https://dl.bintray.com/umsdk/release' }
+    }
+    dependencies {
+//        classpath 'com.android.tools.build:gradle:2.3.3'
+        classpath 'com.android.tools.build:gradle:3.4.0'
+//        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+        // tinkersupport插件, 其中lastest.release指拉取最新版本，也可以指定明确版本号，例如1.0.4
+        classpath "com.tencent.bugly:tinker-support:1.1.2"
+    }
+    ext {
+        POM_NAME = 'ShortcutBadger'
+        POM_DESCRIPTION = 'The ShortcutBadger makes your Android App show the count of unread messages as a badge on your App shortcut!'
+        POM_URL = 'https://github.com/leolin310148/ShortcutBadger'
+        POM_SCM_URL = 'https://github.com/leolin310148/ShortcutBadger'
+        POM_SCM_CONNECTION = 'https://github.com/leolin310148/ShortcutBadger.git'
+        POM_SCM_DEV_CONNECTION = 'https://github.com/leolin310148/ShortcutBadger.git'
+        POM_LICENCE_NAME = 'The Apache Software License, Version 2.0'
+        POM_LICENCE_URL = 'http://www.apache.org/licenses/LICENSE-2.0'
+        POM_LICENCE_DIST = 'repo'
+        POM_DEVELOPER_ID = 'leolin310148'
+        POM_DEVELOPER_NAME = 'Leo Lin'
+        POM_PACKAGING = 'aar'
+        POM_ARTIFACT_ID = 'ShortcutBadger'
+        VERSION_NAME = '1.1.8'
+        VERSION_CODE = 1
+        GROUP = 'me.leolin'
+    }
+}
+
+allprojects {
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+        jcenter()
+        google()
+        mavenCentral()
+        maven { url "https://jitpack.io" }
+        maven {
+            url 'https://maven.google.com/'
+            name 'Google'
+
+        }
+        maven { url 'https://dl.bintray.com/umsdk/release' }
+
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

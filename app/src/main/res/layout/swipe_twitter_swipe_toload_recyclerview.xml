@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/top_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical" />
+    <LinearLayout
+        android:id="@+id/swipe_twitter_swipe_toload_recyclerview_search_linearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="72.5dp"
+        android:background="@color/gray_f5"
+        android:visibility="gone"
+        android:layout_below="@+id/top_view">
+
+        <RelativeLayout
+            android:layout_width="265dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="25dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center_vertical">
+
+            <EditText
+                android:id="@+id/swipe_twitter_swipe_toload_recyclerview_edit"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_backgroud_white_et_square_type"
+                android:hint="请输入食材名称"
+                android:paddingLeft="5dp"
+                android:singleLine="true"
+                android:textColor="@color/gray_66"
+                android:textColorHint="@color/gray_69"
+                android:textSize="14sp" />
+
+            <com.base.glide.GlideImageView
+                android:id="@+id/swipe_twitter_swipe_toload_recyclerview_clear_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="240dp"
+                android:src="@mipmap/phone_clear"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/swipe_twitter_swipe_toload_recyclerview_search_btn"
+            android:layout_width="40dp"
+            android:layout_height="29dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:background="@null"
+            android:text="搜索"
+            android:textColor="@color/blue_2898eb"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <com.base.swipetoloadlayout.SwipeToLoadLayout
+        android:id="@+id/swipeToLoadLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/swipe_twitter_swipe_toload_recyclerview_search_linearlayout"
+        android:layout_above="@+id/down_view"
+        android:background="@color/gray_f2">
+
+        <include
+            android:id="@id/swipe_refresh_header"
+            layout="@layout/swipe_twitter_header" />
+
+        <com.base.viewModel.adapter.MyRecyclerView
+            android:id="@+id/swipe_target"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <include
+            android:id="@id/swipe_load_more_footer"
+            layout="@layout/swipe_twitter_footer" />
+    </com.base.swipetoloadlayout.SwipeToLoadLayout>
+
+    <!--</LinearLayout>-->
+    <LinearLayout
+        android:id="@+id/bottom_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical" />
+    <LinearLayout
+        android:id="@+id/down_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        />
+</RelativeLayout>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?><!--根布局，常用作蒙层（就是变暗的背景）-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#8f000000"
+    >
+    <!--播放动画的内容，可以认为是popup的主要内容布局-->
+    <RelativeLayout
+        android:id="@+id/popup_anima"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:background="@drawable/adv_package_rl_two_shap"
+            android:layout_marginLeft="16dp"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="16dp"
+            android:layout_height="246dp">
+            <RelativeLayout
+                android:id="@+id/rl_title"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:text="备注"
+                    android:layout_centerInParent="true"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/tv_ok"
+                    android:layout_width="70dp"
+                    android:textColor="#359EEC"
+                    android:textSize="15sp"
+                    android:text="完成"
+                    android:gravity="center"
+                    android:layout_alignParentRight="true"
+                    android:layout_height="match_parent" />
+                <ImageView
+                    android:id="@+id/iv_qx"
+                    android:layout_width="70dp"
+                    android:scaleType="center"
+                    android:src="@mipmap/remark_back"
+                    android:layout_height="match_parent" />
+            </RelativeLayout>
+            <EditText
+                android:id="@+id/ed_remark"
+                android:layout_below="@+id/rl_title"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="35dp"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:background="@null"
+                android:gravity="left"
+                android:hint="请输入备注内容，比如：我想突出商品特色服务有保障，优惠实惠等。"
+                android:textColor="#CACACA"
+                android:textSize="15sp"
+                android:maxLength="50"
+                android:textColorHint="#CACACA"
+                android:layout_height="match_parent" />
+            <TextView
+                android:id="@+id/tv_num"
+                android:layout_alignParentBottom="true"
+                android:textSize="14sp"
+                android:layout_marginRight="30dp"
+                android:textColor="#222222"
+                android:text="0/50字"
+                android:gravity="right|center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="35dp" />
+
+        </RelativeLayout>
+      
+
+
+
+    </RelativeLayout>
+</RelativeLayout>

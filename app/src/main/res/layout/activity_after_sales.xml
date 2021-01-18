@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_f2"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/stock_help"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/yellow_fff1d4"
+        android:padding="5dp"
+        android:text="提示：退款成功后，钱会退到《我的余额》里供采购使用。"
+        android:textColor="@color/gray_66"
+        android:textSize="12sp" />
+
+    <include
+        android:id="@+id/goods_information"
+        layout="@layout/item_order_place_goods"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:paddingStart="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="售后类型：" />
+
+        <TextView
+            android:id="@+id/after_sales_type"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginEnd="20dp"
+            android:drawableEnd="@mipmap/right_arrow_gary"
+            android:gravity="center_vertical"
+            android:paddingStart="10dp"
+            android:paddingEnd="15dp"
+            android:textColor="@color/gray_69"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingStart="10dp">
+
+        <TextView
+            android:id="@+id/type_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="退换" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="数量：" />
+
+        <com.base.widget.BusinessEditText
+            android:id="@+id/count"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="20dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:inputType="numberDecimal"
+            android:paddingStart="10dp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="1dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingStart="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="售后金额：" />
+
+        <TextView
+            android:id="@+id/tv_after_sales"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:text="0" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text=" 元" />
+
+        <TextView
+            android:id="@+id/tv_coupons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:text="(使用代金劵，以实付金额为准)"
+            android:textColor="@color/red_f0"
+            android:visibility="visible" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_withdraw_cash_pledge"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:paddingStart="10dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="是否退押：" />
+
+        <Switch
+            android:id="@+id/sw_switch"
+            android:layout_width="128px"
+            android:layout_height="39px"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="20dp"
+            android:thumb="@drawable/switch_thumb"
+            android:track="@drawable/s_switch" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:paddingStart="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="售后原因：" />
+
+        <TextView
+            android:id="@+id/problem_type"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginEnd="20dp"
+            android:drawableEnd="@mipmap/right_arrow_gary"
+            android:gravity="center_vertical"
+            android:paddingStart="10dp"
+            android:paddingEnd="15dp"
+            android:textColor="@color/gray_69"
+            android:hint="请选择售后原因"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:paddingStart="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="问题描述：" />
+
+        <EditText
+            android:id="@+id/description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="start"
+            android:hint="请输入问题描述"
+            android:minHeight="80dp"
+            android:padding="10dp"
+            android:textColor="@color/black_63" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:paddingStart="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="上传凭证照片：" />
+
+        <fragment
+            android:id="@+id/addedPicturesFragment"
+            android:name="tools.fragment.AddedPicturesFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:layout="@layout/customer_added_pictures_group" />
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/ok"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="30dp"
+        android:background="@drawable/r_round_rect_solid_orange_ff7d01"
+        android:text="提交售后申请"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+</LinearLayout>

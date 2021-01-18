@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/black_63"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingStart="10dp">
+
+    <!--style="@style/CustomCheckboxThemeRound"-->
+    <CheckBox
+        android:id="@+id/cart_checked"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1"
+        android:button="@null"
+        android:text="全选"
+        android:drawableLeft="@drawable/s_select_round"
+        android:paddingLeft="5dp"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@color/red_dark"
+        android:gravity="center_vertical"
+        android:paddingEnd="5dp"
+        android:paddingStart="5dp"
+        android:visibility="gone"
+        android:text="移动到收藏夹"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/cart_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@drawable/r_orange_ff7d01"
+        android:gravity="center_vertical"
+        android:paddingEnd="20dp"
+        android:paddingStart="20dp"
+        android:text="删除"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+</LinearLayout>

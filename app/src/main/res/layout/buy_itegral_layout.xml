@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/integral_toobar_layout" />
+    <View
+        android:id="@+id/view"
+        android:layout_below="@+id/intergral_toolbar"
+        android:layout_width="match_parent"
+        android:background="#ecedeb"
+        android:layout_height="10dp"/>
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_below="@+id/view"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/dp_10"
+        android:paddingBottom="@dimen/dp_10"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        android:layout_height="102dp">
+        <TextView
+            android:textSize="14sp"
+            android:layout_width="wrap_content"
+            android:text="默认账号"
+            android:textColor="@color/black_63"
+            android:layout_height="wrap_content" />
+        <RelativeLayout
+            android:layout_marginTop="7dp"
+            android:layout_width="match_parent"
+            android:layout_height="35dp">
+            <EditText
+                android:id="@+id/ed_phone"
+                android:background="@drawable/ed_phone_shap"
+                android:layout_width="match_parent"
+                android:textColor="#666666"
+                android:textSize="18sp"
+                android:inputType="number"
+                android:paddingLeft="@dimen/dp_10"
+                android:layout_marginRight="70dp"
+                android:layout_height="match_parent" />
+            <ImageView
+                android:id="@+id/iv_right"
+                android:layout_alignParentRight="true"
+                android:src="@mipmap/error_bg"
+                android:scaleType="fitXY"
+                android:layout_marginRight="70dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+            <ImageView
+                android:id="@+id/tv_txl"
+                android:layout_alignParentRight="true"
+                android:src="@mipmap/tongxunlu_bg"
+                android:paddingLeft="@dimen/dp_10"
+                android:paddingRight="@dimen/dp_10"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/tv_err"
+            android:layout_width="wrap_content"
+            android:textSize="12sp"
+            android:layout_marginTop="5dp"
+            android:textColor="#FF3333"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view1"
+        android:layout_below="@+id/ll"
+        android:layout_width="match_parent"
+        android:background="#ecedeb"
+        android:layout_height="10dp"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/integral_list"
+        android:layout_below="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </android.support.v7.widget.RecyclerView>
+
+    <Button
+        android:id="@+id/btn"
+        android:layout_below="@+id/tv"
+        android:background="@mipmap/integral_shop_zhifu_bg"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_width="wrap_content"
+        android:text="购买"
+        android:layout_marginBottom="150dp"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:layout_height="wrap_content" />
+</RelativeLayout>

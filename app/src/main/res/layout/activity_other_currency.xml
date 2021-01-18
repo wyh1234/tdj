@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <!--分割线-->
+    <View
+        android:id="@+id/title_split_line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/gray_db"
+        android:visibility="gone" />
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/mainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <!--不需要滑动的页面,从头开始-->
+        <LinearLayout
+            android:id="@+id/other_body"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" />
+        <!-- 页面的中间，适用于显示在中间的页面-->
+        <LinearLayout
+            android:id="@+id/center_body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical" />
+
+        <!--可以滑动的页面，底部不会被覆盖掉-->
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/ns_scroll_body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/scroll_body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+        </android.support.v4.widget.NestedScrollView>
+
+        <com.base.widget.FloatingDragView
+            android:id="@+id/floating"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:visibility="gone"
+            app:backgroundTint="@color/transparent"
+            app:borderWidth="0dp"
+            app:elevation="0dp"
+            app:pressedTranslationZ="0dp" />
+        <!--购物车-->
+        <FrameLayout
+            android:id="@+id/shopping_floating_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|bottom"
+            android:layout_margin="20dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:visibility="gone"
+            tools:targetApi="P"
+            tools:visibility="visible">
+
+            <com.base.glide.GlideImageView
+                android:id="@+id/iv_shopping_cart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/shopping_cart" />
+
+            <TextView
+                android:id="@+id/tv_shopping_count"
+                android:layout_width="wrap_content"
+                android:layout_height="16dp"
+                android:layout_gravity="end"
+                android:includeFontPadding="false"
+                android:background="@drawable/bg_count_red"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="10dp" />
+        </FrameLayout>
+    </android.support.design.widget.CoordinatorLayout>
+
+    <!--内容-->
+
+    <!-- 底部-->
+    <LinearLayout
+        android:id="@+id/bottom_body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="vertical"
+        android:visibility="gone" />
+</LinearLayout>

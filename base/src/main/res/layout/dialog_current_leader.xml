@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="10dp"
+        android:layout_margin="20dp"
+        android:background="@drawable/z_round_rect_solid_white">
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="15dp"
+            android:paddingTop="5dp"
+            android:paddingEnd="15dp"
+            android:textAlignment="center"
+            android:textSize="@dimen/large_text"
+            android:textColor="@color/black"
+            android:paddingBottom="5dp"
+            android:text="负责人" />
+
+        <TextView
+            android:id="@+id/tv_tips"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:lineSpacingMultiplier="1.5"
+            android:background="#FEE7D2"
+            android:textColor="@color/orange_yellow_ff7e01"
+            android:textSize="@dimen/low_text"
+            android:textAlignment="center"
+            android:text="只能在当前员工里指定" />
+
+        <View
+            android:id="@+id/spit_line"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/gray_db" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:textSize="@dimen/low_text"
+            android:text="当前《员工管理》列表无人员，请先在《员工管理》列表为《该门店》添加员工，再来更改负责人。"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:textSize="@dimen/low_text"
+            android:textColor="@color/orange_yellow_ff7d01"
+            android:text="注明：一个手机号，不能同时为多个门店的负责人。"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/gray_db" />
+        <Button
+            android:id="@+id/bt_ok"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="2dp"
+            android:layout_marginBottom="1dp"
+            android:layout_weight="0.5"
+            android:background="@drawable/r_white"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="确定" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="#dedede"
+    android:layout_height="match_parent">
+    <include layout="@layout/integral_toobar_layout" />
+    <TextView
+        android:id="@+id/tv"
+        android:layout_below="@+id/intergral_toolbar"
+        android:text="配送地址：武昌去汇通新昌县"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"
+        android:background="#f0f0f0"
+        android:textColor="@color/red_f0"
+        android:textSize="12sp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+    <LinearLayout
+        android:layout_below="@+id/tv"
+        android:layout_width="match_parent"
+        android:background="#f0f0f0"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_width="wrap_content"
+            android:textColor="@color/gray_69"
+            android:textSize="14sp"
+            android:layout_marginLeft="15dp"
+            android:text="淘大集服务"
+            android:gravity="center_vertical"
+            android:layout_height="@dimen/dp_40" />
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/filtrate_service_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </android.support.v7.widget.RecyclerView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:textColor="@color/gray_69"
+            android:textSize="14sp"
+            android:layout_marginLeft="15dp"
+            android:text="价格区间"
+            android:gravity="center_vertical"
+            android:layout_height="@dimen/dp_40" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_height="40dp">
+            <EditText
+                android:layout_width="130dp"
+                android:hint="最低价"
+                android:gravity="center"
+                android:textSize="12sp"
+                android:textColorHint="#cccccc"
+                android:textColor="@color/black_63"
+                android:background="@drawable/filtrate_ed_pice"
+                android:layout_height="match_parent" />
+            <EditText
+                android:layout_alignParentRight="true"
+                android:layout_width="130dp"
+                android:hint="最高价"
+                android:gravity="center"
+                android:textSize="12sp"
+                android:textColorHint="#bbbbbb"
+                android:textColor="@color/black_63"
+                android:background="@drawable/filtrate_ed_pice"
+                android:layout_height="match_parent" />
+        </RelativeLayout>
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/filtrate_pice_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </android.support.v7.widget.RecyclerView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:textColor="@color/gray_69"
+            android:textSize="14sp"
+            android:layout_marginLeft="15dp"
+            android:text="全部分类"
+            android:gravity="center_vertical"
+            android:layout_height="@dimen/dp_40" />
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/filtrate_category_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </android.support.v7.widget.RecyclerView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <Button
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:text="重置"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:textColor="@color/black_63"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <Button
+            android:layout_weight="1"
+            android:text="确定"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:background="@color/red_f0"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/auditing_message_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/yellow_fff1d4"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/auditing_message"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="您已经通过实名信息认证。"
+            android:textColor="@color/gray_66" />
+
+        <com.base.glide.GlideImageView
+            android:id="@+id/auditing_message_close"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:onClick="onClick"
+            android:src="@mipmap/close_message" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_weight="8"
+            android:paddingStart="10dp"
+            android:text="@string/true_name"
+            android:textSize="16dp" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="21">
+
+            <EditText
+                android:id="@+id/realname"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="20"
+                android:background="@null"
+                android:enabled="false"
+                android:gravity="center_vertical"
+                android:imeOptions="actionNext"
+                android:inputType=""
+                android:tag="@string/realname_tag"
+                android:textColor="@color/gray_66"
+                android:textSize="17dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_weight="8"
+            android:paddingStart="10dp"
+            android:text="@string/card_no"
+            android:textSize="16dp" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="21">
+
+            <EditText
+                android:id="@+id/identification_no"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginEnd="12dp"
+                android:layout_weight="20"
+                android:background="@null"
+                android:digits="0123456789Xx"
+                android:enabled="false"
+                android:gravity="center_vertical"
+                android:imeOptions="actionNext"
+                android:maxLength="18"
+                android:paddingStart="10dp"
+                android:tag="identificationCard"
+                android:textColor="@color/gray_66"
+                android:textSize="17dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="5dp"
+            android:layout_marginStart="10dp"
+            android:text="请上传身份证照片:"
+            android:textSize="16dp" />
+
+        <LinearLayout
+            android:id="@+id/imageView_group"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal" />
+
+        <com.base.glide.GlideImageView
+            android:id="@+id/image_add"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="5dp"
+            android:onClick="onClick"
+            android:src="@mipmap/image_add" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="30dp"
+        android:text="如需修改身份证号，请拔打淘大集" />
+
+    <TextView
+        android:id="@+id/phone_400"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="30dp"
+        android:text="客服电话：" />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="40dp"
+        android:layout_weight="1"
+        android:background="@color/gray_f2" />
+
+
+</LinearLayout>

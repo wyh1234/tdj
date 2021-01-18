@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_shop_bg"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:padding="@dimen/dp_10"
+    android:background="@color/white"
+    android:layout_marginTop="10dp">
+    <ImageView
+        android:id="@+id/iv_item_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/dp_10" />
+    <TextView
+        android:id="@+id/tv_item_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/middle_text"
+        android:layout_toEndOf="@+id/iv_item_icon"
+        android:layout_centerVertical="true"
+        android:textColor="@color/orange_yellow_ff7e01" />
+    <TextView
+        android:id="@+id/tv_item_num_employees"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/middle_text"
+        android:textColor="@color/orange_yellow_ff7e01"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="20dp" />
+    <ImageView
+        android:id="@+id/iv_item_expand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true" />
+</RelativeLayout>

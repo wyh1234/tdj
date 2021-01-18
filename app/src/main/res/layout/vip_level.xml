@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="0dp"
+    android:layout_weight="1"
+    android:layout_height="50dp"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/tv_node_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:textSize="@dimen/middle_text"/>
+
+    <RelativeLayout
+        android:layout_width="60dp"
+        android:layout_height="wrap_content">
+
+        <View
+            android:id="@+id/line_left"
+            android:layout_width="30dp"
+            android:layout_height="5dp"
+            android:layout_centerVertical="true"
+            android:background="#A6A6A6" />
+
+
+        <View
+            android:id="@+id/line_right"
+            android:layout_width="30dp"
+            android:layout_height="5dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/point"
+            android:background="#A6A6A6" />
+
+        <ImageView
+            android:id="@+id/point"
+            android:layout_width="2dp"
+            android:layout_height="10dp"
+            android:layout_centerHorizontal="true"
+            android:scaleType="center"
+            android:background="#A6A6A6" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/show_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textSize="@dimen/middle_text" />
+</LinearLayout>

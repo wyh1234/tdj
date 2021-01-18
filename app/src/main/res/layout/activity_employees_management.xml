@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/gray_6e"
+    tools:context=".ui.activity.employeeManagement.EmployeesManagementActivity">
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_shop_employees_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+    <Button
+        android:id="@+id/btn_add_new_employee"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/s_orage_yellow_round_rect"
+        android:layout_gravity="bottom"
+        android:textSize="@dimen/large_text"
+        android:textColor="@color/white"
+        android:text="添加员工"/>
+</LinearLayout>

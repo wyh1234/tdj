@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:paddingTop="15dp"
+    android:paddingBottom="15dp"
+    android:paddingRight="15dp"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/iv"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:padding="15dp"
+        android:src="@drawable/image_selects"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textColor="@color/black_63"
+                android:textSize="14sp"
+             />
+            <TextView
+                android:id="@+id/tv_phone"
+                android:layout_toRightOf="@+id/tv_name"
+                android:layout_marginLeft="20dp"
+                android:layout_centerVertical="true"
+                android:textSize="14sp"
+                android:textColor="@color/black_63"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_status"
+                android:layout_width="wrap_content"
+                android:layout_centerVertical="true"
+                android:textColor="@color/gray_66"
+                android:background="@drawable/itegral_address_stastus"
+                android:textSize="14sp"
+                android:layout_marginRight="@dimen/dp_10"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/tv_address"
+                android:layout_width="wrap_content"
+                android:layout_toRightOf="@+id/tv_status"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:textColor="@color/gray_66"
+                android:textSize="14sp"
+               />
+
+            <ImageView
+                android:id="@+id/iv_bj"
+                android:layout_width="wrap_content"
+                android:src="@mipmap/bianji"
+                android:padding="15dp"
+                android:visibility="gone"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+  <!--      <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="不在配送范围"
+                android:layout_centerInParent="true"
+                android:drawablePadding="5dp"
+                android:textColor="#ffaa00"
+                android:drawableLeft="@mipmap/gantan"
+                android:textSize="12sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>-->
+    </LinearLayout>
+
+</LinearLayout>

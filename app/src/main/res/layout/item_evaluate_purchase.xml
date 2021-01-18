@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <com.base.glide.GlideImageView
+        android:id="@+id/shop_logo"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_margin="10dp"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/head_portrait" />
+
+    <RadioGroup
+        android:id="@+id/evaluate_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/shop_logo"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/shop_logo"
+        android:layout_toEndOf="@+id/shop_logo"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radioButton1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@drawable/s_evaluate_good"
+            android:checked="true"
+            android:text="好评" />
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@drawable/s_evaluate"
+            android:text="中评" />
+
+        <RadioButton
+            android:id="@+id/radioButton3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@drawable/s_evaluate_bad"
+            android:text="差评" />
+    </RadioGroup>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/shop_logo"
+        android:background="@color/gray_db" />
+
+    <EditText
+        android:id="@+id/evaluate_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/view"
+        android:background="@null"
+        android:ems="10"
+        android:gravity="start"
+        android:padding="5dp"
+        android:hint="商品好评超过10个字并上传图片，可奖励20积分哦~"
+        android:inputType="textMultiLine"
+        android:maxLength="150"
+        android:minHeight="60dp"
+        android:textSize="14sp" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/evaluate_text"
+        android:layout_below="@+id/evaluate_text"
+        android:layout_marginTop="10dp"
+        android:paddingEnd="5dp"
+        android:paddingStart="5dp" />
+
+</RelativeLayout>

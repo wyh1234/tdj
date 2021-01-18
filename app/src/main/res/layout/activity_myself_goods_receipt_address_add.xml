@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_color">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="@color/orange_yellow_ff7d01"
+        android:text="收货人"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:layout_marginTop="10dp"
+        android:drawableStart="@mipmap/ic_get_orange"
+        android:drawablePadding="5dp"/>
+
+   <!-- <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/gray_db" />-->
+
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/gray_db" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="15dp"
+            android:text="姓名："
+            android:textSize="16sp" />
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginEnd="5dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:hint="@string/true_name_hint"
+            android:imeOptions="actionNext"
+            android:inputType=""
+            android:paddingStart="10dp"
+            android:tag="consignee"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <!--    <View
+          android:layout_width="match_parent"
+          android:layout_height="1px"
+          android:background="@color/gray_db
+    <com.base.widget.MyRadioGroup
+          android:id="@+id/radioGroup"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="center_horizontal"
+          android:orientation="horizontal"
+          android:padding="15dp">
+
+          <RadioButton
+              android:id="@+id/man"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginEnd="20dp"
+              android:checked="true"
+              android:tag="gender_0"
+              android:text="男士" />
+
+          <RadioButton
+              android:id="@+id/woman"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginStart="20dp"
+              android:tag="gender_1"
+              android:text="女士" />
+      </com.base.widget.MyRadioGroup>-->
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/gray_db" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="15dp"
+            android:text="手机："
+            android:textSize="16sp" />
+
+        <com.base.widget.my_edittext.UserNameEditText
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginEnd="5dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:hint="请输入收货手机号码。以便配送员联系您"
+            android:imeOptions="actionNext"
+            android:inputType="phone"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp"
+            android:tag="phoneNumber"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/gray_db" />
+
+  <!--  <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/gray_db" />-->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingBottom="20dp"
+        android:paddingStart="10dp"
+        android:paddingTop="20dp"
+        android:text="收货地址"
+        android:textColor="@color/orange_yellow_ff7d01"
+        android:textSize="18sp"
+        android:background="@color/white"
+        android:drawableStart="@mipmap/ic_get_address_orange"
+        android:drawablePadding="5dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/gray_db" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="15dp"
+            android:text="门店名称："
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/activity_myself_goods_receipt_address_add_editext"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginEnd="5dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:inputType=""
+            android:paddingStart="10dp"
+            android:tag="hotelName"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/gray_db" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="15dp"
+            android:text="收货地址："
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/place"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginTop="8dp"
+            android:layout_weight="21"
+            android:gravity="center_vertical"
+            android:paddingStart="10dp" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/gray_db" />
+
+  <!--  <EditText
+        android:id="@+id/myself_goods_receipt_address_add_editext_xiangqing"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:background="@null"
+        android:gravity="start"
+        android:hint="详细地址"
+        android:imeOptions="actionNext"
+        android:inputType=""
+        android:padding="10dp"
+        android:paddingStart="10dp"
+        android:tag="street"
+        android:textSize="16sp" />-->
+</LinearLayout>

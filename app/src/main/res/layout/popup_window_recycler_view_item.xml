@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/r_round_rect_solid_white"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <com.base.glide.GlideImageView
+        android:id="@+id/imageView"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/head_portrait" />
+
+    <TextView
+        android:id="@+id/bankCard_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@id/imageView"
+        android:text="银行"
+        android:textSize="18sp" />
+
+
+</RelativeLayout>
